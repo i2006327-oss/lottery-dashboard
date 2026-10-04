@@ -1,0 +1,461 @@
+{
+  "generated_at": "2026-10-04T16:45:11+08:00",
+  "games": [
+    {
+      "game_id": "cash539",
+      "game_name": "今彩539",
+      "currency": "TWD",
+      "draw_days": [
+        "週一",
+        "週二",
+        "週三",
+        "週四",
+        "週五",
+        "週六"
+      ],
+      "status": "ok",
+      "generated_at": "2026-10-04T16:45:11+08:00",
+      "data_cutoff": "20261003",
+      "next_draw": null,
+      "latest_draw": {
+        "date": "20261003",
+        "numbers": [
+          5,
+          28,
+          29,
+          33,
+          38
+        ],
+        "settlements": [
+          {
+            "track": "正式 C2J2",
+            "role": "formal",
+            "hits": [
+              1,
+              1
+            ],
+            "hit_numbers": [
+              5,
+              38
+            ],
+            "payout": 0,
+            "cost": 100
+          },
+          {
+            "track": "高ANY觀察",
+            "role": "observe",
+            "hits": [
+              0,
+              1
+            ],
+            "hit_numbers": [
+              38
+            ],
+            "payout": 0,
+            "cost": 100
+          }
+        ]
+      },
+      "recent": [
+        {
+          "date": "20261003",
+          "numbers": [
+            5,
+            28,
+            29,
+            33,
+            38
+          ],
+          "settlements": [
+            {
+              "track": "正式 C2J2",
+              "role": "formal",
+              "hits": [
+                1,
+                1
+              ],
+              "hit_numbers": [
+                5,
+                38
+              ],
+              "payout": 0,
+              "cost": 100
+            },
+            {
+              "track": "高ANY觀察",
+              "role": "observe",
+              "hits": [
+                0,
+                1
+              ],
+              "hit_numbers": [
+                38
+              ],
+              "payout": 0,
+              "cost": 100
+            }
+          ]
+        },
+        {
+          "date": "20261002",
+          "numbers": [
+            13,
+            24,
+            30,
+            34,
+            38
+          ],
+          "settlements": [
+            {
+              "track": "高ANY觀察",
+              "role": "observe",
+              "hits": [
+                2,
+                2
+              ],
+              "hit_numbers": [
+                13,
+                30,
+                34,
+                38
+              ],
+              "payout": 100,
+              "cost": 100
+            }
+          ]
+        },
+        {
+          "date": "20261001",
+          "numbers": [
+            1,
+            3,
+            16,
+            28,
+            38
+          ],
+          "settlements": [
+            {
+              "track": "正式 C2J2",
+              "role": "formal",
+              "hits": [
+                0,
+                1
+              ],
+              "hit_numbers": [
+                38
+              ],
+              "payout": 0,
+              "cost": 100
+            }
+          ]
+        },
+        {
+          "date": "20260930",
+          "numbers": [
+            2,
+            7,
+            9,
+            14,
+            33
+          ],
+          "settlements": [
+            {
+              "track": "正式 C2J2",
+              "role": "formal",
+              "hits": [
+                1,
+                0
+              ],
+              "hit_numbers": [
+                2
+              ],
+              "payout": 0,
+              "cost": 100
+            }
+          ]
+        },
+        {
+          "date": "20260929",
+          "numbers": [
+            6,
+            13,
+            17,
+            26,
+            28
+          ],
+          "settlements": []
+        },
+        {
+          "date": "20260928",
+          "numbers": [
+            13,
+            19,
+            21,
+            27,
+            32
+          ],
+          "settlements": [
+            {
+              "track": "正式 C2J2",
+              "role": "formal",
+              "hits": [
+                1,
+                0
+              ],
+              "hit_numbers": [
+                13
+              ],
+              "payout": 0,
+              "cost": 100
+            }
+          ]
+        },
+        {
+          "date": "20260926",
+          "numbers": [
+            17,
+            18,
+            30,
+            34,
+            39
+          ],
+          "settlements": [
+            {
+              "track": "正式 C2J2",
+              "role": "formal",
+              "hits": [
+                0,
+                1
+              ],
+              "hit_numbers": [
+                30
+              ],
+              "payout": 0,
+              "cost": 100
+            }
+          ]
+        },
+        {
+          "date": "20260925",
+          "numbers": [
+            6,
+            15,
+            20,
+            30,
+            33
+          ],
+          "settlements": [
+            {
+              "track": "正式 C2J2",
+              "role": "formal",
+              "hits": [
+                0,
+                2
+              ],
+              "hit_numbers": [
+                20,
+                30
+              ],
+              "payout": 0,
+              "cost": 0
+            }
+          ]
+        },
+        {
+          "date": "20260924",
+          "numbers": [
+            5,
+            8,
+            18,
+            19,
+            30
+          ],
+          "settlements": [
+            {
+              "track": "正式 C2J2",
+              "role": "formal",
+              "hits": [
+                1,
+                0
+              ],
+              "hit_numbers": [
+                30
+              ],
+              "payout": 0,
+              "cost": 0
+            }
+          ]
+        },
+        {
+          "date": "20260923",
+          "numbers": [
+            8,
+            10,
+            14,
+            16,
+            30
+          ],
+          "settlements": [
+            {
+              "track": "正式 C2J2",
+              "role": "formal",
+              "hits": [],
+              "hit_numbers": [
+                30
+              ],
+              "payout": 0,
+              "cost": 0
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "cutoff": "20261002",
+        "windows": {
+          "W30": {
+            "n": 30,
+            "any": 0.36666666666666664,
+            "hit2": 0.36666666666666664,
+            "hit3": 0.0,
+            "hit4": 0.0,
+            "hit5": 0.0,
+            "count3": 0,
+            "count4": 0,
+            "count5": 0,
+            "gross_roi": 0.2,
+            "net_roi": -0.8,
+            "gross_roi_ex4plus": 0.2,
+            "max0": 7,
+            "pool_hits_mean": 3.3666666666666667,
+            "union10_hits_mean": 1.4333333333333333
+          },
+          "W300": {
+            "n": 300,
+            "any": 0.22666666666666666,
+            "hit2": 0.22666666666666666,
+            "hit3": 0.006666666666666667,
+            "hit4": 0.0,
+            "hit5": 0.0,
+            "count3": 2,
+            "count4": 0,
+            "count5": 0,
+            "gross_roi": 0.13333333333333333,
+            "net_roi": -0.8666666666666667,
+            "gross_roi_ex4plus": 0.13333333333333333,
+            "max0": 13,
+            "pool_hits_mean": 3.3533333333333335,
+            "union10_hits_mean": 1.2833333333333334
+          },
+          "W1000": {
+            "n": 1000,
+            "any": 0.22,
+            "hit2": 0.22,
+            "hit3": 0.02,
+            "hit4": 0.001,
+            "hit5": 0.0,
+            "count3": 19,
+            "count4": 1,
+            "count5": 0,
+            "gross_roi": 0.3605,
+            "net_roi": -0.6395,
+            "gross_roi_ex4plus": 0.1665,
+            "max0": 23,
+            "pool_hits_mean": 3.341,
+            "union10_hits_mean": 1.322
+          }
+        },
+        "random_baseline": {
+          "runs": 2000000,
+          "any": 0.22249,
+          "hit2": 0.22249,
+          "hit3": 0.0199355,
+          "hit4": 0.000571,
+          "hit5": 4e-06,
+          "gross_roi": 0.59547825,
+          "gross_roi_ex4plus": 0.16550425000000002
+        },
+        "note": "重播研究，非前瞻"
+      },
+      "pipeline": {
+        "last_run": "2026-10-03T23:05:17.729757+08:00",
+        "stage": "postdraw",
+        "status": "ok"
+      }
+    },
+    {
+      "game_id": "powerlotto",
+      "game_name": "威力彩",
+      "currency": "TWD",
+      "draw_days": [
+        "週一",
+        "週四"
+      ],
+      "status": "not_connected",
+      "generated_at": "2026-10-04T16:45:11+08:00",
+      "data_cutoff": null,
+      "next_draw": null,
+      "latest_draw": null,
+      "recent": [],
+      "metrics": {
+        "cutoff": null,
+        "windows": {},
+        "random_baseline": {},
+        "note": "尚未接入"
+      },
+      "pipeline": {
+        "last_run": null,
+        "stage": null,
+        "status": "not_connected"
+      }
+    },
+    {
+      "game_id": "lotto649",
+      "game_name": "大樂透",
+      "currency": "TWD",
+      "draw_days": [
+        "週二",
+        "週五"
+      ],
+      "status": "not_connected",
+      "generated_at": "2026-10-04T16:45:11+08:00",
+      "data_cutoff": null,
+      "next_draw": null,
+      "latest_draw": null,
+      "recent": [],
+      "metrics": {
+        "cutoff": null,
+        "windows": {},
+        "random_baseline": {},
+        "note": "尚未接入"
+      },
+      "pipeline": {
+        "last_run": null,
+        "stage": null,
+        "status": "not_connected"
+      }
+    },
+    {
+      "game_id": "lotto6_49",
+      "game_name": "六合彩",
+      "currency": "TWD",
+      "draw_days": [],
+      "status": "not_connected",
+      "generated_at": "2026-10-04T16:45:11+08:00",
+      "data_cutoff": null,
+      "next_draw": null,
+      "latest_draw": null,
+      "recent": [],
+      "metrics": {
+        "cutoff": null,
+        "windows": {},
+        "random_baseline": {},
+        "note": "尚未接入"
+      },
+      "pipeline": {
+        "last_run": null,
+        "stage": null,
+        "status": "not_connected"
+      }
+    }
+  ]
+}
