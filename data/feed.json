@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T00:30:01+08:00",
+  "generated_at": "2026-10-05T02:49:04+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,7 +14,7 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-10-05T00:30:01+08:00",
+      "generated_at": "2026-10-05T02:49:04+08:00",
       "data_cutoff": "20261003",
       "next_draw": {
         "date": "20261005",
@@ -62,8 +62,49 @@
               ]
             ],
             "cost": 100
+          },
+          {
+            "name": "樂合二合",
+            "role": "lehe_2he",
+            "tickets": [
+              [
+                7,
+                12
+              ],
+              [
+                26,
+                31
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                13,
+                35
+              ],
+              [
+                9,
+                24
+              ],
+              [
+                22,
+                25
+              ],
+              [
+                27,
+                30
+              ],
+              [
+                15,
+                20
+              ]
+            ],
+            "cost": 200,
+            "bet_type": "2he"
           }
         ],
+        "total_cost": 300,
         "state": "ready",
         "expected_at": null
       },
@@ -453,7 +494,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-10-05T00:30:01+08:00",
+      "generated_at": "2026-10-05T02:49:04+08:00",
       "data_cutoff": "20261001",
       "next_draw": {
         "date": "20261005",
@@ -688,7 +729,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-05T00:30:01+08:00",
+      "generated_at": "2026-10-05T02:49:04+08:00",
       "data_cutoff": "20261002",
       "next_draw": {
         "date": "20261006",
@@ -873,7 +914,7 @@
       "draw_days": [],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-05T00:30:01+08:00",
+      "generated_at": "2026-10-05T02:49:04+08:00",
       "data_cutoff": "20261003",
       "next_draw": {
         "date": "20261006",
