@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-04T19:00:00+08:00",
+  "generated_at": "2026-10-04T19:17:33+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,11 +14,12 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-10-04T19:00:00+08:00",
+      "generated_at": "2026-10-04T19:17:33+08:00",
       "data_cutoff": "20261003",
       "next_draw": null,
       "latest_draw": {
         "date": "20261003",
+        "period": null,
         "numbers": [
           5,
           28,
@@ -59,6 +60,7 @@
       "recent": [
         {
           "date": "20261003",
+          "period": null,
           "numbers": [
             5,
             28,
@@ -98,6 +100,7 @@
         },
         {
           "date": "20261002",
+          "period": null,
           "numbers": [
             13,
             24,
@@ -126,6 +129,7 @@
         },
         {
           "date": "20261001",
+          "period": null,
           "numbers": [
             1,
             3,
@@ -151,6 +155,7 @@
         },
         {
           "date": "20260930",
+          "period": null,
           "numbers": [
             2,
             7,
@@ -176,6 +181,7 @@
         },
         {
           "date": "20260929",
+          "period": null,
           "numbers": [
             6,
             13,
@@ -187,6 +193,7 @@
         },
         {
           "date": "20260928",
+          "period": null,
           "numbers": [
             13,
             19,
@@ -212,6 +219,7 @@
         },
         {
           "date": "20260926",
+          "period": null,
           "numbers": [
             17,
             18,
@@ -237,6 +245,7 @@
         },
         {
           "date": "20260925",
+          "period": null,
           "numbers": [
             6,
             15,
@@ -263,6 +272,7 @@
         },
         {
           "date": "20260924",
+          "period": null,
           "numbers": [
             5,
             8,
@@ -288,6 +298,7 @@
         },
         {
           "date": "20260923",
+          "period": null,
           "numbers": [
             8,
             10,
@@ -390,22 +401,229 @@
         "週一",
         "週四"
       ],
-      "status": "not_connected",
-      "generated_at": "2026-10-04T19:00:00+08:00",
-      "data_cutoff": null,
-      "next_draw": null,
-      "latest_draw": null,
-      "recent": [],
+      "special_label": "第二區",
+      "status": "ok",
+      "generated_at": "2026-10-04T19:17:33+08:00",
+      "data_cutoff": "20261001",
+      "next_draw": {
+        "date": "20261005",
+        "period": "115000080",
+        "sealed": true,
+        "tracks": [
+          {
+            "name": "觀察，不建議投入",
+            "role": "observe",
+            "tickets": [
+              {
+                "main": [
+                  4,
+                  6,
+                  23,
+                  33,
+                  34,
+                  35
+                ],
+                "special": [
+                  2
+                ]
+              },
+              {
+                "main": [
+                  7,
+                  9,
+                  14,
+                  19,
+                  21,
+                  34
+                ],
+                "special": [
+                  3
+                ]
+              },
+              {
+                "main": [
+                  7,
+                  8,
+                  11,
+                  17,
+                  29,
+                  31
+                ],
+                "special": [
+                  5
+                ]
+              }
+            ],
+            "cost": 0
+          }
+        ]
+      },
+      "latest_draw": {
+        "date": "20261001",
+        "period": "115000079",
+        "numbers": [
+          2,
+          4,
+          18,
+          26,
+          33,
+          37
+        ],
+        "special": 3,
+        "settlements": []
+      },
+      "recent": [
+        {
+          "date": "20261001",
+          "period": "115000079",
+          "numbers": [
+            2,
+            4,
+            18,
+            26,
+            33,
+            37
+          ],
+          "special": 3,
+          "settlements": []
+        },
+        {
+          "date": "20260928",
+          "period": "115000078",
+          "numbers": [
+            1,
+            2,
+            4,
+            17,
+            29,
+            34
+          ],
+          "special": 1,
+          "settlements": []
+        },
+        {
+          "date": "20260924",
+          "period": "115000077",
+          "numbers": [
+            3,
+            8,
+            25,
+            27,
+            30,
+            31
+          ],
+          "special": 1,
+          "settlements": []
+        },
+        {
+          "date": "20260921",
+          "period": "115000076",
+          "numbers": [
+            3,
+            8,
+            17,
+            24,
+            25,
+            37
+          ],
+          "special": 6,
+          "settlements": []
+        },
+        {
+          "date": "20260917",
+          "period": "115000075",
+          "numbers": [
+            23,
+            26,
+            27,
+            28,
+            31,
+            37
+          ],
+          "special": 7,
+          "settlements": []
+        },
+        {
+          "date": "20260914",
+          "period": "115000074",
+          "numbers": [
+            10,
+            12,
+            14,
+            16,
+            29,
+            36
+          ],
+          "special": 8,
+          "settlements": []
+        },
+        {
+          "date": "20260910",
+          "period": "115000073",
+          "numbers": [
+            8,
+            17,
+            18,
+            29,
+            33,
+            38
+          ],
+          "special": 2,
+          "settlements": []
+        },
+        {
+          "date": "20260907",
+          "period": "115000072",
+          "numbers": [
+            7,
+            14,
+            17,
+            22,
+            29,
+            35
+          ],
+          "special": 2,
+          "settlements": []
+        },
+        {
+          "date": "20260903",
+          "period": "115000071",
+          "numbers": [
+            1,
+            6,
+            7,
+            19,
+            30,
+            33
+          ],
+          "special": 8,
+          "settlements": []
+        },
+        {
+          "date": "20260831",
+          "period": "115000070",
+          "numbers": [
+            4,
+            8,
+            12,
+            19,
+            32,
+            37
+          ],
+          "special": 2,
+          "settlements": []
+        }
+      ],
       "metrics": {
         "cutoff": null,
         "windows": {},
         "random_baseline": {},
-        "note": "尚未接入"
+        "note": "無可安全公開且附截止日的指標"
       },
       "pipeline": {
         "last_run": null,
-        "stage": null,
-        "status": "not_connected"
+        "stage": "已完成的研究排程",
+        "status": "ok"
       }
     },
     {
@@ -417,7 +635,7 @@
         "週五"
       ],
       "status": "not_connected",
-      "generated_at": "2026-10-04T19:00:00+08:00",
+      "generated_at": "2026-10-04T19:17:33+08:00",
       "data_cutoff": null,
       "next_draw": null,
       "latest_draw": null,
@@ -440,7 +658,7 @@
       "currency": "TWD",
       "draw_days": [],
       "status": "not_connected",
-      "generated_at": "2026-10-04T19:00:00+08:00",
+      "generated_at": "2026-10-04T19:17:33+08:00",
       "data_cutoff": null,
       "next_draw": null,
       "latest_draw": null,
