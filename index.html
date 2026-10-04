@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
@@ -17,7 +17,8 @@ function renderGame(g){const card=el('article','card');card.append(el('h2','',g.
 const next=el('section','section');next.append(el('strong','','下一期 '+(g.next_draw?.date||'尚無推薦')));if(g.next_draw){next.append(el('p','muted',g.next_draw.sealed?'已封存':'未封存；購買狀態未確認'));g.next_draw.tracks.forEach(t=>{next.append(el('div','track',t.name+'（'+t.role+'）'));t.tickets.forEach(ticket=>ticketBalls(next,ticket,g.special_label));})}else next.append(el('p','muted','目前沒有晚於資料截止期的推薦。'));card.append(next);
 if(g.latest_draw){const s=el('section','section');s.append(el('strong','','最新開獎 '+g.latest_draw.date));balls(s,g.latest_draw.numbers);if(g.latest_draw.special!=null){s.append(el('small','muted',g.special_label||'\u7279\u5225\u865f'));const sr=el('div','balls');sr.append(el('span','ball special',String(g.latest_draw.special).padStart(2,'0')));s.append(sr);}g.latest_draw.settlements.forEach(x=>s.append(el('p','',x.track+'命中 '+x.hits.join('+')+' 個，回收 '+x.payout+' 元')));if(!g.latest_draw.settlements.length)s.append(el('p','muted','未核對'));card.append(s)}
 const r=el('section','section');r.append(el('strong','','近 10 期回收'));const list=el('div','recent');g.recent.forEach(d=>{const row=el('div','recent-row');row.append(el('span','',d.date));const value=el('span','recent-value',d.settlements.length?d.settlements.map(x=>(x.role==='formal'?'正式':'觀察')+' '+(x.hits.length?x.hits.join('+'):'未核對')+' '+x.payout+'元').join('｜'):'未核對');row.append(value);list.append(row)});r.append(list);card.append(r);
-const m=el('section','section');m.append(el('strong','','指標與隨機基準'));m.append(el('p','muted',g.metrics.note+'；隨機基準：兩組互斥票。'));m.append(metricTable(g.metrics));card.append(m);card.append(el('p','muted','資料截止：'+g.data_cutoff+'｜管線：'+(g.pipeline.stage||'未知')+' / '+g.pipeline.status));return card}
+const m=el('section','section');m.append(el('strong','','指標與隨機基準'));m.append(el('p','muted',g.metrics.note+'；隨機基準：兩組互斥票。'));m.append(metricTable(g.metrics));card.append(m);card.append(el('p','muted','研究用途，不保證中獎；購買狀態未確認。資料截止：'+g.data_cutoff+'｜管線：'+(g.pipeline.stage||'未知')+' / '+g.pipeline.status));return card}
 async function start(){try{const res=await fetch('data/feed.json');if(!res.ok)throw new Error('資料載入失敗');const feed=await res.json();document.getElementById('built').textContent='最後建置：'+feed.generated_at;const root=document.getElementById('games');feed.games.forEach(g=>root.append(renderGame(g)))}catch(e){document.getElementById('built').textContent='資料尚未載入，請確認 feed.json 已建置。'}}
 document.getElementById('theme').addEventListener('click',()=>{const dark=document.body.dataset.theme!=='dark';document.body.dataset.theme=dark?'dark':'light'});start();
 </script></body></html>
+

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-04T19:17:33+08:00",
+  "generated_at": "2026-10-04T19:33:09+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,7 +14,7 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-10-04T19:17:33+08:00",
+      "generated_at": "2026-10-04T19:33:09+08:00",
       "data_cutoff": "20261003",
       "next_draw": null,
       "latest_draw": {
@@ -403,7 +403,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-10-04T19:17:33+08:00",
+      "generated_at": "2026-10-04T19:33:09+08:00",
       "data_cutoff": "20261001",
       "next_draw": {
         "date": "20261005",
@@ -634,22 +634,177 @@
         "週二",
         "週五"
       ],
-      "status": "not_connected",
-      "generated_at": "2026-10-04T19:17:33+08:00",
-      "data_cutoff": null,
+      "special_label": "特別號",
+      "status": "ok",
+      "generated_at": "2026-10-04T19:33:09+08:00",
+      "data_cutoff": "20261002",
       "next_draw": null,
-      "latest_draw": null,
-      "recent": [],
+      "latest_draw": {
+        "date": "20261002",
+        "period": "20261002",
+        "numbers": [
+          4,
+          14,
+          20,
+          26,
+          40,
+          47
+        ],
+        "special": 42,
+        "settlements": []
+      },
+      "recent": [
+        {
+          "date": "20261002",
+          "period": "20261002",
+          "numbers": [
+            4,
+            14,
+            20,
+            26,
+            40,
+            47
+          ],
+          "special": 42,
+          "settlements": []
+        },
+        {
+          "date": "20260929",
+          "period": "20260929",
+          "numbers": [
+            1,
+            2,
+            4,
+            13,
+            30,
+            38
+          ],
+          "special": 27,
+          "settlements": []
+        },
+        {
+          "date": "20260925",
+          "period": "20260925",
+          "numbers": [
+            5,
+            13,
+            24,
+            25,
+            28,
+            33
+          ],
+          "special": 40,
+          "settlements": []
+        },
+        {
+          "date": "20260922",
+          "period": "20260922",
+          "numbers": [
+            14,
+            15,
+            18,
+            30,
+            35,
+            45
+          ],
+          "special": 10,
+          "settlements": []
+        },
+        {
+          "date": "20260918",
+          "period": "20260918",
+          "numbers": [
+            1,
+            6,
+            14,
+            21,
+            31,
+            35
+          ],
+          "special": 16,
+          "settlements": []
+        },
+        {
+          "date": "20260915",
+          "period": "20260915",
+          "numbers": [
+            2,
+            3,
+            18,
+            21,
+            22,
+            39
+          ],
+          "special": 7,
+          "settlements": []
+        },
+        {
+          "date": "20260911",
+          "period": "20260911",
+          "numbers": [
+            12,
+            15,
+            19,
+            27,
+            43,
+            48
+          ],
+          "special": 25,
+          "settlements": []
+        },
+        {
+          "date": "20260908",
+          "period": "20260908",
+          "numbers": [
+            3,
+            15,
+            28,
+            35,
+            47,
+            49
+          ],
+          "special": 27,
+          "settlements": []
+        },
+        {
+          "date": "20260904",
+          "period": "20260904",
+          "numbers": [
+            3,
+            13,
+            17,
+            18,
+            27,
+            37
+          ],
+          "special": 19,
+          "settlements": []
+        },
+        {
+          "date": "20260901",
+          "period": "20260901",
+          "numbers": [
+            10,
+            16,
+            19,
+            26,
+            29,
+            48
+          ],
+          "special": 30,
+          "settlements": []
+        }
+      ],
       "metrics": {
         "cutoff": null,
         "windows": {},
         "random_baseline": {},
-        "note": "尚未接入"
+        "note": "無可安全公開且附截止日的正式指標"
       },
       "pipeline": {
         "last_run": null,
         "stage": null,
-        "status": "not_connected"
+        "status": "error"
       }
     },
     {
@@ -658,7 +813,7 @@
       "currency": "TWD",
       "draw_days": [],
       "status": "not_connected",
-      "generated_at": "2026-10-04T19:17:33+08:00",
+      "generated_at": "2026-10-04T19:33:09+08:00",
       "data_cutoff": null,
       "next_draw": null,
       "latest_draw": null,
