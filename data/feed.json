@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T02:49:04+08:00",
+  "generated_at": "2026-10-05T08:49:32+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,7 +14,7 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-10-05T02:49:04+08:00",
+      "generated_at": "2026-10-05T08:49:32+08:00",
       "data_cutoff": "20261003",
       "next_draw": {
         "date": "20261005",
@@ -494,7 +494,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-10-05T02:49:04+08:00",
+      "generated_at": "2026-10-05T08:49:32+08:00",
       "data_cutoff": "20261001",
       "next_draw": {
         "date": "20261005",
@@ -729,15 +729,80 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-05T02:49:04+08:00",
+      "generated_at": "2026-10-05T08:49:32+08:00",
       "data_cutoff": "20261002",
       "next_draw": {
         "date": "20261006",
         "period": null,
-        "sealed": false,
-        "tracks": [],
-        "state": "overdue",
-        "expected_at": "20261002 21:40"
+        "sealed": true,
+        "total_cost": 300,
+        "tracks": [
+          {
+            "name": "Top12 正票（使用者指定，未通過統計 gate）",
+            "role": "formal",
+            "tickets": [
+              [
+                13,
+                14,
+                15,
+                18,
+                25,
+                35
+              ],
+              [
+                4,
+                12,
+                26,
+                29,
+                47,
+                48
+              ]
+            ],
+            "cost": 100
+          },
+          {
+            "name": "49樂合二合",
+            "role": "lehe_2he",
+            "bet_type": "2he",
+            "tickets": [
+              [
+                14,
+                35
+              ],
+              [
+                15,
+                35
+              ],
+              [
+                29,
+                48
+              ],
+              [
+                12,
+                48
+              ],
+              [
+                26,
+                47
+              ],
+              [
+                13,
+                25
+              ],
+              [
+                14,
+                26
+              ],
+              [
+                4,
+                47
+              ]
+            ],
+            "cost": 200
+          }
+        ],
+        "state": "ready",
+        "expected_at": null
       },
       "latest_draw": {
         "date": "20261002",
@@ -902,9 +967,9 @@
         "note": "無可安全公開且附截止日的正式指標"
       },
       "pipeline": {
-        "last_run": null,
-        "stage": null,
-        "status": "error"
+        "last_run": "2026/10/04 21:12:02",
+        "stage": "大樂透 Hermes 排程",
+        "status": "ok"
       }
     },
     {
@@ -914,7 +979,7 @@
       "draw_days": [],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-05T02:49:04+08:00",
+      "generated_at": "2026-10-05T08:49:32+08:00",
       "data_cutoff": "20261003",
       "next_draw": {
         "date": "20261006",
