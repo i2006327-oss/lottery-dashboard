@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T23:00:01+08:00",
+  "generated_at": "2026-10-06T00:11:58+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,16 +14,38 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-10-05T23:00:01+08:00",
+      "generated_at": "2026-10-06T00:11:58+08:00",
       "data_cutoff": "20261005",
       "next_draw": {
         "date": "20261006",
         "period": null,
         "sealed": false,
-        "tracks": [],
-        "state": "scheduled",
-        "expected_at": "20261006 00:10",
-        "total_cost": 0
+        "tracks": [
+          {
+            "name": "高ANY觀察",
+            "role": "observe",
+            "tickets": [
+              [
+                5,
+                8,
+                28,
+                33,
+                38
+              ],
+              [
+                6,
+                13,
+                17,
+                19,
+                30
+              ]
+            ],
+            "cost": 100
+          }
+        ],
+        "total_cost": 0,
+        "state": "ready",
+        "expected_at": null
       },
       "latest_draw": {
         "date": "20261005",
@@ -448,15 +470,62 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-10-05T23:00:01+08:00",
+      "generated_at": "2026-10-06T00:11:58+08:00",
       "data_cutoff": "20261005",
       "next_draw": {
         "date": "20261008",
-        "period": null,
-        "sealed": false,
-        "tracks": [],
-        "state": "overdue",
-        "expected_at": "20261005 22:10"
+        "period": "115000081",
+        "sealed": true,
+        "tracks": [
+          {
+            "name": "觀察，不建議投入",
+            "role": "observe",
+            "tickets": [
+              {
+                "main": [
+                  8,
+                  14,
+                  17,
+                  19,
+                  20,
+                  25
+                ],
+                "special": [
+                  7
+                ]
+              },
+              {
+                "main": [
+                  6,
+                  7,
+                  16,
+                  23,
+                  29,
+                  31
+                ],
+                "special": [
+                  2
+                ]
+              },
+              {
+                "main": [
+                  1,
+                  8,
+                  13,
+                  24,
+                  29,
+                  35
+                ],
+                "special": [
+                  6
+                ]
+              }
+            ],
+            "cost": 0
+          }
+        ],
+        "state": "ready",
+        "expected_at": null
       },
       "latest_draw": {
         "date": "20261005",
@@ -636,7 +705,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-05T23:00:01+08:00",
+      "generated_at": "2026-10-06T00:11:58+08:00",
       "data_cutoff": "20261002",
       "next_draw": {
         "date": "20261006",
@@ -886,7 +955,7 @@
       "draw_days": [],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-05T23:00:01+08:00",
+      "generated_at": "2026-10-06T00:11:58+08:00",
       "data_cutoff": "20261003",
       "next_draw": {
         "date": "20261006",
