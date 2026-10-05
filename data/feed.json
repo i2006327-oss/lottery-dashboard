@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T00:30:01+08:00",
+  "generated_at": "2026-10-06T02:01:43+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,7 +14,7 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-10-06T00:30:01+08:00",
+      "generated_at": "2026-10-06T02:01:43+08:00",
       "data_cutoff": "20261005",
       "next_draw": {
         "date": "20261006",
@@ -531,7 +531,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-10-06T00:30:01+08:00",
+      "generated_at": "2026-10-06T02:01:43+08:00",
       "data_cutoff": "20261005",
       "next_draw": {
         "date": "20261008",
@@ -852,7 +852,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-06T00:30:01+08:00",
+      "generated_at": "2026-10-06T02:01:43+08:00",
       "data_cutoff": "20261002",
       "next_draw": {
         "date": "20261006",
@@ -939,7 +939,34 @@
           47
         ],
         "special": 42,
-        "settlements": []
+        "settlements": [
+          {
+            "track": "Top12 正票",
+            "role": "formal",
+            "hits": [
+              2,
+              0
+            ],
+            "hit_numbers": [
+              14,
+              26
+            ],
+            "payout": 0,
+            "cost": 100
+          },
+          {
+            "track": "49樂合二合",
+            "role": "lehe_2he",
+            "hits": [
+              0
+            ],
+            "hit_numbers": [],
+            "winning_pairs": [],
+            "payout": 0,
+            "cost": 200
+          }
+        ],
+        "settlement_status": "settled"
       },
       "recent": [
         {
@@ -954,7 +981,34 @@
             47
           ],
           "special": 42,
-          "settlements": []
+          "settlements": [
+            {
+              "track": "Top12 正票",
+              "role": "formal",
+              "hits": [
+                2,
+                0
+              ],
+              "hit_numbers": [
+                14,
+                26
+              ],
+              "payout": 0,
+              "cost": 100
+            },
+            {
+              "track": "49樂合二合",
+              "role": "lehe_2he",
+              "hits": [
+                0
+              ],
+              "hit_numbers": [],
+              "winning_pairs": [],
+              "payout": 0,
+              "cost": 200
+            }
+          ],
+          "settlement_status": "settled"
         },
         {
           "date": "20260929",
@@ -968,7 +1022,8 @@
             38
           ],
           "special": 27,
-          "settlements": []
+          "settlements": [],
+          "settlement_status": "no_record"
         },
         {
           "date": "20260925",
@@ -982,7 +1037,8 @@
             33
           ],
           "special": 40,
-          "settlements": []
+          "settlements": [],
+          "settlement_status": "no_record"
         },
         {
           "date": "20260922",
@@ -996,7 +1052,8 @@
             45
           ],
           "special": 10,
-          "settlements": []
+          "settlements": [],
+          "settlement_status": "no_record"
         },
         {
           "date": "20260918",
@@ -1010,7 +1067,8 @@
             35
           ],
           "special": 16,
-          "settlements": []
+          "settlements": [],
+          "settlement_status": "no_record"
         },
         {
           "date": "20260915",
@@ -1024,7 +1082,8 @@
             39
           ],
           "special": 7,
-          "settlements": []
+          "settlements": [],
+          "settlement_status": "no_record"
         },
         {
           "date": "20260911",
@@ -1038,7 +1097,8 @@
             48
           ],
           "special": 25,
-          "settlements": []
+          "settlements": [],
+          "settlement_status": "no_record"
         },
         {
           "date": "20260908",
@@ -1052,7 +1112,8 @@
             49
           ],
           "special": 27,
-          "settlements": []
+          "settlements": [],
+          "settlement_status": "no_record"
         },
         {
           "date": "20260904",
@@ -1066,7 +1127,8 @@
             37
           ],
           "special": 19,
-          "settlements": []
+          "settlements": [],
+          "settlement_status": "no_record"
         },
         {
           "date": "20260901",
@@ -1080,7 +1142,8 @@
             48
           ],
           "special": 30,
-          "settlements": []
+          "settlements": [],
+          "settlement_status": "no_record"
         }
       ],
       "metrics": {
@@ -1102,7 +1165,7 @@
       "draw_days": [],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-06T00:30:01+08:00",
+      "generated_at": "2026-10-06T02:01:43+08:00",
       "data_cutoff": "20261003",
       "next_draw": {
         "date": "20261006",
