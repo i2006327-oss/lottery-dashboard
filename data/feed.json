@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T00:30:01+08:00",
+  "generated_at": "2026-10-09T18:17:35+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,10 +14,10 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-10-07T00:30:01+08:00",
-      "data_cutoff": "20261006",
+      "generated_at": "2026-10-09T18:17:35+08:00",
+      "data_cutoff": "20261008",
       "next_draw": {
-        "date": "20261007",
+        "date": "20261009",
         "period": null,
         "sealed": true,
         "tracks": [
@@ -26,18 +26,18 @@
             "role": "formal",
             "tickets": [
               [
-                6,
-                13,
+                2,
+                7,
                 17,
                 30,
-                34
+                31
               ],
               [
-                14,
-                25,
-                26,
-                29,
-                33
+                3,
+                8,
+                16,
+                28,
+                38
               ]
             ],
             "cost": 100
@@ -48,17 +48,17 @@
             "tickets": [
               [
                 2,
-                8,
-                28,
-                33,
-                38
+                5,
+                14,
+                16,
+                33
               ],
               [
-                6,
                 13,
-                17,
+                26,
+                28,
                 30,
-                34
+                38
               ]
             ],
             "cost": 100
@@ -68,36 +68,36 @@
             "role": "lehe_2he",
             "tickets": [
               [
-                16,
+                5,
+                39
+              ],
+              [
+                14,
                 35
               ],
               [
-                36,
+                18,
                 37
               ],
               [
-                5,
-                38
-              ],
-              [
                 24,
-                31
-              ],
-              [
-                12,
-                19
-              ],
-              [
-                2,
-                20
-              ],
-              [
-                1,
-                7
+                36
               ],
               [
                 11,
-                23
+                19
+              ],
+              [
+                27,
+                34
+              ],
+              [
+                13,
+                20
+              ],
+              [
+                10,
+                33
               ]
             ],
             "cost": 200,
@@ -109,53 +109,77 @@
         "expected_at": null
       },
       "latest_draw": {
-        "date": "20261006",
+        "date": "20261008",
         "period": null,
         "numbers": [
-          14,
-          25,
-          26,
-          29,
-          33
+          3,
+          7,
+          15,
+          17,
+          30
         ],
-        "settlements": [
-          {
-            "track": "正式 C2J2",
-            "role": "formal",
-            "hits": [
-              0,
-              0
-            ],
-            "hit_numbers": [],
-            "payout": 0,
-            "cost": 100
-          },
-          {
-            "track": "高ANY觀察",
-            "role": "observe",
-            "hits": [
-              1,
-              0
-            ],
-            "hit_numbers": [
-              33
-            ],
-            "payout": 0,
-            "cost": 100
-          },
-          {
-            "track": "樂合二合",
-            "role": "lehe_2he",
-            "hits": [
-              1
-            ],
-            "hit_numbers": [],
-            "payout": 1125,
-            "cost": 200
-          }
-        ]
+        "settlements": []
       },
       "recent": [
+        {
+          "date": "20261008",
+          "period": null,
+          "numbers": [
+            3,
+            7,
+            15,
+            17,
+            30
+          ],
+          "settlements": []
+        },
+        {
+          "date": "20261007",
+          "period": null,
+          "numbers": [
+            5,
+            11,
+            14,
+            18,
+            19
+          ],
+          "settlements": [
+            {
+              "track": "正式 C2J2",
+              "role": "formal",
+              "hits": [
+                0,
+                1
+              ],
+              "hit_numbers": [
+                14
+              ],
+              "payout": 0,
+              "cost": 100
+            },
+            {
+              "track": "高ANY觀察",
+              "role": "observe",
+              "hits": [
+                0,
+                0
+              ],
+              "hit_numbers": [],
+              "payout": 0,
+              "cost": 100
+            },
+            {
+              "track": "樂合二合",
+              "role": "lehe_2he",
+              "hits": [
+                0
+              ],
+              "hit_numbers": [],
+              "payout": 0,
+              "cost": 200
+            }
+          ]
+        },
         {
           "date": "20261006",
           "period": null,
@@ -411,59 +435,6 @@
               "cost": 100
             }
           ]
-        },
-        {
-          "date": "20260926",
-          "period": null,
-          "numbers": [
-            17,
-            18,
-            30,
-            34,
-            39
-          ],
-          "settlements": [
-            {
-              "track": "正式 C2J2",
-              "role": "formal",
-              "hits": [
-                0,
-                1
-              ],
-              "hit_numbers": [
-                30
-              ],
-              "payout": 0,
-              "cost": 100
-            }
-          ]
-        },
-        {
-          "date": "20260925",
-          "period": null,
-          "numbers": [
-            6,
-            15,
-            20,
-            30,
-            33
-          ],
-          "settlements": [
-            {
-              "track": "正式 C2J2",
-              "role": "formal",
-              "hits": [
-                0,
-                2
-              ],
-              "hit_numbers": [
-                20,
-                30
-              ],
-              "payout": 0,
-              "cost": 0
-            }
-          ]
         }
       ],
       "metrics": {
@@ -534,8 +505,8 @@
         "note": "重播研究，非前瞻"
       },
       "pipeline": {
-        "last_run": "2026-10-07T00:10:00.705784+08:00",
-        "stage": "predraw",
+        "last_run": "2026-10-09T18:17:27.166453+08:00",
+        "stage": "check",
         "status": "ok"
       }
     },
@@ -549,11 +520,11 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-10-07T00:30:01+08:00",
-      "data_cutoff": "20261005",
+      "generated_at": "2026-10-09T18:17:35+08:00",
+      "data_cutoff": "20261008",
       "next_draw": {
-        "date": "20261008",
-        "period": "115000081",
+        "date": "20261012",
+        "period": "115000082",
         "sealed": true,
         "tracks": [
           {
@@ -562,23 +533,23 @@
             "tickets": [
               {
                 "main": [
+                  6,
+                  7,
                   8,
+                  11,
                   14,
-                  17,
-                  19,
-                  20,
                   25
                 ],
                 "special": [
-                  7
+                  5
                 ]
               },
               {
                 "main": [
-                  6,
-                  7,
-                  16,
-                  23,
+                  1,
+                  8,
+                  9,
+                  22,
                   29,
                   31
                 ],
@@ -588,15 +559,15 @@
               },
               {
                 "main": [
-                  1,
-                  8,
-                  13,
-                  24,
-                  29,
-                  35
+                  6,
+                  17,
+                  19,
+                  20,
+                  34,
+                  38
                 ],
                 "special": [
-                  6
+                  8
                 ]
               }
             ],
@@ -607,34 +578,33 @@
         "expected_at": null
       },
       "latest_draw": {
-        "date": "20261005",
-        "period": "115000080",
+        "date": "20261008",
+        "period": "115000081",
         "numbers": [
-          2,
-          6,
-          17,
-          21,
-          26,
-          37
+          4,
+          23,
+          27,
+          28,
+          29,
+          38
         ],
-        "special": 6,
+        "special": 5,
         "settlements": [
           {
             "track": "V7 觀察",
             "role": "observe",
             "hits": [
-              1,
-              1,
+              0,
+              2,
               1
             ],
             "hit_numbers": [
-              6,
-              17,
-              21
+              23,
+              29
             ],
             "prizes": [
-              "1+0 未中獎",
-              "1+0 未中獎",
+              "0+0 未中獎",
+              "2+0 未中獎",
               "1+0 未中獎"
             ],
             "payout": 0,
@@ -643,6 +613,41 @@
         ]
       },
       "recent": [
+        {
+          "date": "20261008",
+          "period": "115000081",
+          "numbers": [
+            4,
+            23,
+            27,
+            28,
+            29,
+            38
+          ],
+          "special": 5,
+          "settlements": [
+            {
+              "track": "V7 觀察",
+              "role": "observe",
+              "hits": [
+                0,
+                2,
+                1
+              ],
+              "hit_numbers": [
+                23,
+                29
+              ],
+              "prizes": [
+                "0+0 未中獎",
+                "2+0 未中獎",
+                "1+0 未中獎"
+              ],
+              "payout": 0,
+              "cost": 0
+            }
+          ]
+        },
         {
           "date": "20261005",
           "period": "115000080",
@@ -832,20 +837,6 @@
           ],
           "special": 2,
           "settlements": []
-        },
-        {
-          "date": "20260903",
-          "period": "115000071",
-          "numbers": [
-            1,
-            6,
-            7,
-            19,
-            30,
-            33
-          ],
-          "special": 8,
-          "settlements": []
         }
       ],
       "metrics": {
@@ -855,7 +846,7 @@
         "note": "無可安全公開且附截止日的指標"
       },
       "pipeline": {
-        "last_run": "2026/10/06  0:09:03.88",
+        "last_run": "2026/10/09  6:32:26.43",
         "stage": "延遲重試",
         "status": "ok"
       }
@@ -870,7 +861,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-07T00:30:01+08:00",
+      "generated_at": "2026-10-09T18:17:35+08:00",
       "data_cutoff": "20261006",
       "next_draw": {
         "date": "20261009",
@@ -1207,10 +1198,10 @@
       "draw_days": [],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-07T00:30:01+08:00",
-      "data_cutoff": "20261006",
+      "generated_at": "2026-10-09T18:17:35+08:00",
+      "data_cutoff": "20261008",
       "next_draw": {
-        "date": "20261008",
+        "date": "20261010",
         "period": null,
         "sealed": true,
         "tracks": [
@@ -1222,12 +1213,12 @@
                 "main": [
                   7,
                   31,
-                  4,
                   9,
+                  4,
                   45,
                   28,
-                  32,
-                  34
+                  34,
+                  35
                 ],
                 "special": [
                   23,
@@ -1242,20 +1233,34 @@
         "expected_at": null
       },
       "latest_draw": {
-        "date": "20261006",
-        "period": "26/106",
+        "date": "20261008",
+        "period": "26/107",
         "numbers": [
-          9,
-          29,
+          18,
+          19,
+          24,
           31,
-          34,
-          36,
-          41
+          40,
+          44
         ],
-        "special": 28,
+        "special": 5,
         "settlements": []
       },
       "recent": [
+        {
+          "date": "20261008",
+          "period": "26/107",
+          "numbers": [
+            18,
+            19,
+            24,
+            31,
+            40,
+            44
+          ],
+          "special": 5,
+          "settlements": []
+        },
         {
           "date": "20261006",
           "period": "26/106",
@@ -1380,20 +1385,6 @@
             45
           ],
           "special": 34,
-          "settlements": []
-        },
-        {
-          "date": "20260908",
-          "period": "26/097",
-          "numbers": [
-            9,
-            23,
-            28,
-            29,
-            35,
-            41
-          ],
-          "special": 38,
           "settlements": []
         }
       ],
