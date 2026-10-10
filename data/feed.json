@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T00:30:01+08:00",
+  "generated_at": "2026-10-10T19:00:01+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,7 +14,7 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-10-10T00:30:01+08:00",
+      "generated_at": "2026-10-10T19:00:01+08:00",
       "data_cutoff": "20261009",
       "next_draw": {
         "date": "20261010",
@@ -575,7 +575,7 @@
         "note": "重播研究，非前瞻"
       },
       "pipeline": {
-        "last_run": "2026-10-10T00:23:49.227053+08:00",
+        "last_run": "2026-10-10T18:41:47.987144+08:00",
         "stage": "check",
         "status": "ok"
       }
@@ -590,7 +590,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-10-10T00:30:01+08:00",
+      "generated_at": "2026-10-10T19:00:01+08:00",
       "data_cutoff": "20261008",
       "next_draw": {
         "date": "20261012",
@@ -931,7 +931,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-10T00:30:01+08:00",
+      "generated_at": "2026-10-10T19:00:01+08:00",
       "data_cutoff": "20261009",
       "next_draw": {
         "date": "20261013",
@@ -1275,10 +1275,33 @@
         }
       ],
       "metrics": {
-        "cutoff": null,
-        "windows": {},
-        "random_baseline": {},
-        "note": "無可安全公開且附截止日的正式指標"
+        "cutoff": "20261002",
+        "windows": {
+          "W30": {
+            "n": 30,
+            "any": 16.67,
+            "gross_roi": 73.89,
+            "max0": 9,
+            "count3": 1,
+            "count4": 0,
+            "count5": 0
+          },
+          "W300": {
+            "n": 300,
+            "any": 13.33,
+            "gross_roi": 62.5,
+            "max0": 33,
+            "count3": 15,
+            "count4": 4,
+            "count5": 0
+          }
+        },
+        "random_baseline": {
+          "runs": 2000000,
+          "any": 12.55,
+          "gross_roi": 52.1
+        },
+        "note": "官方固定獎（不含浮動獎與加碼）；歷史重播非前瞻證據；前瞻帳本已結算 2 期（n<30 不足評估）；隨機基準為同結構隨機選號"
       },
       "pipeline": {
         "last_run": "2026/10/09 21:40:58",
@@ -1290,10 +1313,14 @@
       "game_id": "lotto6_49",
       "game_name": "六合彩",
       "currency": "HKD",
-      "draw_days": [],
+      "draw_days": [
+        "週二",
+        "週四",
+        "週六"
+      ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-10T00:30:01+08:00",
+      "generated_at": "2026-10-10T19:00:01+08:00",
       "data_cutoff": "20261008",
       "next_draw": {
         "date": "20261010",
@@ -1306,18 +1333,18 @@
             "tickets": [
               {
                 "main": [
-                  7,
-                  31,
-                  9,
                   4,
-                  45,
+                  7,
+                  9,
                   28,
+                  31,
                   34,
-                  35
+                  35,
+                  45
                 ],
                 "special": [
-                  23,
-                  6
+                  6,
+                  23
                 ]
               }
             ],
@@ -1339,7 +1366,23 @@
           44
         ],
         "special": 5,
-        "settlements": []
+        "settlements": [
+          {
+            "track": "正式 K8 路由（eligible；不代表統計優勢）",
+            "role": "formal",
+            "cost": 300,
+            "payout": 0,
+            "hits": [
+              1
+            ],
+            "hit_numbers": [
+              31
+            ],
+            "winning_pairs": [],
+            "prizes": []
+          }
+        ],
+        "settlement_status": "settled"
       },
       "recent": [
         {
@@ -1354,7 +1397,23 @@
             44
           ],
           "special": 5,
-          "settlements": []
+          "settlements": [
+            {
+              "track": "正式 K8 路由（eligible；不代表統計優勢）",
+              "role": "formal",
+              "cost": 300,
+              "payout": 0,
+              "hits": [
+                1
+              ],
+              "hit_numbers": [
+                31
+              ],
+              "winning_pairs": [],
+              "prizes": []
+            }
+          ],
+          "settlement_status": "settled"
         },
         {
           "date": "20261006",
@@ -1368,7 +1427,23 @@
             41
           ],
           "special": 28,
-          "settlements": []
+          "settlements": [
+            {
+              "track": "正式 K8 路由（eligible；不代表統計優勢）",
+              "role": "formal",
+              "cost": 300,
+              "payout": 0,
+              "hits": [
+                1
+              ],
+              "hit_numbers": [
+                31
+              ],
+              "winning_pairs": [],
+              "prizes": []
+            }
+          ],
+          "settlement_status": "settled"
         },
         {
           "date": "20261003",
@@ -1382,7 +1457,23 @@
             43
           ],
           "special": 48,
-          "settlements": []
+          "settlements": [
+            {
+              "track": "正式 K8 路由（eligible；不代表統計優勢）",
+              "role": "formal",
+              "cost": 300,
+              "payout": 0,
+              "hits": [
+                1
+              ],
+              "hit_numbers": [
+                31
+              ],
+              "winning_pairs": [],
+              "prizes": []
+            }
+          ],
+          "settlement_status": "settled"
         },
         {
           "date": "20260926",
@@ -1396,7 +1487,31 @@
             48
           ],
           "special": 19,
-          "settlements": []
+          "settlements": [
+            {
+              "track": "正式 K8 路由（eligible；不代表統計優勢）",
+              "role": "formal",
+              "cost": 300,
+              "payout": 720,
+              "hits": [
+                2
+              ],
+              "hit_numbers": [
+                4,
+                31
+              ],
+              "winning_pairs": [
+                [
+                  4,
+                  31
+                ]
+              ],
+              "prizes": [
+                "二星 ×1"
+              ]
+            }
+          ],
+          "settlement_status": "settled"
         },
         {
           "date": "20260922",
@@ -1410,7 +1525,23 @@
             46
           ],
           "special": 41,
-          "settlements": []
+          "settlements": [
+            {
+              "track": "正式 K8 路由（eligible；不代表統計優勢）",
+              "role": "formal",
+              "cost": 300,
+              "payout": 480,
+              "hits": [
+                0
+              ],
+              "hit_numbers": [],
+              "winning_pairs": [],
+              "prizes": [
+                "特別號命中"
+              ]
+            }
+          ],
+          "settlement_status": "settled"
         },
         {
           "date": "20260919",
@@ -1424,7 +1555,23 @@
             31
           ],
           "special": 21,
-          "settlements": []
+          "settlements": [
+            {
+              "track": "正式 K8 路由（eligible；不代表統計優勢）",
+              "role": "formal",
+              "cost": 300,
+              "payout": 0,
+              "hits": [
+                1
+              ],
+              "hit_numbers": [
+                31
+              ],
+              "winning_pairs": [],
+              "prizes": []
+            }
+          ],
+          "settlement_status": "settled"
         },
         {
           "date": "20260917",
@@ -1438,7 +1585,31 @@
             48
           ],
           "special": 8,
-          "settlements": []
+          "settlements": [
+            {
+              "track": "正式 K8 路由（eligible；不代表統計優勢）",
+              "role": "formal",
+              "cost": 300,
+              "payout": 720,
+              "hits": [
+                2
+              ],
+              "hit_numbers": [
+                4,
+                31
+              ],
+              "winning_pairs": [
+                [
+                  4,
+                  31
+                ]
+              ],
+              "prizes": [
+                "二星 ×1"
+              ]
+            }
+          ],
+          "settlement_status": "settled"
         },
         {
           "date": "20260915",
@@ -1452,7 +1623,21 @@
             30
           ],
           "special": 19,
-          "settlements": []
+          "settlements": [
+            {
+              "track": "正式 K8 路由（eligible；不代表統計優勢）",
+              "role": "formal",
+              "cost": 300,
+              "payout": 0,
+              "hits": [
+                0
+              ],
+              "hit_numbers": [],
+              "winning_pairs": [],
+              "prizes": []
+            }
+          ],
+          "settlement_status": "settled"
         },
         {
           "date": "20260912",
@@ -1466,7 +1651,23 @@
             47
           ],
           "special": 11,
-          "settlements": []
+          "settlements": [
+            {
+              "track": "正式 K8 路由（eligible；不代表統計優勢）",
+              "role": "formal",
+              "cost": 300,
+              "payout": 0,
+              "hits": [
+                1
+              ],
+              "hit_numbers": [
+                18
+              ],
+              "winning_pairs": [],
+              "prizes": []
+            }
+          ],
+          "settlement_status": "settled"
         },
         {
           "date": "20260910",
@@ -1480,19 +1681,35 @@
             45
           ],
           "special": 34,
-          "settlements": []
+          "settlements": [
+            {
+              "track": "正式 K8 路由（eligible；不代表統計優勢）",
+              "role": "formal",
+              "cost": 300,
+              "payout": 0,
+              "hits": [
+                1
+              ],
+              "hit_numbers": [
+                32
+              ],
+              "winning_pairs": [],
+              "prizes": []
+            }
+          ],
+          "settlement_status": "settled"
         }
       ],
       "metrics": {
-        "cutoff": null,
+        "cutoff": "20261008",
         "windows": {},
         "random_baseline": {},
-        "note": "無可信公開指標來源，指標缺檔待確認"
+        "note": "前瞻正式帳本 14 張（截止 20261008）：成本 4200、回收 3360、淨 ROI -20.0%；無重播研究指標。"
       },
       "pipeline": {
-        "last_run": null,
-        "stage": null,
-        "status": "missing"
+        "last_run": "2026-10-09T02:57:17.096499+08:00",
+        "stage": "production",
+        "status": "ok"
       }
     }
   ]
