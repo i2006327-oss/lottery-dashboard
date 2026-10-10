@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T19:00:01+08:00",
+  "generated_at": "2026-10-10T19:58:37+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,7 +14,7 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-10-10T19:00:01+08:00",
+      "generated_at": "2026-10-10T19:58:37+08:00",
       "data_cutoff": "20261009",
       "next_draw": {
         "date": "20261010",
@@ -130,7 +130,8 @@
               31
             ],
             "payout": 0,
-            "cost": 100
+            "cost": 100,
+            "net_payout": 0.0
           },
           {
             "track": "高ANY觀察",
@@ -141,7 +142,8 @@
             ],
             "hit_numbers": [],
             "payout": 0,
-            "cost": 100
+            "cost": 100,
+            "net_payout": 0.0
           },
           {
             "track": "樂合二合",
@@ -151,7 +153,8 @@
             ],
             "hit_numbers": [],
             "payout": 0,
-            "cost": 200
+            "cost": 200,
+            "net_payout": 0.0
           }
         ]
       },
@@ -178,7 +181,8 @@
                 31
               ],
               "payout": 0,
-              "cost": 100
+              "cost": 100,
+              "net_payout": 0.0
             },
             {
               "track": "高ANY觀察",
@@ -189,7 +193,8 @@
               ],
               "hit_numbers": [],
               "payout": 0,
-              "cost": 100
+              "cost": 100,
+              "net_payout": 0.0
             },
             {
               "track": "樂合二合",
@@ -199,7 +204,8 @@
               ],
               "hit_numbers": [],
               "payout": 0,
-              "cost": 200
+              "cost": 200,
+              "net_payout": 0.0
             }
           ]
         },
@@ -237,7 +243,8 @@
                 14
               ],
               "payout": 0,
-              "cost": 100
+              "cost": 100,
+              "net_payout": 0.0
             },
             {
               "track": "高ANY觀察",
@@ -248,7 +255,8 @@
               ],
               "hit_numbers": [],
               "payout": 0,
-              "cost": 100
+              "cost": 100,
+              "net_payout": 0.0
             },
             {
               "track": "樂合二合",
@@ -258,7 +266,8 @@
               ],
               "hit_numbers": [],
               "payout": 0,
-              "cost": 200
+              "cost": 200,
+              "net_payout": 0.0
             }
           ]
         },
@@ -282,7 +291,8 @@
               ],
               "hit_numbers": [],
               "payout": 0,
-              "cost": 100
+              "cost": 100,
+              "net_payout": 0.0
             },
             {
               "track": "高ANY觀察",
@@ -295,7 +305,8 @@
                 33
               ],
               "payout": 0,
-              "cost": 100
+              "cost": 100,
+              "net_payout": 0.0
             },
             {
               "track": "樂合二合",
@@ -305,7 +316,8 @@
               ],
               "hit_numbers": [],
               "payout": 1125,
-              "cost": 200
+              "cost": 200,
+              "net_payout": 1125.0
             }
           ]
         },
@@ -332,7 +344,8 @@
                 8
               ],
               "payout": 0,
-              "cost": 100
+              "cost": 100,
+              "net_payout": 0.0
             },
             {
               "track": "高ANY觀察",
@@ -345,7 +358,8 @@
                 8
               ],
               "payout": 0,
-              "cost": 100
+              "cost": 100,
+              "net_payout": 0.0
             },
             {
               "track": "樂合二合",
@@ -355,7 +369,8 @@
               ],
               "hit_numbers": [],
               "payout": 0,
-              "cost": 200
+              "cost": 200,
+              "net_payout": 0.0
             }
           ]
         },
@@ -382,7 +397,8 @@
                 38
               ],
               "payout": 0,
-              "cost": 100
+              "cost": 100,
+              "net_payout": 0.0
             },
             {
               "track": "高ANY觀察",
@@ -395,7 +411,8 @@
                 38
               ],
               "payout": 0,
-              "cost": 100
+              "cost": 100,
+              "net_payout": 0.0
             }
           ]
         },
@@ -424,7 +441,8 @@
                 38
               ],
               "payout": 100,
-              "cost": 100
+              "cost": 100,
+              "net_payout": 100.0
             }
           ]
         },
@@ -450,7 +468,8 @@
                 38
               ],
               "payout": 0,
-              "cost": 100
+              "cost": 100,
+              "net_payout": 0.0
             }
           ]
         },
@@ -476,7 +495,8 @@
                 2
               ],
               "payout": 0,
-              "cost": 100
+              "cost": 100,
+              "net_payout": 0.0
             }
           ]
         },
@@ -502,7 +522,8 @@
                 13
               ],
               "payout": 0,
-              "cost": 100
+              "cost": 100,
+              "net_payout": 0.0
             }
           ]
         }
@@ -575,10 +596,62 @@
         "note": "重播研究，非前瞻"
       },
       "pipeline": {
-        "last_run": "2026-10-10T18:41:47.987144+08:00",
+        "last_run": "2026-10-10T19:03:38+08:00",
         "stage": "check",
         "status": "ok"
-      }
+      },
+      "purchase": {
+        "date": "20261010",
+        "status": "pending",
+        "tracks": [
+          {
+            "name": "正式組",
+            "track": "formal",
+            "count": 2,
+            "amount": 100.0
+          },
+          {
+            "name": "二合",
+            "track": "lehe_2he",
+            "count": 8,
+            "amount": 200.0
+          }
+        ],
+        "paper_only": [
+          "high_any"
+        ],
+        "total_amount": 300.0,
+        "monthly_profit": null,
+        "loss_limit": null
+      },
+      "actual_pnl": {
+        "status": "ok",
+        "month": "202610",
+        "monthly": {
+          "periods": 1,
+          "cost": 300.0,
+          "gross_return": 0.0,
+          "net_return": 0.0,
+          "profit": -300.0,
+          "pending_periods": 1,
+          "pending_cost": 300.0
+        },
+        "all_time": {
+          "periods": 22,
+          "cost": 3800.0,
+          "gross_return": 350.0,
+          "net_return": 350.0,
+          "profit": -3450.0,
+          "pending_periods": 1,
+          "pending_cost": 300.0
+        }
+      },
+      "promotions": {
+        "status": "unavailable",
+        "cutoff": "20261010",
+        "activities": []
+      },
+      "alerts": []
     },
     {
       "game_id": "powerlotto",
@@ -590,7 +663,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-10-10T19:00:01+08:00",
+      "generated_at": "2026-10-10T19:58:37+08:00",
       "data_cutoff": "20261008",
       "next_draw": {
         "date": "20261012",
@@ -931,7 +1004,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-10T19:00:01+08:00",
+      "generated_at": "2026-10-10T19:58:37+08:00",
       "data_cutoff": "20261009",
       "next_draw": {
         "date": "20261013",
@@ -1320,7 +1393,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-10T19:00:01+08:00",
+      "generated_at": "2026-10-10T19:58:37+08:00",
       "data_cutoff": "20261008",
       "next_draw": {
         "date": "20261010",
