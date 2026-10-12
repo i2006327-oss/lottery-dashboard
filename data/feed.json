@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T22:00:01+08:00",
+  "generated_at": "2026-10-12T22:30:36+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,137 +14,36 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-10-12T22:00:01+08:00",
-      "data_cutoff": "20261010",
+      "generated_at": "2026-10-12T22:30:36+08:00",
+      "data_cutoff": "20261012",
       "next_draw": {
-        "date": "20261012",
+        "date": "20261013",
         "period": null,
-        "sealed": true,
-        "tracks": [
-          {
-            "name": "正式 C2J2",
-            "role": "formal",
-            "tickets": [
-              [
-                2,
-                18,
-                23,
-                30,
-                32
-              ],
-              [
-                5,
-                28,
-                29,
-                33,
-                38
-              ]
-            ],
-            "cost": 100
-          },
-          {
-            "name": "高ANY觀察",
-            "role": "observe",
-            "tickets": [
-              [
-                2,
-                14,
-                16,
-                30,
-                34
-              ],
-              [
-                5,
-                28,
-                29,
-                33,
-                38
-              ]
-            ],
-            "cost": 100
-          },
-          {
-            "name": "樂合二合",
-            "role": "lehe_2he",
-            "tickets": [
-              [
-                13,
-                19
-              ],
-              [
-                5,
-                27
-              ],
-              [
-                11,
-                18
-              ],
-              [
-                20,
-                21
-              ],
-              [
-                24,
-                25
-              ],
-              [
-                30,
-                31
-              ],
-              [
-                32,
-                38
-              ],
-              [
-                22,
-                26
-              ],
-              [
-                6,
-                29
-              ],
-              [
-                4,
-                28
-              ],
-              [
-                8,
-                23
-              ],
-              [
-                15,
-                39
-              ]
-            ],
-            "cost": 300,
-            "bet_type": "2he"
-          }
-        ],
-        "total_cost": 400,
-        "state": "ready",
-        "expected_at": null
+        "sealed": false,
+        "tracks": [],
+        "state": "scheduled",
+        "expected_at": "20261013 00:10",
+        "total_cost": 0
       },
       "latest_draw": {
-        "date": "20261010",
+        "date": "20261012",
         "period": null,
         "numbers": [
-          14,
-          21,
-          23,
-          32,
-          34
+          6,
+          16,
+          24,
+          36,
+          39
         ],
         "settlements": [
           {
             "track": "正式 C2J2",
             "role": "formal",
             "hits": [
-              1,
+              0,
               0
             ],
-            "hit_numbers": [
-              23
-            ],
+            "hit_numbers": [],
             "payout": 0,
             "cost": 100,
             "net_payout": 0.0
@@ -157,7 +56,7 @@
               0
             ],
             "hit_numbers": [
-              14
+              16
             ],
             "payout": 0,
             "cost": 100,
@@ -171,12 +70,62 @@
             ],
             "hit_numbers": [],
             "payout": 0,
-            "cost": 200,
+            "cost": 300,
             "net_payout": 0.0
           }
         ]
       },
       "recent": [
+        {
+          "date": "20261012",
+          "period": null,
+          "numbers": [
+            6,
+            16,
+            24,
+            36,
+            39
+          ],
+          "settlements": [
+            {
+              "track": "正式 C2J2",
+              "role": "formal",
+              "hits": [
+                0,
+                0
+              ],
+              "hit_numbers": [],
+              "payout": 0,
+              "cost": 100,
+              "net_payout": 0.0
+            },
+            {
+              "track": "高ANY觀察",
+              "role": "observe",
+              "hits": [
+                1,
+                0
+              ],
+              "hit_numbers": [
+                16
+              ],
+              "payout": 0,
+              "cost": 100,
+              "net_payout": 0.0
+            },
+            {
+              "track": "樂合二合",
+              "role": "lehe_2he",
+              "hits": [
+                0
+              ],
+              "hit_numbers": [],
+              "payout": 0,
+              "cost": 300,
+              "net_payout": 0.0
+            }
+          ]
+        },
         {
           "date": "20261010",
           "period": null,
@@ -542,33 +491,6 @@
               "net_payout": 0.0
             }
           ]
-        },
-        {
-          "date": "20260930",
-          "period": null,
-          "numbers": [
-            2,
-            7,
-            9,
-            14,
-            33
-          ],
-          "settlements": [
-            {
-              "track": "正式 C2J2",
-              "role": "formal",
-              "hits": [
-                1,
-                0
-              ],
-              "hit_numbers": [
-                2
-              ],
-              "payout": 0,
-              "cost": 100,
-              "net_payout": 0.0
-            }
-          ]
         }
       ],
       "metrics": {
@@ -639,13 +561,13 @@
         "note": "重播研究，非前瞻"
       },
       "pipeline": {
-        "last_run": "2026-10-12T21:35:00+08:00",
+        "last_run": "2026-10-12T22:05:00+08:00",
         "stage": "postdraw",
-        "status": "failed"
+        "status": "ok"
       },
       "purchase": {
-        "date": "20261012",
-        "status": "buy",
+        "date": "20261013",
+        "status": "pending",
         "tracks": [
           {
             "name": "二合",
@@ -659,8 +581,8 @@
           "high_any"
         ],
         "total_amount": 300.0,
-        "monthly_profit": -300.0,
-        "loss_limit": 6000.0
+        "monthly_profit": null,
+        "loss_limit": null
       },
       "actual_pnl": {
         "status": "ok",
@@ -671,8 +593,8 @@
           "gross_return": 0.0,
           "net_return": 0.0,
           "profit": -600.0,
-          "pending_periods": 1,
-          "pending_cost": 300.0
+          "pending_periods": 0,
+          "pending_cost": 0.0
         },
         "all_time": {
           "periods": 23,
@@ -680,8 +602,8 @@
           "gross_return": 350.0,
           "net_return": 350.0,
           "profit": -3750.0,
-          "pending_periods": 1,
-          "pending_cost": 300.0
+          "pending_periods": 0,
+          "pending_cost": 0.0
         }
       },
       "promotions": {
@@ -689,9 +611,7 @@
         "cutoff": "20261012",
         "activities": []
       },
-      "alerts": [
-        "pipeline_failed"
-      ]
+      "alerts": []
     },
     {
       "game_id": "powerlotto",
@@ -703,11 +623,11 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-10-12T22:00:01+08:00",
-      "data_cutoff": "20261008",
+      "generated_at": "2026-10-12T22:30:36+08:00",
+      "data_cutoff": "20261012",
       "next_draw": {
-        "date": "20261012",
-        "period": "115000082",
+        "date": "20261015",
+        "period": "115000083",
         "sealed": true,
         "tracks": [
           {
@@ -716,12 +636,12 @@
             "tickets": [
               {
                 "main": [
-                  6,
+                  3,
                   7,
-                  8,
-                  11,
-                  14,
-                  25
+                  9,
+                  29,
+                  31,
+                  33
                 ],
                 "special": [
                   5
@@ -729,12 +649,12 @@
               },
               {
                 "main": [
-                  1,
+                  4,
                   8,
-                  9,
-                  22,
+                  23,
                   29,
-                  31
+                  35,
+                  38
                 ],
                 "special": [
                   2
@@ -742,15 +662,15 @@
               },
               {
                 "main": [
-                  6,
-                  17,
-                  19,
+                  9,
+                  14,
                   20,
-                  34,
-                  38
+                  22,
+                  28,
+                  34
                 ],
                 "special": [
-                  8
+                  3
                 ]
               }
             ],
@@ -761,33 +681,33 @@
         "expected_at": null
       },
       "latest_draw": {
-        "date": "20261008",
-        "period": "115000081",
+        "date": "20261012",
+        "period": "115000082",
         "numbers": [
-          4,
-          23,
-          27,
-          28,
-          29,
-          38
+          3,
+          5,
+          20,
+          22,
+          26,
+          32
         ],
-        "special": 5,
+        "special": 3,
         "settlements": [
           {
             "track": "V7 觀察",
             "role": "observe",
             "hits": [
               0,
-              2,
+              1,
               1
             ],
             "hit_numbers": [
-              23,
-              29
+              20,
+              22
             ],
             "prizes": [
               "0+0 未中獎",
-              "2+0 未中獎",
+              "1+0 未中獎",
               "1+0 未中獎"
             ],
             "payout": 0,
@@ -796,6 +716,41 @@
         ]
       },
       "recent": [
+        {
+          "date": "20261012",
+          "period": "115000082",
+          "numbers": [
+            3,
+            5,
+            20,
+            22,
+            26,
+            32
+          ],
+          "special": 3,
+          "settlements": [
+            {
+              "track": "V7 觀察",
+              "role": "observe",
+              "hits": [
+                0,
+                1,
+                1
+              ],
+              "hit_numbers": [
+                20,
+                22
+              ],
+              "prizes": [
+                "0+0 未中獎",
+                "1+0 未中獎",
+                "1+0 未中獎"
+              ],
+              "payout": 0,
+              "cost": 0
+            }
+          ]
+        },
         {
           "date": "20261008",
           "period": "115000081",
@@ -1006,20 +961,6 @@
           ],
           "special": 2,
           "settlements": []
-        },
-        {
-          "date": "20260907",
-          "period": "115000072",
-          "numbers": [
-            7,
-            14,
-            17,
-            22,
-            29,
-            35
-          ],
-          "special": 2,
-          "settlements": []
         }
       ],
       "metrics": {
@@ -1029,7 +970,7 @@
         "note": "無可安全公開且附截止日的指標"
       },
       "pipeline": {
-        "last_run": "2026/10/09  6:32:26.43",
+        "last_run": "2026/10/12 22:30:29.49",
         "stage": "延遲重試",
         "status": "ok"
       }
@@ -1044,7 +985,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-12T22:00:01+08:00",
+      "generated_at": "2026-10-12T22:30:36+08:00",
       "data_cutoff": "20261009",
       "next_draw": {
         "date": "20261013",
@@ -1433,7 +1374,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-12T22:00:01+08:00",
+      "generated_at": "2026-10-12T22:30:36+08:00",
       "data_cutoff": "20261010",
       "next_draw": {
         "date": "20261013",
