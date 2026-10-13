@@ -20,13 +20,13 @@ function cashPackages(n){const done=[],missing=[],tracks=n.tracks||[];if(tracks.
 const cashNames={formal:'正式組',high_any:'高ANY',lehe_2he:'二合'};
 const cashAlertText={pipeline_failed:'539 管線最後一次執行失敗',recommendation_overdue:'539 推薦逾期',stop_loss:'539 本月已達停損，暫停購買',reconciliation_overdue:'539 開獎已超過 2 個開獎日仍未核對',purchase_unavailable:'539 購買計畫資料缺漏或無法核驗',actual_unavailable:'539 實際帳本資料缺漏或無法核驗'};
 const cashAmount=x=>Number(x).toLocaleString('zh-TW',{maximumFractionDigits:2});
-function cashPayout(x){return x.net_payout==null?'回收 '+cashAmount(x.payout)+' 元（稅後實得尚未核驗）':'稅後實得 '+cashAmount(x.net_payout)+' 元'}
+function cashPayout(x){return x.data_status==='error'?'資料錯誤：結算回收無法核驗':x.net_payout==null?'回收 '+cashAmount(x.payout)+' 元（稅後實得尚未核驗）':'稅後實得 '+cashAmount(x.net_payout)+' 元'}
 function renderCashNext(g){
 const s=el('section','section cash-plan'),n=g.next_draw,p=g.purchase;
 s.append(el('strong','','下一期 '+p.date));
 if(n?.state==='overdue')s.append(el('p','overdue','推薦逾期'));
 else if(n?.state!=='ready')s.append(el('p','muted','推薦'+(n?.state==='generating'?'產生中':'預計 '+(n?.expected_at||'待確認')+' 產生')));
-const description=p.tracks.map(t=>t.name+' '+t.count+' 注 '+cashAmount(t.amount)+' 元').join('、');
+const description=p.tracks.map(t=>t.name+' '+(t.track==='lehe_2he'?(t.count==null?'組數待確認':t.count+' 組'+(t.copies?' × '+t.copies+' 份':'')):t.count+' 注')+' '+(t.amount==null?'金額依當期推薦':cashAmount(t.amount)+' 元')).join('、');
 if(p.status==='pending')s.append(el('p','muted','購買計畫待開獎日產生（預定：'+description+'）'));
 else if(p.status==='buy')s.append(el('p','','本期購買：'+description));
 else if(p.status==='stop_loss_paused')s.append(el('p','overdue','本月已達停損，暫停購買；當月損益 '+cashAmount(p.monthly_profit)+' 元；停損上限 '+cashAmount(p.loss_limit)+' 元'));
@@ -34,7 +34,8 @@ else s.append(el('p','muted','購買計畫資料缺漏或無法核驗'));
 if(p.paper_only.length)s.append(el('p','muted',p.paper_only.map(t=>cashNames[t]).join('、')+'：紙上紀錄（不購買）'));
 for(const t of n?.tracks||[]){
 const track=t.role==='observe'?'high_any':t.role;
-s.append(el('div','track',t.name+(p.paper_only.includes(track)?'｜紙上紀錄（不購買）':'')+'｜'+t.tickets.length+' 注・'+cashAmount(t.cost)+' 元'));
+s.append(el('div','track',t.name+(p.paper_only.includes(track)?'｜紙上紀錄（不購買）':'')+'｜'+(t.role==='lehe_2he'?(t.status==='missing'?'組數待確認':t.tickets.length+' 組 × '+(t.copies||1)+' 份'):t.tickets.length+' 注')+'・'+(t.cost==null?'金額依當期推薦':cashAmount(t.cost)+' 元')));
+if(t.promo_note)s.append(el('p','muted',t.promo_note));
 if(t.status==='missing'){s.append(el('p','muted','推薦資料缺漏'));continue}
 if(t.role==='lehe_2he'){const row=el('div','pair-pills');t.tickets.forEach(pair=>row.append(el('span','pair-pill',pair.map(v=>String(v).padStart(2,'0')).join('・'))));s.append(row)}
 else t.tickets.forEach(ticket=>ticketBalls(s,ticket,g.special_label));
@@ -63,7 +64,7 @@ const texts=games.filter(g=>g.game_id==='cash539').flatMap(g=>(g.alerts||[]).map
 if(!texts.length)return;const banner=el('div','cash-warning');banner.id='cash-alerts';banner.setAttribute('role','alert');texts.forEach(t=>banner.append(el('div','',t)));document.querySelector('header').after(banner)}
 function renderNext(g){
 const next=el('section','section'),n=g.next_draw;
-if(n?.state==='ready'){const heading=el('div','next-heading');heading.append(el('strong','','\u4e0b\u4e00\u671f '+n.date));if(n.total_cost!=null)heading.append(el('span','muted','\u672c\u671f\u5408\u8a08 '+n.total_cost+' \u5143'));next.append(heading);next.append(el('p','muted',n.sealed?'\u5df2\u5c01\u5b58':'\u672a\u5c01\u5b58\uff1b\u8cfc\u8cb7\u72c0\u614b\u672a\u78ba\u8a8d'));n.tracks.forEach(t=>{if(t.role==='lehe_2he'){next.append(el('div','track','\u6a02\u5408\u4e8c\u5408 8 \u6ce8\u30fb200 \u5143'));if(t.status==='missing'){next.append(el('p','muted','\u4e8c\u5408\u63a8\u85a6\u8cc7\u6599\u7f3a\u6f0f'));return}const row=el('div','pair-pills');t.tickets.forEach(pair=>row.append(el('span','pair-pill',pair.map(v=>String(v).padStart(2,'0')).join('\u30fb'))));next.append(row);return}next.append(el('div','track',t.name+'\uff08'+t.role+'\uff09'));t.tickets.forEach(ticket=>ticketBalls(next,ticket,g.special_label));})}
+if(n?.state==='ready'){const heading=el('div','next-heading');heading.append(el('strong','','\u4e0b\u4e00\u671f '+n.date));if(n.total_cost!=null)heading.append(el('span','muted','\u672c\u671f\u5408\u8a08 '+n.total_cost+' \u5143'));next.append(heading);next.append(el('p','muted',n.sealed?'\u5df2\u5c01\u5b58':'\u672a\u5c01\u5b58\uff1b\u8cfc\u8cb7\u72c0\u614b\u672a\u78ba\u8a8d'));n.tracks.forEach(t=>{if(t.role==='lehe_2he'){next.append(el('div','track',t.name+' '+(t.status==='missing'?'組數待確認':t.tickets.length+' 組 × '+(t.copies||1)+' 份')+'・'+(t.cost==null?'金額依當期推薦':cashAmount(t.cost)+' 元')));if(t.promo_note)next.append(el('p','muted',t.promo_note));if(t.status==='missing'){next.append(el('p','muted','\u4e8c\u5408\u63a8\u85a6\u8cc7\u6599\u7f3a\u6f0f'));return}const row=el('div','pair-pills');t.tickets.forEach(pair=>row.append(el('span','pair-pill',pair.map(v=>String(v).padStart(2,'0')).join('\u30fb'))));next.append(row);return}next.append(el('div','track',t.name+'\uff08'+t.role+'\uff09'));t.tickets.forEach(ticket=>ticketBalls(next,ticket,g.special_label));})}
 else if(n?.state==='scheduled'){next.append(el('strong','muted','\u4e0b\u4e00\u671f '+nextDate(n.date,true)+'\uff1b\u63a8\u85a6\u9810\u8a08 '+n.expected_at.slice(9)+' \u7522\u751f'))}
 else if(n?.state==='generating'&&g.game_id==='cash539'){const packs=cashPackages(n);next.append(el('strong','muted','推薦產生中（已完成：'+(packs.done.join('、')||'無')+'）'))}
 else if(n?.state==='overdue'&&g.game_id==='cash539'){const packs=cashPackages(n);next.append(el('strong','overdue','下一期 '+nextDate(n.date)+'；推薦逾期（缺少：'+packs.missing.join('、')+'）'))}
