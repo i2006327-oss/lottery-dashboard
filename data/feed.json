@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T19:00:02+08:00",
+  "generated_at": "2026-10-13T22:00:01+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,7 +14,7 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-10-13T19:00:02+08:00",
+      "generated_at": "2026-10-13T22:00:01+08:00",
       "data_cutoff": "20261012",
       "next_draw": {
         "date": "20261013",
@@ -661,9 +661,9 @@
         "note": "重播研究，非前瞻"
       },
       "pipeline": {
-        "last_run": "2026-10-13T18:30:00+08:00",
-        "stage": "check",
-        "status": "ok"
+        "last_run": "2026-10-13T21:35:00+08:00",
+        "stage": "postdraw",
+        "status": "failed"
       },
       "purchase": {
         "date": "20261013",
@@ -712,7 +712,9 @@
         "cutoff": "20261013",
         "activities": []
       },
-      "alerts": []
+      "alerts": [
+        "pipeline_failed"
+      ]
     },
     {
       "game_id": "powerlotto",
@@ -724,7 +726,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-10-13T19:00:02+08:00",
+      "generated_at": "2026-10-13T22:00:01+08:00",
       "data_cutoff": "20261012",
       "next_draw": {
         "date": "20261015",
@@ -1086,103 +1088,97 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-13T19:00:02+08:00",
-      "data_cutoff": "20261009",
+      "generated_at": "2026-10-13T22:00:01+08:00",
+      "data_cutoff": "20261013",
       "next_draw": {
-        "date": "20261013",
+        "date": "20261016",
         "period": null,
         "sealed": true,
         "total_cost": 300,
         "tracks": [
           {
-            "name": "Top12 正票（使用者指定，未通過統計 gate）",
-            "role": "formal",
-            "tickets": [
-              [
-                3,
-                12,
-                15,
-                25,
-                29,
-                35
-              ],
-              [
-                1,
-                4,
-                14,
-                18,
-                20,
-                26
-              ]
-            ],
-            "cost": 100
-          },
-          {
-            "name": "49樂合二合（正票號碼外）",
+            "name": "49樂合二合（全二合 12 組）",
             "role": "lehe_2he",
             "bet_type": "2he",
             "tickets": [
               [
-                27,
+                4,
+                20
+              ],
+              [
+                14,
+                35
+              ],
+              [
+                18,
+                39
+              ],
+              [
+                12,
                 48
               ],
               [
-                2,
-                21
-              ],
-              [
                 13,
-                28
+                25
               ],
               [
-                6,
-                36
-              ],
-              [
-                47,
-                49
-              ],
-              [
-                9,
+                15,
                 30
               ],
               [
-                19,
-                24
+                26,
+                47
               ],
               [
-                37,
-                39
+                1,
+                6
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                9,
+                36
+              ],
+              [
+                19,
+                29
+              ],
+              [
+                24,
+                49
               ]
             ],
-            "cost": 200
+            "cost": 300
           }
         ],
         "state": "ready",
         "expected_at": null
       },
       "latest_draw": {
-        "date": "20261009",
+        "date": "20261013",
         "period": null,
         "numbers": [
           3,
-          9,
-          11,
-          25,
-          34,
-          41
+          31,
+          35,
+          36,
+          47,
+          48
         ],
-        "special": 27,
+        "special": 32,
         "settlements": [
           {
             "track": "Top12 正票",
             "role": "formal",
             "hits": [
-              0,
-              1
+              2,
+              0
             ],
             "hit_numbers": [
-              25
+              3,
+              35
             ],
             "payout": 0,
             "cost": 100
@@ -1202,6 +1198,47 @@
         "settlement_status": "settled"
       },
       "recent": [
+        {
+          "date": "20261013",
+          "period": null,
+          "numbers": [
+            3,
+            31,
+            35,
+            36,
+            47,
+            48
+          ],
+          "special": 32,
+          "settlements": [
+            {
+              "track": "Top12 正票",
+              "role": "formal",
+              "hits": [
+                2,
+                0
+              ],
+              "hit_numbers": [
+                3,
+                35
+              ],
+              "payout": 0,
+              "cost": 100
+            },
+            {
+              "track": "49樂合二合",
+              "role": "lehe_2he",
+              "hits": [
+                0
+              ],
+              "hit_numbers": [],
+              "winning_pairs": [],
+              "payout": 0,
+              "cost": 200
+            }
+          ],
+          "settlement_status": "settled"
+        },
         {
           "date": "20261009",
           "period": null,
@@ -1412,21 +1449,6 @@
           "special": 25,
           "settlements": [],
           "settlement_status": "no_record"
-        },
-        {
-          "date": "20260908",
-          "period": null,
-          "numbers": [
-            3,
-            15,
-            28,
-            35,
-            47,
-            49
-          ],
-          "special": 27,
-          "settlements": [],
-          "settlement_status": "no_record"
         }
       ],
       "metrics": {
@@ -1456,10 +1478,10 @@
           "any": 12.55,
           "gross_roi": 52.1
         },
-        "note": "官方固定獎（不含浮動獎與加碼）；歷史重播非前瞻證據；前瞻帳本已結算 2 期（n<30 不足評估）；隨機基準為同結構隨機選號"
+        "note": "官方固定獎（不含浮動獎與加碼）；歷史重播非前瞻證據；前瞻帳本已結算 3 期（n<30 不足評估）；隨機基準為同結構隨機選號"
       },
       "pipeline": {
-        "last_run": "2026/10/09 21:40:58",
+        "last_run": "2026/10/13 21:40:21",
         "stage": "大樂透 Hermes 排程",
         "status": "ok"
       }
@@ -1475,7 +1497,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-13T19:00:02+08:00",
+      "generated_at": "2026-10-13T22:00:01+08:00",
       "data_cutoff": "20261010",
       "next_draw": {
         "date": "20261013",
