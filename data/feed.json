@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-20T00:00:22+08:00",
+  "generated_at": "2026-10-20T00:30:02+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,16 +14,97 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-10-20T00:00:22+08:00",
+      "generated_at": "2026-10-20T00:30:02+08:00",
       "data_cutoff": "20261019",
       "next_draw": {
         "date": "20261020",
         "period": null,
-        "sealed": false,
-        "tracks": [],
-        "state": "scheduled",
-        "expected_at": "20261020 00:10",
-        "total_cost": 0
+        "sealed": true,
+        "tracks": [
+          {
+            "name": "正式 C2J2",
+            "role": "formal",
+            "tickets": [
+              [
+                12,
+                14,
+                16,
+                32,
+                34
+              ],
+              [
+                3,
+                7,
+                15,
+                17,
+                30
+              ]
+            ],
+            "cost": 100
+          },
+          {
+            "name": "高ANY觀察",
+            "role": "observe",
+            "tickets": [
+              [
+                9,
+                20,
+                23,
+                25,
+                32
+              ],
+              [
+                3,
+                14,
+                26,
+                30,
+                34
+              ]
+            ],
+            "cost": 100
+          },
+          {
+            "name": "樂合二合",
+            "role": "lehe_2he",
+            "tickets": [
+              [
+                6,
+                20
+              ],
+              [
+                24,
+                30
+              ],
+              [
+                38,
+                39
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                8,
+                11
+              ],
+              [
+                16,
+                22
+              ],
+              [
+                34,
+                36
+              ]
+            ],
+            "cost": 350,
+            "bet_type": "2he",
+            "copies": 2,
+            "promo_note": "加碼期：二合每組 1,500 元，本期每組買 2 份"
+          }
+        ],
+        "total_cost": 450,
+        "state": "ready",
+        "expected_at": null
       },
       "latest_draw": {
         "date": "20261019",
@@ -615,28 +696,29 @@
         "note": "重播研究，非前瞻"
       },
       "pipeline": {
-        "last_run": "2026-10-19T22:35:01+08:00",
-        "stage": "postdraw",
+        "last_run": "2026-10-20T00:10:01+08:00",
+        "stage": "predraw",
         "status": "ok"
       },
       "purchase": {
         "date": "20261020",
-        "status": "pending",
+        "status": "buy",
         "tracks": [
           {
             "name": "二合",
             "track": "lehe_2he",
-            "count": null,
-            "amount": null
+            "count": 7,
+            "amount": 350.0,
+            "copies": 2
           }
         ],
         "paper_only": [
           "formal",
           "high_any"
         ],
-        "total_amount": null,
-        "monthly_profit": null,
-        "loss_limit": null
+        "total_amount": 350.0,
+        "monthly_profit": 200.0,
+        "loss_limit": 6000.0
       },
       "actual_pnl": {
         "status": "ok",
@@ -662,7 +744,7 @@
       },
       "promotions": {
         "status": "unavailable",
-        "cutoff": "20261019",
+        "cutoff": "20261020",
         "activities": []
       },
       "alerts": []
@@ -677,7 +759,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-10-20T00:00:22+08:00",
+      "generated_at": "2026-10-20T00:30:02+08:00",
       "data_cutoff": "20261019",
       "next_draw": {
         "date": "20261022",
@@ -2050,7 +2132,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-20T00:00:22+08:00",
+      "generated_at": "2026-10-20T00:30:02+08:00",
       "data_cutoff": "20261016",
       "next_draw": {
         "date": "20261020",
@@ -2457,7 +2539,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-20T00:00:22+08:00",
+      "generated_at": "2026-10-20T00:30:02+08:00",
       "data_cutoff": "20261017",
       "next_draw": {
         "date": "20261020",
