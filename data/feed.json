@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T23:00:02+08:00",
+  "generated_at": "2026-10-20T00:00:22+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,7 +14,7 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-10-19T23:00:02+08:00",
+      "generated_at": "2026-10-20T00:00:22+08:00",
       "data_cutoff": "20261019",
       "next_draw": {
         "date": "20261020",
@@ -642,20 +642,20 @@
         "status": "ok",
         "month": "202610",
         "monthly": {
-          "periods": 7,
-          "cost": 2400.0,
+          "periods": 8,
+          "cost": 2800.0,
           "gross_return": 3000.0,
           "net_return": 3000.0,
-          "profit": 600.0,
+          "profit": 200.0,
           "pending_periods": 0,
           "pending_cost": 0.0
         },
         "all_time": {
-          "periods": 28,
-          "cost": 5900.0,
+          "periods": 29,
+          "cost": 6300.0,
           "gross_return": 3350.0,
           "net_return": 3350.0,
-          "profit": -2550.0,
+          "profit": -2950.0,
           "pending_periods": 0,
           "pending_cost": 0.0
         }
@@ -677,7 +677,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-10-19T23:00:02+08:00",
+      "generated_at": "2026-10-20T00:00:22+08:00",
       "data_cutoff": "20261019",
       "next_draw": {
         "date": "20261022",
@@ -685,7 +685,7 @@
         "sealed": true,
         "tracks": [
           {
-            "name": "觀察，不建議投入",
+            "name": "V7 主要觀察",
             "role": "observe",
             "tickets": [
               {
@@ -729,6 +729,144 @@
               }
             ],
             "cost": 0
+          },
+          {
+            "name": "V5.2.1",
+            "role": "observe",
+            "tickets": [
+              {
+                "main": [
+                  6,
+                  17,
+                  29,
+                  31,
+                  33,
+                  35
+                ],
+                "special": [
+                  2
+                ]
+              },
+              {
+                "main": [
+                  4,
+                  11,
+                  12,
+                  22,
+                  27,
+                  37
+                ],
+                "special": [
+                  8
+                ]
+              },
+              {
+                "main": [
+                  7,
+                  8,
+                  9,
+                  19,
+                  29,
+                  35
+                ],
+                "special": [
+                  5
+                ]
+              }
+            ],
+            "cost": 0
+          },
+          {
+            "name": "V6",
+            "role": "observe",
+            "tickets": [
+              {
+                "main": [
+                  5,
+                  13,
+                  18,
+                  29,
+                  31,
+                  33
+                ],
+                "special": [
+                  3
+                ]
+              },
+              {
+                "main": [
+                  9,
+                  16,
+                  27,
+                  34,
+                  35,
+                  38
+                ],
+                "special": [
+                  4
+                ]
+              },
+              {
+                "main": [
+                  1,
+                  6,
+                  20,
+                  26,
+                  32,
+                  37
+                ],
+                "special": [
+                  8
+                ]
+              }
+            ],
+            "cost": 0
+          },
+          {
+            "name": "Joint",
+            "role": "observe",
+            "tickets": [
+              {
+                "main": [
+                  2,
+                  9,
+                  29,
+                  31,
+                  35,
+                  37
+                ],
+                "special": [
+                  2
+                ]
+              },
+              {
+                "main": [
+                  4,
+                  7,
+                  8,
+                  11,
+                  17,
+                  19
+                ],
+                "special": [
+                  6
+                ]
+              },
+              {
+                "main": [
+                  2,
+                  6,
+                  22,
+                  25,
+                  27,
+                  35
+                ],
+                "special": [
+                  7
+                ]
+              }
+            ],
+            "cost": 0
           }
         ],
         "state": "ready",
@@ -748,7 +886,7 @@
         "special": 8,
         "settlements": [
           {
-            "track": "V7 觀察",
+            "track": "V7",
             "role": "observe",
             "hits": [
               0,
@@ -760,14 +898,103 @@
               27
             ],
             "prizes": [
-              "0+0 未中獎",
-              "1+0 未中獎",
-              "1+0 未中獎"
+              "0+0",
+              "1+0",
+              "1+0"
             ],
             "payout": 0,
-            "cost": 0
+            "cost": 0,
+            "winning_tickets": 0,
+            "special_hit": false,
+            "evidence": {
+              "kind": "快照",
+              "source": "115000084",
+              "generated_at": "2026-10-15T22:14:28+08:00"
+            }
+          },
+          {
+            "track": "V5.2.1",
+            "role": "observe",
+            "hits": [
+              0,
+              1,
+              0
+            ],
+            "hit_numbers": [
+              9
+            ],
+            "prizes": [
+              "0+0",
+              "1+0",
+              "0+0"
+            ],
+            "payout": 0,
+            "cost": 0,
+            "winning_tickets": 0,
+            "special_hit": false,
+            "evidence": {
+              "kind": "快照",
+              "source": "115000084_PLV521_115000077_15031b5e1f0e",
+              "generated_at": "2026-10-15T22:11:37+08:00"
+            }
+          },
+          {
+            "track": "V6",
+            "role": "observe",
+            "hits": [
+              0,
+              1,
+              2
+            ],
+            "hit_numbers": [
+              10,
+              27,
+              36
+            ],
+            "prizes": [
+              "0+0",
+              "1+0",
+              "2+0"
+            ],
+            "payout": 0,
+            "cost": 0,
+            "winning_tickets": 0,
+            "special_hit": false,
+            "evidence": {
+              "kind": "快照",
+              "source": "powerlotto_v6_tracker",
+              "generated_at": "2026-10-15T22:14:25+08:00"
+            }
+          },
+          {
+            "track": "Joint",
+            "role": "observe",
+            "hits": [
+              1,
+              0,
+              2
+            ],
+            "hit_numbers": [
+              9,
+              24
+            ],
+            "prizes": [
+              "1+0",
+              "0+0",
+              "2+0"
+            ],
+            "payout": 0,
+            "cost": 0,
+            "winning_tickets": 0,
+            "special_hit": false,
+            "evidence": {
+              "kind": "快照",
+              "source": "115000084",
+              "generated_at": "2026-10-15T22:14:27.341257+08:00"
+            }
           }
-        ]
+        ],
+        "strategy_status": {}
       },
       "recent": [
         {
@@ -784,7 +1011,7 @@
           "special": 8,
           "settlements": [
             {
-              "track": "V7 觀察",
+              "track": "V7",
               "role": "observe",
               "hits": [
                 0,
@@ -796,14 +1023,103 @@
                 27
               ],
               "prizes": [
-                "0+0 未中獎",
-                "1+0 未中獎",
-                "1+0 未中獎"
+                "0+0",
+                "1+0",
+                "1+0"
               ],
               "payout": 0,
-              "cost": 0
+              "cost": 0,
+              "winning_tickets": 0,
+              "special_hit": false,
+              "evidence": {
+                "kind": "快照",
+                "source": "115000084",
+                "generated_at": "2026-10-15T22:14:28+08:00"
+              }
+            },
+            {
+              "track": "V5.2.1",
+              "role": "observe",
+              "hits": [
+                0,
+                1,
+                0
+              ],
+              "hit_numbers": [
+                9
+              ],
+              "prizes": [
+                "0+0",
+                "1+0",
+                "0+0"
+              ],
+              "payout": 0,
+              "cost": 0,
+              "winning_tickets": 0,
+              "special_hit": false,
+              "evidence": {
+                "kind": "快照",
+                "source": "115000084_PLV521_115000077_15031b5e1f0e",
+                "generated_at": "2026-10-15T22:11:37+08:00"
+              }
+            },
+            {
+              "track": "V6",
+              "role": "observe",
+              "hits": [
+                0,
+                1,
+                2
+              ],
+              "hit_numbers": [
+                10,
+                27,
+                36
+              ],
+              "prizes": [
+                "0+0",
+                "1+0",
+                "2+0"
+              ],
+              "payout": 0,
+              "cost": 0,
+              "winning_tickets": 0,
+              "special_hit": false,
+              "evidence": {
+                "kind": "快照",
+                "source": "powerlotto_v6_tracker",
+                "generated_at": "2026-10-15T22:14:25+08:00"
+              }
+            },
+            {
+              "track": "Joint",
+              "role": "observe",
+              "hits": [
+                1,
+                0,
+                2
+              ],
+              "hit_numbers": [
+                9,
+                24
+              ],
+              "prizes": [
+                "1+0",
+                "0+0",
+                "2+0"
+              ],
+              "payout": 0,
+              "cost": 0,
+              "winning_tickets": 0,
+              "special_hit": false,
+              "evidence": {
+                "kind": "快照",
+                "source": "115000084",
+                "generated_at": "2026-10-15T22:14:27.341257+08:00"
+              }
             }
-          ]
+          ],
+          "strategy_status": {}
         },
         {
           "date": "20261015",
@@ -819,7 +1135,7 @@
           "special": 6,
           "settlements": [
             {
-              "track": "V7 觀察",
+              "track": "V7",
               "role": "observe",
               "hits": [
                 1,
@@ -830,14 +1146,102 @@
                 33
               ],
               "prizes": [
-                "1+0 未中獎",
-                "0+0 未中獎",
-                "0+0 未中獎"
+                "1+0",
+                "0+0",
+                "0+0"
               ],
               "payout": 0,
-              "cost": 0
+              "cost": 0,
+              "winning_tickets": 0,
+              "special_hit": false,
+              "evidence": {
+                "kind": "快照",
+                "source": "115000083",
+                "generated_at": "2026-10-12T22:30:26+08:00"
+              }
+            },
+            {
+              "track": "V5.2.1",
+              "role": "observe",
+              "hits": [
+                0,
+                0,
+                1
+              ],
+              "hit_numbers": [
+                30
+              ],
+              "prizes": [
+                "0+0",
+                "0+0",
+                "1+1 普獎 100 元"
+              ],
+              "payout": 100,
+              "cost": 0,
+              "winning_tickets": 1,
+              "special_hit": true,
+              "evidence": {
+                "kind": "快照",
+                "source": "115000083_PLV521_115000077_15031b5e1f0e",
+                "generated_at": "2026-10-12T22:27:45+08:00"
+              }
+            },
+            {
+              "track": "V6",
+              "role": "observe",
+              "hits": [
+                0,
+                2,
+                0
+              ],
+              "hit_numbers": [
+                30,
+                33
+              ],
+              "prizes": [
+                "0+1",
+                "2+0",
+                "0+0"
+              ],
+              "payout": 0,
+              "cost": 0,
+              "winning_tickets": 0,
+              "special_hit": true,
+              "evidence": {
+                "kind": "快照",
+                "source": "powerlotto_v6_tracker",
+                "generated_at": "2026-10-12T22:30:24+08:00"
+              }
+            },
+            {
+              "track": "Joint",
+              "role": "observe",
+              "hits": [
+                1,
+                0,
+                1
+              ],
+              "hit_numbers": [
+                12,
+                25
+              ],
+              "prizes": [
+                "1+0",
+                "0+0",
+                "1+0"
+              ],
+              "payout": 0,
+              "cost": 0,
+              "winning_tickets": 0,
+              "special_hit": false,
+              "evidence": {
+                "kind": "快照",
+                "source": "115000083",
+                "generated_at": "2026-10-12T22:30:25.901686+08:00"
+              }
             }
-          ]
+          ],
+          "strategy_status": {}
         },
         {
           "date": "20261012",
@@ -853,7 +1257,7 @@
           "special": 3,
           "settlements": [
             {
-              "track": "V7 觀察",
+              "track": "V7",
               "role": "observe",
               "hits": [
                 0,
@@ -865,14 +1269,98 @@
                 22
               ],
               "prizes": [
-                "0+0 未中獎",
-                "1+0 未中獎",
-                "1+0 未中獎"
+                "0+0",
+                "1+0",
+                "1+0"
               ],
               "payout": 0,
-              "cost": 0
+              "cost": 0,
+              "winning_tickets": 0,
+              "special_hit": false,
+              "evidence": {
+                "kind": "快照",
+                "source": "115000082",
+                "generated_at": "2026-10-09T06:32:21+08:00"
+              }
+            },
+            {
+              "track": "V5.2.1",
+              "role": "observe",
+              "hits": [
+                0,
+                0,
+                1
+              ],
+              "hit_numbers": [
+                32
+              ],
+              "prizes": [
+                "0+0",
+                "0+0",
+                "1+0"
+              ],
+              "payout": 0,
+              "cost": 0,
+              "winning_tickets": 0,
+              "special_hit": false,
+              "evidence": {
+                "kind": "快照",
+                "source": "115000082_PLV521_115000077_15031b5e1f0e",
+                "generated_at": "2026-10-09T06:30:51+08:00"
+              }
+            },
+            {
+              "track": "V6",
+              "role": "observe",
+              "hits": [
+                0,
+                0,
+                1
+              ],
+              "hit_numbers": [
+                32
+              ],
+              "prizes": [
+                "0+0",
+                "0+0",
+                "1+1 普獎 100 元"
+              ],
+              "payout": 100,
+              "cost": 0,
+              "winning_tickets": 1,
+              "special_hit": true,
+              "evidence": {
+                "kind": "快照",
+                "source": "powerlotto_v6_tracker",
+                "generated_at": "2026-10-09T06:32:19+08:00"
+              }
+            },
+            {
+              "track": "Joint",
+              "role": "observe",
+              "hits": [
+                0,
+                0,
+                0
+              ],
+              "hit_numbers": [],
+              "prizes": [
+                "0+0",
+                "0+0",
+                "0+0"
+              ],
+              "payout": 0,
+              "cost": 0,
+              "winning_tickets": 0,
+              "special_hit": false,
+              "evidence": {
+                "kind": "快照",
+                "source": "115000082",
+                "generated_at": "2026-10-09T06:32:21.277435+08:00"
+              }
             }
-          ]
+          ],
+          "strategy_status": {}
         },
         {
           "date": "20261008",
@@ -888,7 +1376,7 @@
           "special": 5,
           "settlements": [
             {
-              "track": "V7 觀察",
+              "track": "V7",
               "role": "observe",
               "hits": [
                 0,
@@ -900,14 +1388,106 @@
                 29
               ],
               "prizes": [
-                "0+0 未中獎",
-                "2+0 未中獎",
-                "1+0 未中獎"
+                "0+0",
+                "2+0",
+                "1+0"
               ],
               "payout": 0,
-              "cost": 0
+              "cost": 0,
+              "winning_tickets": 0,
+              "special_hit": false,
+              "evidence": {
+                "kind": "快照",
+                "source": "115000081",
+                "generated_at": "2026-10-06T00:09:00+08:00"
+              }
+            },
+            {
+              "track": "V5.2.1",
+              "role": "observe",
+              "hits": [
+                0,
+                2,
+                0
+              ],
+              "hit_numbers": [
+                29,
+                38
+              ],
+              "prizes": [
+                "0+0",
+                "2+0",
+                "0+0"
+              ],
+              "payout": 0,
+              "cost": 0,
+              "winning_tickets": 0,
+              "special_hit": false,
+              "evidence": {
+                "kind": "快照",
+                "source": "115000081_PLV521_115000077_15031b5e1f0e",
+                "generated_at": "2026-10-06T00:06:54+08:00"
+              }
+            },
+            {
+              "track": "V6",
+              "role": "observe",
+              "hits": [
+                1,
+                1,
+                1
+              ],
+              "hit_numbers": [
+                28,
+                29,
+                38
+              ],
+              "prizes": [
+                "1+1 普獎 100 元",
+                "1+0",
+                "1+0"
+              ],
+              "payout": 100,
+              "cost": 0,
+              "winning_tickets": 1,
+              "special_hit": true,
+              "evidence": {
+                "kind": "快照",
+                "source": "powerlotto_v6_tracker",
+                "generated_at": "2026-10-06T00:08:58+08:00"
+              }
+            },
+            {
+              "track": "Joint",
+              "role": "observe",
+              "hits": [
+                3,
+                1,
+                1
+              ],
+              "hit_numbers": [
+                4,
+                23,
+                29,
+                38
+              ],
+              "prizes": [
+                "3+0 玖獎 100 元",
+                "1+0",
+                "1+0"
+              ],
+              "payout": 100,
+              "cost": 0,
+              "winning_tickets": 1,
+              "special_hit": false,
+              "evidence": {
+                "kind": "快照",
+                "source": "115000081",
+                "generated_at": "2026-10-06T00:09:00.119734+08:00"
+              }
             }
-          ]
+          ],
+          "strategy_status": {}
         },
         {
           "date": "20261005",
@@ -923,7 +1503,7 @@
           "special": 6,
           "settlements": [
             {
-              "track": "V7 觀察",
+              "track": "V7",
               "role": "observe",
               "hits": [
                 1,
@@ -936,14 +1516,104 @@
                 21
               ],
               "prizes": [
-                "1+0 未中獎",
-                "1+0 未中獎",
-                "1+0 未中獎"
+                "1+0",
+                "1+0",
+                "1+0"
               ],
               "payout": 0,
-              "cost": 0
+              "cost": 0,
+              "winning_tickets": 0,
+              "special_hit": false,
+              "evidence": {
+                "kind": "快照",
+                "source": "115000080",
+                "generated_at": "2026-10-02T02:04:56+08:00"
+              }
+            },
+            {
+              "track": "V5.2.1",
+              "role": "observe",
+              "hits": [
+                1,
+                2,
+                0
+              ],
+              "hit_numbers": [
+                17,
+                26,
+                37
+              ],
+              "prizes": [
+                "1+0",
+                "2+0",
+                "0+0"
+              ],
+              "payout": 0,
+              "cost": 0,
+              "winning_tickets": 0,
+              "special_hit": false,
+              "evidence": {
+                "kind": "快照",
+                "source": "115000080_PLV521_115000077_15031b5e1f0e",
+                "generated_at": "2026-10-03T08:17:48+08:00"
+              }
+            },
+            {
+              "track": "V6",
+              "role": "observe",
+              "hits": [
+                0,
+                0,
+                2
+              ],
+              "hit_numbers": [
+                2,
+                26
+              ],
+              "prizes": [
+                "0+0",
+                "0+1",
+                "2+0"
+              ],
+              "payout": 0,
+              "cost": 0,
+              "winning_tickets": 0,
+              "special_hit": true,
+              "evidence": {
+                "kind": "快照",
+                "source": "powerlotto_v6_tracker",
+                "generated_at": "2026-10-03T08:20:10+08:00"
+              }
+            },
+            {
+              "track": "Joint",
+              "role": "observe",
+              "hits": [
+                2,
+                0,
+                0
+              ],
+              "hit_numbers": [
+                6,
+                17
+              ],
+              "prizes": [
+                "2+0",
+                "0+0",
+                "0+0"
+              ],
+              "payout": 0,
+              "cost": 0,
+              "winning_tickets": 0,
+              "special_hit": false,
+              "evidence": {
+                "kind": "快照",
+                "source": "115000080",
+                "generated_at": "2026-10-03T08:20:12.857443+08:00"
+              }
             }
-          ]
+          ],
+          "strategy_status": {}
         },
         {
           "date": "20261001",
@@ -957,7 +1627,13 @@
             37
           ],
           "special": 3,
-          "settlements": []
+          "settlements": [],
+          "strategy_status": {
+            "V7": "缺事前快照",
+            "V5.2.1": "尚無事前紀錄",
+            "V6": "尚無事前紀錄",
+            "Joint": "尚無事前紀錄"
+          }
         },
         {
           "date": "20260928",
@@ -973,7 +1649,7 @@
           "special": 1,
           "settlements": [
             {
-              "track": "V7 觀察",
+              "track": "V7",
               "role": "observe",
               "hits": [
                 1,
@@ -985,14 +1661,26 @@
                 29
               ],
               "prizes": [
-                "1+0 未中獎",
-                "1+0 未中獎",
-                "0+0 未中獎"
+                "1+0",
+                "1+0",
+                "0+0"
               ],
               "payout": 0,
-              "cost": 0
+              "cost": 0,
+              "winning_tickets": 0,
+              "special_hit": false,
+              "evidence": {
+                "kind": "快照",
+                "source": "115000078",
+                "generated_at": "2026-09-24T21:36:52+08:00"
+              }
             }
-          ]
+          ],
+          "strategy_status": {
+            "V5.2.1": "尚無事前紀錄",
+            "V6": "尚無事前紀錄",
+            "Joint": "尚無事前紀錄"
+          }
         },
         {
           "date": "20260924",
@@ -1008,7 +1696,7 @@
           "special": 1,
           "settlements": [
             {
-              "track": "V7 觀察",
+              "track": "V7",
               "role": "observe",
               "hits": [
                 2,
@@ -1020,14 +1708,102 @@
                 31
               ],
               "prizes": [
-                "2+0 未中獎",
-                "0+0 未中獎",
-                "1+0 未中獎"
+                "2+0",
+                "0+0",
+                "1+0"
               ],
               "payout": 0,
-              "cost": 0
+              "cost": 0,
+              "winning_tickets": 0,
+              "special_hit": false,
+              "evidence": {
+                "kind": "快照",
+                "source": "115000077",
+                "generated_at": "2026-09-22T23:25:58+08:00"
+              }
+            },
+            {
+              "track": "V5.2.1",
+              "role": "observe",
+              "hits": [
+                1,
+                1,
+                0
+              ],
+              "hit_numbers": [
+                8,
+                31
+              ],
+              "prizes": [
+                "1+0",
+                "1+0",
+                "0+0"
+              ],
+              "payout": 0,
+              "cost": 0,
+              "winning_tickets": 0,
+              "special_hit": false,
+              "evidence": {
+                "kind": "快照",
+                "source": "115000077_PLV521_115000077_15031b5e1f0e",
+                "generated_at": "2026-09-22T19:32:59+08:00"
+              }
+            },
+            {
+              "track": "V6",
+              "role": "observe",
+              "hits": [
+                1,
+                2,
+                1
+              ],
+              "hit_numbers": [
+                3,
+                25,
+                27,
+                31
+              ],
+              "prizes": [
+                "1+0",
+                "2+0",
+                "1+0"
+              ],
+              "payout": 0,
+              "cost": 0,
+              "winning_tickets": 0,
+              "special_hit": false,
+              "evidence": {
+                "kind": "快照",
+                "source": "powerlotto_v6_tracker",
+                "generated_at": "2026-09-21T21:04:31+08:00"
+              }
+            },
+            {
+              "track": "Joint",
+              "role": "observe",
+              "hits": [
+                0,
+                0,
+                0
+              ],
+              "hit_numbers": [],
+              "prizes": [
+                "0+0",
+                "0+0",
+                "0+0"
+              ],
+              "payout": 0,
+              "cost": 0,
+              "winning_tickets": 0,
+              "special_hit": false,
+              "evidence": {
+                "kind": "快照",
+                "source": "115000077",
+                "generated_at": "2026-09-21T21:04:29.875987+08:00"
+              }
             }
-          ]
+          ],
+          "strategy_status": {}
         },
         {
           "date": "20260921",
@@ -1041,7 +1817,13 @@
             37
           ],
           "special": 6,
-          "settlements": []
+          "settlements": [],
+          "strategy_status": {
+            "V7": "尚未上線",
+            "V5.2.1": "尚無事前紀錄",
+            "V6": "尚無事前紀錄",
+            "Joint": "尚無事前紀錄"
+          }
         },
         {
           "date": "20260917",
@@ -1055,7 +1837,95 @@
             37
           ],
           "special": 7,
-          "settlements": []
+          "settlements": [
+            {
+              "track": "V5.2.1",
+              "role": "observe",
+              "hits": [
+                0,
+                1,
+                1
+              ],
+              "hit_numbers": [
+                31,
+                37
+              ],
+              "prizes": [
+                "0+0",
+                "1+0",
+                "1+0"
+              ],
+              "payout": 0,
+              "cost": 0,
+              "winning_tickets": 0,
+              "special_hit": false,
+              "evidence": {
+                "kind": "封存副本",
+                "source": "20260915_011714_recommendation_v5_2_next",
+                "generated_at": "2026-09-15T01:17:14+08:00"
+              }
+            },
+            {
+              "track": "V6",
+              "role": "observe",
+              "hits": [
+                2,
+                2,
+                1
+              ],
+              "hit_numbers": [
+                23,
+                26,
+                27,
+                28,
+                37
+              ],
+              "prizes": [
+                "2+0",
+                "2+0",
+                "1+0"
+              ],
+              "payout": 0,
+              "cost": 0,
+              "winning_tickets": 0,
+              "special_hit": false,
+              "evidence": {
+                "kind": "快照",
+                "source": "powerlotto_v6_tracker",
+                "generated_at": "2026-09-15T01:12:13+08:00"
+              }
+            },
+            {
+              "track": "Joint",
+              "role": "observe",
+              "hits": [
+                0,
+                2,
+                0
+              ],
+              "hit_numbers": [
+                28,
+                31
+              ],
+              "prizes": [
+                "0+0",
+                "2+0",
+                "0+0"
+              ],
+              "payout": 0,
+              "cost": 0,
+              "winning_tickets": 0,
+              "special_hit": false,
+              "evidence": {
+                "kind": "快照",
+                "source": "115000075",
+                "generated_at": "2026-09-15T01:15:33.973926+08:00"
+              }
+            }
+          ],
+          "strategy_status": {
+            "V7": "尚未上線"
+          }
         }
       ],
       "metrics": {
@@ -1068,6 +1938,106 @@
         "last_run": "2026/10/19 22:14:00.55",
         "stage": "開獎後更新",
         "status": "ok"
+      },
+      "powerlotto_research": {
+        "notice": "未實際購買／研究用途；正式建議投入 0 TWD。金額為固定獎稅前假設值，頭／貳獎浮動獎金不計；期數少，差異多半是隨機波動",
+        "missing_next": [],
+        "baseline": {
+          "win_probability": 0.11782962247358535,
+          "fixed_gross": 21.05139999876842,
+          "fixed_net": 20.54717658432829
+        },
+        "strategies": [
+          {
+            "name": "V7",
+            "periods": [
+              "115000077",
+              "115000078",
+              "115000080",
+              "115000081",
+              "115000082",
+              "115000083",
+              "115000084"
+            ],
+            "draws": 7,
+            "winning_tickets": 0,
+            "tickets": 21,
+            "payout": 0,
+            "hypothetical_cost": 2100,
+            "profit": -2100,
+            "evidence_types": [
+              "快照"
+            ]
+          },
+          {
+            "name": "V5.2.1",
+            "periods": [
+              "115000075",
+              "115000077",
+              "115000080",
+              "115000081",
+              "115000082",
+              "115000083",
+              "115000084"
+            ],
+            "draws": 7,
+            "winning_tickets": 1,
+            "tickets": 21,
+            "payout": 100,
+            "hypothetical_cost": 2100,
+            "profit": -2000,
+            "evidence_types": [
+              "封存副本",
+              "快照"
+            ]
+          },
+          {
+            "name": "V6",
+            "periods": [
+              "115000070",
+              "115000072",
+              "115000075",
+              "115000077",
+              "115000080",
+              "115000081",
+              "115000082",
+              "115000083",
+              "115000084"
+            ],
+            "draws": 9,
+            "winning_tickets": 3,
+            "tickets": 27,
+            "payout": 400,
+            "hypothetical_cost": 2700,
+            "profit": -2300,
+            "evidence_types": [
+              "快照"
+            ]
+          },
+          {
+            "name": "Joint",
+            "periods": [
+              "115000073",
+              "115000074",
+              "115000075",
+              "115000077",
+              "115000080",
+              "115000081",
+              "115000082",
+              "115000083",
+              "115000084"
+            ],
+            "draws": 9,
+            "winning_tickets": 3,
+            "tickets": 27,
+            "payout": 300,
+            "hypothetical_cost": 2700,
+            "profit": -2400,
+            "evidence_types": [
+              "快照"
+            ]
+          }
+        ]
       }
     },
     {
@@ -1080,7 +2050,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-19T23:00:02+08:00",
+      "generated_at": "2026-10-20T00:00:22+08:00",
       "data_cutoff": "20261016",
       "next_draw": {
         "date": "20261020",
@@ -1487,7 +2457,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-19T23:00:02+08:00",
+      "generated_at": "2026-10-20T00:00:22+08:00",
       "data_cutoff": "20261017",
       "next_draw": {
         "date": "20261020",
