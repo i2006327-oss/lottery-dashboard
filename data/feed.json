@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T00:30:02+08:00",
+  "generated_at": "2026-10-19T19:00:02+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,7 +14,7 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-10-19T00:30:02+08:00",
+      "generated_at": "2026-10-19T19:00:02+08:00",
       "data_cutoff": "20261017",
       "next_draw": {
         "date": "20261019",
@@ -707,8 +707,8 @@
         "note": "重播研究，非前瞻"
       },
       "pipeline": {
-        "last_run": "2026-10-19T00:10:01+08:00",
-        "stage": "predraw",
+        "last_run": "2026-10-19T18:30:00+08:00",
+        "stage": "check",
         "status": "ok"
       },
       "purchase": {
@@ -770,7 +770,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-10-19T00:30:02+08:00",
+      "generated_at": "2026-10-19T19:00:02+08:00",
       "data_cutoff": "20261015",
       "next_draw": {
         "date": "20261019",
@@ -1151,7 +1151,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-19T00:30:02+08:00",
+      "generated_at": "2026-10-19T19:00:02+08:00",
       "data_cutoff": "20261016",
       "next_draw": {
         "date": "20261020",
@@ -1558,7 +1558,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-19T00:30:02+08:00",
+      "generated_at": "2026-10-19T19:00:02+08:00",
       "data_cutoff": "20261017",
       "next_draw": {
         "date": "20261020",
@@ -1939,7 +1939,7 @@
         "note": "前瞻正式帳本 18 張（截止 20261017）：成本 5400、回收 3360、淨 ROI -37.8%；無重播研究指標。"
       },
       "pipeline": {
-        "last_run": "2026-10-18T10:07:10.972781+08:00",
+        "last_run": "2026-10-19T10:07:39.359670+08:00",
         "stage": "production",
         "status": "ok"
       }
