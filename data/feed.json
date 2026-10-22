@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T00:30:02+08:00",
+  "generated_at": "2026-10-22T19:24:15+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,7 +14,7 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-10-22T00:30:02+08:00",
+      "generated_at": "2026-10-22T19:24:15+08:00",
       "data_cutoff": "20261021",
       "next_draw": {
         "date": "20261022",
@@ -743,8 +743,8 @@
         "note": "重播研究，非前瞻"
       },
       "pipeline": {
-        "last_run": "2026-10-22T00:10:01+08:00",
-        "stage": "predraw",
+        "last_run": "2026-10-22T19:24:14+08:00",
+        "stage": "catchup",
         "status": "ok"
       },
       "purchase": {
@@ -806,7 +806,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-10-22T00:30:02+08:00",
+      "generated_at": "2026-10-22T19:24:15+08:00",
       "data_cutoff": "20261019",
       "next_draw": {
         "date": "20261022",
@@ -2179,7 +2179,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-22T00:30:02+08:00",
+      "generated_at": "2026-10-22T19:24:15+08:00",
       "data_cutoff": "20261020",
       "next_draw": {
         "date": "20261023",
@@ -2598,7 +2598,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-22T00:30:02+08:00",
+      "generated_at": "2026-10-22T19:24:15+08:00",
       "data_cutoff": "20261020",
       "next_draw": {
         "date": "20261022",
