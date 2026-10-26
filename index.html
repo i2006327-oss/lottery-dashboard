@@ -30,10 +30,13 @@ const description=p.tracks.map(t=>t.name+' '+(t.track==='lehe_2he'?(t.count==nul
 if(p.status==='pending')s.append(el('p','muted','購買計畫待開獎日產生（預定：'+description+'）'));
 else if(p.status==='buy')s.append(el('p','','本期購買：'+description));
 else if(p.status==='normal_period_paused')s.append(el('p','muted','一般期間暫停購買（D20），僅紙上紀錄'));
+else if(p.status==='normal_month_stopped_after_hit')s.append(el('p','muted','本月一般期間實買已中獎，停止購買至下月'));
+else if(p.status==='normal_month_cap_reached')s.append(el('p','muted','本月一般期間已買滿 44 注，停止購買至下月'));
 else if(p.status==='no_bets')s.append(el('p','muted','本期無可購買組合，僅紙上紀錄'));
 else if(p.status==='stop_loss_paused')s.append(el('p','overdue','本月已達停損，暫停購買；當月損益 '+cashAmount(p.monthly_profit)+' 元；停損上限 '+cashAmount(p.loss_limit)+' 元'));
 else s.append(el('p','muted','購買計畫資料缺漏或無法核驗'));
 for(const t of p.tracks)if(t.note)s.append(el('p','muted',t.note+'；原封存金額 '+cashAmount(t.sealed_amount)+' 元'));
+if(p.monthly_used_units!=null){s.append(el('p','muted','一般期間 D22｜本月已用 '+p.monthly_used_units+' 注／剩餘 '+p.monthly_remaining_units+' 注｜中獎後停止：'+(p.monthly_stopped_after_hit?'是':'否')));for(const t of p.tracks)if(t.pairs){s.append(el('p','','實買組合'));const row=el('div','pair-pills');t.pairs.forEach(pair=>row.append(el('span','pair-pill',pair.map(v=>String(v).padStart(2,'0')).join('・'))));s.append(row)}}
 if(p.paper_only.length)s.append(el('p','muted',p.paper_only.map(t=>cashNames[t]).join('、')+'：紙上紀錄（不購買）'));
 for(const t of n?.tracks||[]){
 const track=t.role==='observe'?'high_any':t.role;
