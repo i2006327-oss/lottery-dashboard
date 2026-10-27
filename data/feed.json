@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T19:47:27+08:00",
+  "generated_at": "2026-10-27T22:00:02+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,7 +14,7 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-10-27T19:47:27+08:00",
+      "generated_at": "2026-10-27T22:00:02+08:00",
       "data_cutoff": "20261026",
       "next_draw": {
         "date": "20261027",
@@ -742,9 +742,9 @@
         "note": "重播研究，非前瞻"
       },
       "pipeline": {
-        "last_run": "2026-10-27T19:47:27+08:00",
-        "stage": "catchup",
-        "status": "skipped"
+        "last_run": "2026-10-27T21:35:00+08:00",
+        "stage": "postdraw",
+        "status": "failed"
       },
       "purchase": {
         "date": "20261027",
@@ -806,7 +806,9 @@
         "cutoff": "20261027",
         "activities": []
       },
-      "alerts": []
+      "alerts": [
+        "pipeline_failed"
+      ]
     },
     {
       "game_id": "powerlotto",
@@ -818,7 +820,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-10-27T19:47:27+08:00",
+      "generated_at": "2026-10-27T22:00:02+08:00",
       "data_cutoff": "20261026",
       "next_draw": {
         "date": "20261029",
@@ -2335,7 +2337,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-27T19:47:27+08:00",
+      "generated_at": "2026-10-27T22:00:02+08:00",
       "data_cutoff": "20261023",
       "next_draw": {
         "date": "20261027",
@@ -2766,7 +2768,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-10-27T19:47:27+08:00",
+      "generated_at": "2026-10-27T22:00:02+08:00",
       "data_cutoff": "20261024",
       "next_draw": {
         "date": "20261027",
@@ -3155,7 +3157,7 @@
         "note": "前瞻正式帳本 21 張（截止 20261024）：成本 6300、回收 4080、淨 ROI -35.2%；無重播研究指標。"
       },
       "pipeline": {
-        "last_run": "2026-10-26T23:30:09.053524+08:00",
+        "last_run": "2026-10-27T19:56:36.048713+08:00",
         "stage": "production",
         "status": "ok"
       }
