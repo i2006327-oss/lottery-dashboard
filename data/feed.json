@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T00:30:02+08:00",
+  "generated_at": "2026-11-03T01:51:38+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,7 +14,7 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-11-03T00:30:02+08:00",
+      "generated_at": "2026-11-03T01:51:38+08:00",
       "data_cutoff": "20261102",
       "next_draw": {
         "date": "20261103",
@@ -820,15 +820,200 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-11-03T00:30:02+08:00",
+      "generated_at": "2026-11-03T01:51:38+08:00",
       "data_cutoff": "20261102",
       "next_draw": {
         "date": "20261105",
-        "period": null,
-        "sealed": false,
-        "tracks": [],
-        "state": "overdue",
-        "expected_at": "20261102 22:10"
+        "period": "115000089",
+        "sealed": true,
+        "tracks": [
+          {
+            "name": "V7 主要觀察",
+            "role": "observe",
+            "tickets": [
+              {
+                "main": [
+                  17,
+                  25,
+                  26,
+                  29,
+                  31,
+                  38
+                ],
+                "special": [
+                  7
+                ]
+              },
+              {
+                "main": [
+                  2,
+                  4,
+                  7,
+                  16,
+                  27,
+                  37
+                ],
+                "special": [
+                  2
+                ]
+              },
+              {
+                "main": [
+                  7,
+                  9,
+                  11,
+                  19,
+                  26,
+                  35
+                ],
+                "special": [
+                  6
+                ]
+              }
+            ],
+            "cost": 0
+          },
+          {
+            "name": "V5.2.1",
+            "role": "observe",
+            "tickets": [
+              {
+                "main": [
+                  7,
+                  9,
+                  17,
+                  19,
+                  26,
+                  37
+                ],
+                "special": [
+                  2
+                ]
+              },
+              {
+                "main": [
+                  6,
+                  11,
+                  29,
+                  31,
+                  35,
+                  38
+                ],
+                "special": [
+                  7
+                ]
+              },
+              {
+                "main": [
+                  4,
+                  8,
+                  19,
+                  25,
+                  28,
+                  35
+                ],
+                "special": [
+                  6
+                ]
+              }
+            ],
+            "cost": 0
+          },
+          {
+            "name": "V6",
+            "role": "observe",
+            "tickets": [
+              {
+                "main": [
+                  4,
+                  11,
+                  12,
+                  16,
+                  35,
+                  37
+                ],
+                "special": [
+                  6
+                ]
+              },
+              {
+                "main": [
+                  6,
+                  8,
+                  20,
+                  26,
+                  32,
+                  34
+                ],
+                "special": [
+                  4
+                ]
+              },
+              {
+                "main": [
+                  2,
+                  15,
+                  25,
+                  31,
+                  36,
+                  38
+                ],
+                "special": [
+                  7
+                ]
+              }
+            ],
+            "cost": 0
+          },
+          {
+            "name": "Joint",
+            "role": "observe",
+            "tickets": [
+              {
+                "main": [
+                  7,
+                  9,
+                  17,
+                  19,
+                  29,
+                  38
+                ],
+                "special": [
+                  6
+                ]
+              },
+              {
+                "main": [
+                  6,
+                  11,
+                  14,
+                  26,
+                  28,
+                  35
+                ],
+                "special": [
+                  2
+                ]
+              },
+              {
+                "main": [
+                  4,
+                  11,
+                  22,
+                  24,
+                  26,
+                  31
+                ],
+                "special": [
+                  7
+                ]
+              }
+            ],
+            "cost": 0
+          }
+        ],
+        "state": "ready",
+        "expected_at": null
       },
       "latest_draw": {
         "date": "20261102",
@@ -2119,18 +2304,13 @@
         "note": "無可安全公開且附截止日的指標"
       },
       "pipeline": {
-        "last_run": "2026/11/02 22:12:06.54",
-        "stage": "開獎後更新（退出碼 20：測試失敗）",
-        "status": "error"
+        "last_run": "2026/11/03  1:51:34.57",
+        "stage": "延遲重試",
+        "status": "ok"
       },
       "powerlotto_research": {
         "notice": "未實際購買／研究用途；正式建議投入 0 TWD。金額為固定獎稅前假設值，頭／貳獎浮動獎金不計；期數少，差異多半是隨機波動",
-        "missing_next": [
-          "V7",
-          "V5.2.1",
-          "V6",
-          "Joint"
-        ],
+        "missing_next": [],
         "baseline": {
           "win_probability": 0.11782962247358535,
           "fixed_gross": 21.05139999876842,
@@ -2255,7 +2435,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-03T00:30:02+08:00",
+      "generated_at": "2026-11-03T01:51:38+08:00",
       "data_cutoff": "20261030",
       "next_draw": {
         "date": "20261103",
@@ -2710,7 +2890,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-03T00:30:02+08:00",
+      "generated_at": "2026-11-03T01:51:38+08:00",
       "data_cutoff": "20261031",
       "next_draw": {
         "date": "20261103",
