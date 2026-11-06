@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T19:00:02+08:00",
+  "generated_at": "2026-11-06T22:00:02+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,7 +14,7 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-11-06T19:00:02+08:00",
+      "generated_at": "2026-11-06T22:00:02+08:00",
       "data_cutoff": "20261105",
       "next_draw": {
         "date": "20261106",
@@ -738,9 +738,9 @@
         "note": "重播研究，非前瞻"
       },
       "pipeline": {
-        "last_run": "2026-11-06T18:30:00+08:00",
-        "stage": "check",
-        "status": "ok"
+        "last_run": "2026-11-06T21:35:01+08:00",
+        "stage": "postdraw",
+        "status": "failed"
       },
       "purchase": {
         "date": "20261106",
@@ -779,22 +779,22 @@
         "status": "ok",
         "month": "202611",
         "monthly": {
-          "periods": 4,
-          "cost": 250.0,
+          "periods": 5,
+          "cost": 300.0,
           "gross_return": 0.0,
           "net_return": 0.0,
-          "profit": -250.0,
-          "pending_periods": 0,
-          "pending_cost": 0.0
+          "profit": -300.0,
+          "pending_periods": 1,
+          "pending_cost": 50.0
         },
         "all_time": {
-          "periods": 39,
-          "cost": 8100.0,
+          "periods": 40,
+          "cost": 8150.0,
           "gross_return": 5600.0,
           "net_return": 5600.0,
-          "profit": -2500.0,
-          "pending_periods": 0,
-          "pending_cost": 0.0
+          "profit": -2550.0,
+          "pending_periods": 1,
+          "pending_cost": 50.0
         }
       },
       "promotions": {
@@ -802,7 +802,9 @@
         "cutoff": "20261106",
         "activities": []
       },
-      "alerts": []
+      "alerts": [
+        "pipeline_failed"
+      ]
     },
     {
       "game_id": "powerlotto",
@@ -814,7 +816,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-11-06T19:00:02+08:00",
+      "generated_at": "2026-11-06T22:00:02+08:00",
       "data_cutoff": "20261105",
       "next_draw": {
         "date": "20261109",
@@ -2534,7 +2536,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-06T19:00:02+08:00",
+      "generated_at": "2026-11-06T22:00:02+08:00",
       "data_cutoff": "20261103",
       "next_draw": {
         "date": "20261106",
@@ -3001,7 +3003,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-06T19:00:02+08:00",
+      "generated_at": "2026-11-06T22:00:02+08:00",
       "data_cutoff": "20261105",
       "next_draw": {
         "date": "20261107",
