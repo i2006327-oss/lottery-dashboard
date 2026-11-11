@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T00:30:01+08:00",
+  "generated_at": "2026-11-11T22:00:02+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,7 +14,7 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-11-11T00:30:01+08:00",
+      "generated_at": "2026-11-11T22:00:02+08:00",
       "data_cutoff": "20261110",
       "next_draw": {
         "date": "20261111",
@@ -742,9 +742,9 @@
         "note": "重播研究，非前瞻"
       },
       "pipeline": {
-        "last_run": "2026-11-11T00:10:00+08:00",
-        "stage": "predraw",
-        "status": "ok"
+        "last_run": "2026-11-11T21:35:00+08:00",
+        "stage": "postdraw",
+        "status": "failed"
       },
       "purchase": {
         "date": "20261111",
@@ -783,20 +783,20 @@
         "status": "ok",
         "month": "202611",
         "monthly": {
-          "periods": 7,
-          "cost": 400.0,
+          "periods": 8,
+          "cost": 450.0,
           "gross_return": 0.0,
           "net_return": 0.0,
-          "profit": -400.0,
+          "profit": -450.0,
           "pending_periods": 0,
           "pending_cost": 0.0
         },
         "all_time": {
-          "periods": 42,
-          "cost": 8250.0,
+          "periods": 43,
+          "cost": 8300.0,
           "gross_return": 5600.0,
           "net_return": 5600.0,
-          "profit": -2650.0,
+          "profit": -2700.0,
           "pending_periods": 0,
           "pending_cost": 0.0
         }
@@ -806,7 +806,9 @@
         "cutoff": "20261111",
         "activities": []
       },
-      "alerts": []
+      "alerts": [
+        "pipeline_failed"
+      ]
     },
     {
       "game_id": "powerlotto",
@@ -818,7 +820,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-11-11T00:30:01+08:00",
+      "generated_at": "2026-11-11T22:00:02+08:00",
       "data_cutoff": "20261109",
       "next_draw": {
         "date": "20261112",
@@ -2548,7 +2550,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-11T00:30:01+08:00",
+      "generated_at": "2026-11-11T22:00:02+08:00",
       "data_cutoff": "20261110",
       "next_draw": {
         "date": "20261113",
@@ -2988,7 +2990,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-11T00:30:01+08:00",
+      "generated_at": "2026-11-11T22:00:02+08:00",
       "data_cutoff": "20261110",
       "next_draw": {
         "date": "20261112",
@@ -3369,7 +3371,7 @@
         "note": "前瞻正式帳本 26 張（截止 20261110）：成本 7800、回收 4800、淨 ROI -38.5%；無重播研究指標。"
       },
       "pipeline": {
-        "last_run": "2026-11-10T22:01:00.865171+08:00",
+        "last_run": "2026-11-11T15:12:58.501842+08:00",
         "stage": "production",
         "status": "ok"
       }
