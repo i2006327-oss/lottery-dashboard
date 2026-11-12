@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T19:00:02+08:00",
+  "generated_at": "2026-11-12T22:00:01+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,7 +14,7 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-11-12T19:00:02+08:00",
+      "generated_at": "2026-11-12T22:00:01+08:00",
       "data_cutoff": "20261111",
       "next_draw": {
         "date": "20261112",
@@ -748,9 +748,9 @@
         "note": "重播研究，非前瞻"
       },
       "pipeline": {
-        "last_run": "2026-11-12T18:30:00+08:00",
-        "stage": "check",
-        "status": "ok"
+        "last_run": "2026-11-12T21:35:00+08:00",
+        "stage": "postdraw",
+        "status": "failed"
       },
       "purchase": {
         "date": "20261112",
@@ -812,7 +812,9 @@
         "cutoff": "20261112",
         "activities": []
       },
-      "alerts": []
+      "alerts": [
+        "pipeline_failed"
+      ]
     },
     {
       "game_id": "powerlotto",
@@ -824,7 +826,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-11-12T19:00:02+08:00",
+      "generated_at": "2026-11-12T22:00:01+08:00",
       "data_cutoff": "20261109",
       "next_draw": {
         "date": "20261112",
@@ -2554,7 +2556,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-12T19:00:02+08:00",
+      "generated_at": "2026-11-12T22:00:01+08:00",
       "data_cutoff": "20261110",
       "next_draw": {
         "date": "20261113",
@@ -2994,7 +2996,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-12T19:00:02+08:00",
+      "generated_at": "2026-11-12T22:00:01+08:00",
       "data_cutoff": "20261110",
       "next_draw": {
         "date": "20261112",
