@@ -27,7 +27,13 @@ s.append(el('strong','','下一期 '+p.date));
 if(n?.state==='overdue')s.append(el('p','overdue','推薦逾期'));
 else if(n?.state!=='ready')s.append(el('p','muted','推薦'+(n?.state==='generating'?'產生中':'預計 '+(n?.expected_at||'待確認')+' 產生')));
 const description=p.tracks.map(t=>t.name+' '+(t.track==='lehe_2he'?(t.count==null?'組數待確認':t.count+' 組'+(t.copies?' × '+t.copies+' 份':'')):t.count+' 注')+' '+(t.amount==null?'金額依當期推薦':cashAmount(t.amount)+' 元')).join('、');
-if(p.status==='pending')s.append(el('p','muted','購買計畫待開獎日產生（預定：'+description+'）'));
+if(p.status==='pending'){
+s.append(el('p','muted','正式計畫將於 '+p.date.slice(4,6)+'/'+p.date.slice(6,8)+' 00:10 產生'));
+if(p.tracks.length)s.append(el('p','muted','購買計畫待開獎日產生（預定：'+description+'）'));
+if(p.preview){const v=p.preview;s.append(el('strong','','下一期預覽（非正式）'));s.append(el('p','muted','來源開獎日：'+v.source_draw.date+'｜預計金額 '+cashAmount(v.planned_amount)+' 元'));
+if(v.buy_pairs.length){s.append(el('p','','預計購買組合（每組 '+v.copies+' 份）'));const row=el('div','pair-pills');v.buy_pairs.forEach(pair=>row.append(el('span','pair-pill',pair.map(n=>String(n).padStart(2,'0')).join('・'))));s.append(row)}else s.append(el('p','muted','預計不購買'));
+const top=Object.entries(v.drag_counts).sort((a,b)=>b[1]-a[1]||Number(a[0])-Number(b[0])).slice(0,5);s.append(el('p','muted','拖牌次數：'+top.map(([n,c])=>String(n).padStart(2,'0')+'＝'+c).join('、')));s.append(el('p','muted',v.note));}
+}
 else if(p.status==='buy')s.append(el('p','','本期購買：'+description));
 else if(p.status==='normal_period_paused')s.append(el('p','muted','一般期間暫停購買（D20），僅紙上紀錄'));
 else if(p.status==='normal_month_stopped_after_hit')s.append(el('p','muted','本月一般期間實買已中獎，停止購買至下月'));
