@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T19:44:12+08:00",
+  "generated_at": "2026-11-15T22:00:02+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,7 +14,7 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-11-15T19:44:12+08:00",
+      "generated_at": "2026-11-15T22:00:02+08:00",
       "data_cutoff": "20261114",
       "next_draw": {
         "date": "20261116",
@@ -809,7 +809,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-11-15T19:44:12+08:00",
+      "generated_at": "2026-11-15T22:00:02+08:00",
       "data_cutoff": "20261112",
       "next_draw": {
         "date": "20261116",
@@ -2541,7 +2541,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-15T19:44:12+08:00",
+      "generated_at": "2026-11-15T22:00:02+08:00",
       "data_cutoff": "20261113",
       "next_draw": {
         "date": "20261117",
@@ -2955,6 +2955,1022 @@
         "last_run": "2026/11/13 22:40:35",
         "stage": "大樂透 Hermes 排程",
         "status": "ok"
+      },
+      "biglotto_research": {
+        "strategies": [
+          {
+            "id": "top12_event_driven_300",
+            "name": "主力推薦",
+            "role": "main",
+            "draws": 12,
+            "cost": 3600,
+            "payout": 0,
+            "roi": 0.0,
+            "winning_draws": 0
+          },
+          {
+            "id": "shadow_drag14_inter",
+            "name": "1 期×4 期共同號二合",
+            "role": "shadow",
+            "draws": 1,
+            "cost": 25,
+            "payout": 0,
+            "roi": 0.0,
+            "winning_draws": 0
+          },
+          {
+            "id": "shadow_drag14_inter_relabel",
+            "name": "1 期×4 期（隨機對照）",
+            "role": "shadow",
+            "draws": 1,
+            "cost": 25,
+            "payout": 0,
+            "roi": 0.0,
+            "winning_draws": 0
+          },
+          {
+            "id": "shadow_drag3_ge4_12P",
+            "name": "三期拖牌二合",
+            "role": "shadow",
+            "draws": 1,
+            "cost": 300,
+            "payout": 0,
+            "roi": 0.0,
+            "winning_draws": 0
+          },
+          {
+            "id": "shadow_drag3_ge4_relabel_12P",
+            "name": "三期拖牌（隨機對照）",
+            "role": "shadow",
+            "draws": 1,
+            "cost": 300,
+            "payout": 0,
+            "roi": 0.0,
+            "winning_draws": 0
+          },
+          {
+            "id": "shadow_drag_fill_v1",
+            "name": "拖牌補滿 6 注",
+            "role": "shadow",
+            "draws": 9,
+            "cost": 2700,
+            "payout": 1600,
+            "roi": 0.5925925925925926,
+            "winning_draws": 4
+          },
+          {
+            "id": "shadow_drag_main_v1",
+            "name": "拖牌正票",
+            "role": "shadow",
+            "draws": 9,
+            "cost": 1800,
+            "payout": 400,
+            "roi": 0.2222222222222222,
+            "winning_draws": 1
+          },
+          {
+            "id": "shadow_event_driven",
+            "name": "事件驅動（影子）",
+            "role": "shadow",
+            "draws": 10,
+            "cost": 3000,
+            "payout": 0,
+            "roi": 0.0,
+            "winning_draws": 0
+          },
+          {
+            "id": "shadow_pairs_only_12P",
+            "name": "排名二合 12 組",
+            "role": "shadow",
+            "draws": 10,
+            "cost": 3000,
+            "payout": 0,
+            "roi": 0.0,
+            "winning_draws": 0
+          },
+          {
+            "id": "shadow_random_2L8P",
+            "name": "隨機 2 正票＋8 二合（對照）",
+            "role": "shadow",
+            "draws": 10,
+            "cost": 3000,
+            "payout": 1650,
+            "roi": 0.55,
+            "winning_draws": 2
+          },
+          {
+            "id": "shadow_random_pairs_12P",
+            "name": "隨機二合 12 組（對照）",
+            "role": "shadow",
+            "draws": 10,
+            "cost": 3000,
+            "payout": 3750,
+            "roi": 1.25,
+            "winning_draws": 3
+          },
+          {
+            "id": "shadow_top12_inside",
+            "name": "舊配置",
+            "role": "shadow",
+            "draws": 10,
+            "cost": 3000,
+            "payout": 1250,
+            "roi": 0.4166666666666667,
+            "winning_draws": 1
+          },
+          {
+            "id": "shadow_unpopular_2L8P",
+            "name": "冷門化 2 正票＋8 二合",
+            "role": "shadow",
+            "draws": 10,
+            "cost": 3000,
+            "payout": 1250,
+            "roi": 0.4166666666666667,
+            "winning_draws": 1
+          }
+        ],
+        "next": [
+          {
+            "id": "top12_event_driven_300",
+            "name": "主力推薦",
+            "lotto": [],
+            "pairs": [
+              [
+                32,
+                41
+              ],
+              [
+                40,
+                43
+              ],
+              [
+                25,
+                34
+              ],
+              [
+                4,
+                30
+              ],
+              [
+                5,
+                33
+              ],
+              [
+                23,
+                24
+              ],
+              [
+                2,
+                19
+              ],
+              [
+                26,
+                48
+              ],
+              [
+                8,
+                14
+              ],
+              [
+                3,
+                35
+              ],
+              [
+                15,
+                47
+              ],
+              [
+                9,
+                12
+              ]
+            ],
+            "cost": 300
+          },
+          {
+            "id": "shadow_drag14_inter",
+            "name": "1 期×4 期共同號二合",
+            "lotto": [],
+            "pairs": [],
+            "cost": 0
+          },
+          {
+            "id": "shadow_drag14_inter_relabel",
+            "name": "1 期×4 期（隨機對照）",
+            "lotto": [],
+            "pairs": [],
+            "cost": 0
+          },
+          {
+            "id": "shadow_drag3_ge4_12P",
+            "name": "三期拖牌二合",
+            "lotto": [],
+            "pairs": [
+              [
+                2,
+                38
+              ],
+              [
+                4,
+                38
+              ],
+              [
+                9,
+                38
+              ],
+              [
+                34,
+                38
+              ],
+              [
+                38,
+                40
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                2,
+                9
+              ],
+              [
+                2,
+                34
+              ],
+              [
+                2,
+                40
+              ],
+              [
+                4,
+                9
+              ],
+              [
+                4,
+                34
+              ],
+              [
+                4,
+                40
+              ]
+            ],
+            "cost": 300
+          },
+          {
+            "id": "shadow_drag3_ge4_relabel_12P",
+            "name": "三期拖牌（隨機對照）",
+            "lotto": [],
+            "pairs": [
+              [
+                7,
+                36
+              ],
+              [
+                7,
+                22
+              ],
+              [
+                7,
+                17
+              ],
+              [
+                7,
+                43
+              ],
+              [
+                7,
+                21
+              ],
+              [
+                22,
+                36
+              ],
+              [
+                17,
+                36
+              ],
+              [
+                36,
+                43
+              ],
+              [
+                21,
+                36
+              ],
+              [
+                17,
+                22
+              ],
+              [
+                22,
+                43
+              ],
+              [
+                21,
+                22
+              ]
+            ],
+            "cost": 300
+          },
+          {
+            "id": "shadow_drag_fill_v1",
+            "name": "拖牌補滿 6 注",
+            "lotto": [
+              [
+                2,
+                16,
+                24,
+                29,
+                38,
+                43
+              ],
+              [
+                1,
+                4,
+                6,
+                8,
+                12,
+                14
+              ],
+              [
+                21,
+                22,
+                23,
+                27,
+                30,
+                34
+              ],
+              [
+                35,
+                39,
+                40,
+                41,
+                48,
+                49
+              ],
+              [
+                3,
+                11,
+                17,
+                28,
+                33,
+                42
+              ],
+              [
+                9,
+                15,
+                18,
+                36,
+                45,
+                46
+              ]
+            ],
+            "pairs": [],
+            "cost": 300
+          },
+          {
+            "id": "shadow_drag_main_v1",
+            "name": "拖牌正票",
+            "lotto": [
+              [
+                2,
+                16,
+                24,
+                29,
+                38,
+                43
+              ],
+              [
+                1,
+                4,
+                6,
+                8,
+                12,
+                14
+              ],
+              [
+                21,
+                22,
+                23,
+                27,
+                30,
+                34
+              ],
+              [
+                35,
+                39,
+                40,
+                41,
+                48,
+                49
+              ]
+            ],
+            "pairs": [],
+            "cost": 200
+          },
+          {
+            "id": "shadow_event_driven",
+            "name": "事件驅動（影子）",
+            "lotto": [],
+            "pairs": [
+              [
+                32,
+                41
+              ],
+              [
+                40,
+                43
+              ],
+              [
+                25,
+                34
+              ],
+              [
+                4,
+                30
+              ],
+              [
+                5,
+                33
+              ],
+              [
+                23,
+                24
+              ],
+              [
+                2,
+                19
+              ],
+              [
+                26,
+                48
+              ],
+              [
+                8,
+                14
+              ],
+              [
+                3,
+                35
+              ],
+              [
+                15,
+                47
+              ],
+              [
+                9,
+                12
+              ]
+            ],
+            "cost": 300
+          },
+          {
+            "id": "shadow_pairs_only_12P",
+            "name": "排名二合 12 組",
+            "lotto": [],
+            "pairs": [
+              [
+                32,
+                41
+              ],
+              [
+                40,
+                43
+              ],
+              [
+                25,
+                34
+              ],
+              [
+                4,
+                30
+              ],
+              [
+                5,
+                33
+              ],
+              [
+                23,
+                24
+              ],
+              [
+                2,
+                19
+              ],
+              [
+                26,
+                48
+              ],
+              [
+                8,
+                14
+              ],
+              [
+                3,
+                35
+              ],
+              [
+                15,
+                47
+              ],
+              [
+                9,
+                12
+              ]
+            ],
+            "cost": 300
+          },
+          {
+            "id": "shadow_random_2L8P",
+            "name": "隨機 2 正票＋8 二合（對照）",
+            "lotto": [
+              [
+                7,
+                9,
+                12,
+                30,
+                33,
+                41
+              ],
+              [
+                1,
+                2,
+                4,
+                5,
+                24,
+                47
+              ]
+            ],
+            "pairs": [
+              [
+                26,
+                38
+              ],
+              [
+                8,
+                20
+              ],
+              [
+                34,
+                48
+              ],
+              [
+                16,
+                29
+              ],
+              [
+                21,
+                44
+              ],
+              [
+                22,
+                46
+              ],
+              [
+                10,
+                27
+              ],
+              [
+                14,
+                17
+              ]
+            ],
+            "cost": 300
+          },
+          {
+            "id": "shadow_random_pairs_12P",
+            "name": "隨機二合 12 組（對照）",
+            "lotto": [],
+            "pairs": [
+              [
+                5,
+                16
+              ],
+              [
+                36,
+                38
+              ],
+              [
+                31,
+                33
+              ],
+              [
+                9,
+                32
+              ],
+              [
+                2,
+                29
+              ],
+              [
+                28,
+                48
+              ],
+              [
+                10,
+                41
+              ],
+              [
+                25,
+                27
+              ],
+              [
+                18,
+                26
+              ],
+              [
+                8,
+                45
+              ],
+              [
+                15,
+                49
+              ],
+              [
+                17,
+                21
+              ]
+            ],
+            "cost": 300
+          },
+          {
+            "id": "shadow_top12_inside",
+            "name": "舊配置",
+            "lotto": [
+              [
+                4,
+                9,
+                15,
+                25,
+                26,
+                35
+              ],
+              [
+                2,
+                14,
+                30,
+                40,
+                41,
+                48
+              ]
+            ],
+            "pairs": [
+              [
+                4,
+                30
+              ],
+              [
+                2,
+                25
+              ],
+              [
+                26,
+                48
+              ],
+              [
+                9,
+                26
+              ],
+              [
+                9,
+                41
+              ],
+              [
+                35,
+                48
+              ],
+              [
+                25,
+                30
+              ],
+              [
+                40,
+                41
+              ]
+            ],
+            "cost": 300
+          },
+          {
+            "id": "shadow_unpopular_2L8P",
+            "name": "冷門化 2 正票＋8 二合",
+            "lotto": [
+              [
+                2,
+                14,
+                25,
+                30,
+                41,
+                48
+              ],
+              [
+                4,
+                9,
+                26,
+                35,
+                40,
+                43
+              ]
+            ],
+            "pairs": [
+              [
+                5,
+                33
+              ],
+              [
+                23,
+                24
+              ],
+              [
+                3,
+                47
+              ],
+              [
+                8,
+                15
+              ],
+              [
+                29,
+                39
+              ],
+              [
+                12,
+                19
+              ],
+              [
+                6,
+                32
+              ],
+              [
+                34,
+                36
+              ]
+            ],
+            "cost": 300
+          }
+        ],
+        "latest": [
+          {
+            "id": "top12_event_driven_300",
+            "name": "主力推薦",
+            "line_hits": [],
+            "winning_pairs": [],
+            "payout": 0
+          },
+          {
+            "id": "shadow_drag14_inter",
+            "name": "1 期×4 期共同號二合",
+            "line_hits": [],
+            "winning_pairs": [],
+            "payout": 0
+          },
+          {
+            "id": "shadow_drag14_inter_relabel",
+            "name": "1 期×4 期（隨機對照）",
+            "line_hits": [],
+            "winning_pairs": [],
+            "payout": 0
+          },
+          {
+            "id": "shadow_drag3_ge4_12P",
+            "name": "三期拖牌二合",
+            "line_hits": [],
+            "winning_pairs": [],
+            "payout": 0
+          },
+          {
+            "id": "shadow_drag3_ge4_relabel_12P",
+            "name": "三期拖牌（隨機對照）",
+            "line_hits": [],
+            "winning_pairs": [],
+            "payout": 0
+          },
+          {
+            "id": "shadow_drag_fill_v1",
+            "name": "拖牌補滿 6 注",
+            "line_hits": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              3
+            ],
+            "winning_pairs": [],
+            "payout": 400
+          },
+          {
+            "id": "shadow_drag_main_v1",
+            "name": "拖牌正票",
+            "line_hits": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "winning_pairs": [],
+            "payout": 0
+          },
+          {
+            "id": "shadow_event_driven",
+            "name": "事件驅動（影子）",
+            "line_hits": [],
+            "winning_pairs": [],
+            "payout": 0
+          },
+          {
+            "id": "shadow_pairs_only_12P",
+            "name": "排名二合 12 組",
+            "line_hits": [],
+            "winning_pairs": [],
+            "payout": 0
+          },
+          {
+            "id": "shadow_random_2L8P",
+            "name": "隨機 2 正票＋8 二合（對照）",
+            "line_hits": [
+              0,
+              1
+            ],
+            "winning_pairs": [],
+            "payout": 0
+          },
+          {
+            "id": "shadow_random_pairs_12P",
+            "name": "隨機二合 12 組（對照）",
+            "line_hits": [],
+            "winning_pairs": [],
+            "payout": 0
+          },
+          {
+            "id": "shadow_top12_inside",
+            "name": "舊配置",
+            "line_hits": [
+              1,
+              0
+            ],
+            "winning_pairs": [],
+            "payout": 0
+          },
+          {
+            "id": "shadow_unpopular_2L8P",
+            "name": "冷門化 2 正票＋8 二合",
+            "line_hits": [
+              1,
+              0
+            ],
+            "winning_pairs": [],
+            "payout": 0
+          }
+        ],
+        "recent": [
+          {
+            "date": "20261113",
+            "payouts": {
+              "top12_event_driven_300": 0,
+              "shadow_drag14_inter": 0,
+              "shadow_drag14_inter_relabel": 0,
+              "shadow_drag3_ge4_12P": 0,
+              "shadow_drag3_ge4_relabel_12P": 0,
+              "shadow_drag_fill_v1": 400,
+              "shadow_drag_main_v1": 0,
+              "shadow_event_driven": 0,
+              "shadow_pairs_only_12P": 0,
+              "shadow_random_2L8P": 0,
+              "shadow_random_pairs_12P": 0,
+              "shadow_top12_inside": 0,
+              "shadow_unpopular_2L8P": 0
+            }
+          },
+          {
+            "date": "20261110",
+            "payouts": {
+              "top12_event_driven_300": 0,
+              "shadow_drag_fill_v1": 400,
+              "shadow_drag_main_v1": 0,
+              "shadow_event_driven": 0,
+              "shadow_pairs_only_12P": 0,
+              "shadow_random_2L8P": 0,
+              "shadow_random_pairs_12P": 0,
+              "shadow_top12_inside": 0,
+              "shadow_unpopular_2L8P": 0
+            }
+          },
+          {
+            "date": "20261106",
+            "payouts": {
+              "top12_event_driven_300": 0,
+              "shadow_drag_fill_v1": 0,
+              "shadow_drag_main_v1": 0,
+              "shadow_event_driven": 0,
+              "shadow_pairs_only_12P": 0,
+              "shadow_random_2L8P": 0,
+              "shadow_random_pairs_12P": 1250,
+              "shadow_top12_inside": 0,
+              "shadow_unpopular_2L8P": 0
+            }
+          },
+          {
+            "date": "20261103",
+            "payouts": {
+              "top12_event_driven_300": 0,
+              "shadow_drag_fill_v1": 0,
+              "shadow_drag_main_v1": 0,
+              "shadow_event_driven": 0,
+              "shadow_pairs_only_12P": 0,
+              "shadow_random_2L8P": 0,
+              "shadow_random_pairs_12P": 0,
+              "shadow_top12_inside": 0,
+              "shadow_unpopular_2L8P": 0
+            }
+          },
+          {
+            "date": "20261030",
+            "payouts": {
+              "top12_event_driven_300": 0,
+              "shadow_drag_fill_v1": 0,
+              "shadow_drag_main_v1": 0,
+              "shadow_event_driven": 0,
+              "shadow_pairs_only_12P": 0,
+              "shadow_random_2L8P": 0,
+              "shadow_random_pairs_12P": 0,
+              "shadow_top12_inside": 1250,
+              "shadow_unpopular_2L8P": 0
+            }
+          },
+          {
+            "date": "20261027",
+            "payouts": {
+              "top12_event_driven_300": 0,
+              "shadow_drag_fill_v1": 0,
+              "shadow_drag_main_v1": 0,
+              "shadow_event_driven": 0,
+              "shadow_pairs_only_12P": 0,
+              "shadow_random_2L8P": 1250,
+              "shadow_random_pairs_12P": 1250,
+              "shadow_top12_inside": 0,
+              "shadow_unpopular_2L8P": 0
+            }
+          },
+          {
+            "date": "20261023",
+            "payouts": {
+              "top12_event_driven_300": 0,
+              "shadow_drag_fill_v1": 400,
+              "shadow_drag_main_v1": 400,
+              "shadow_event_driven": 0,
+              "shadow_pairs_only_12P": 0,
+              "shadow_random_2L8P": 0,
+              "shadow_random_pairs_12P": 1250,
+              "shadow_top12_inside": 0,
+              "shadow_unpopular_2L8P": 0
+            }
+          },
+          {
+            "date": "20261020",
+            "payouts": {
+              "top12_event_driven_300": 0,
+              "shadow_drag_fill_v1": 400,
+              "shadow_drag_main_v1": 0,
+              "shadow_event_driven": 0,
+              "shadow_pairs_only_12P": 0,
+              "shadow_random_2L8P": 0,
+              "shadow_random_pairs_12P": 0,
+              "shadow_top12_inside": 0,
+              "shadow_unpopular_2L8P": 0
+            }
+          },
+          {
+            "date": "20261016",
+            "payouts": {
+              "top12_event_driven_300": 0,
+              "shadow_drag_fill_v1": 0,
+              "shadow_drag_main_v1": 0,
+              "shadow_event_driven": 0,
+              "shadow_pairs_only_12P": 0,
+              "shadow_random_2L8P": 400,
+              "shadow_random_pairs_12P": 0,
+              "shadow_top12_inside": 0,
+              "shadow_unpopular_2L8P": 0
+            }
+          },
+          {
+            "date": "20261013",
+            "payouts": {
+              "top12_event_driven_300": 0,
+              "shadow_event_driven": 0,
+              "shadow_pairs_only_12P": 0,
+              "shadow_random_2L8P": 0,
+              "shadow_random_pairs_12P": 0,
+              "shadow_top12_inside": 0,
+              "shadow_unpopular_2L8P": 1250
+            }
+          }
+        ],
+        "baseline": {
+          "pair_roi": 0.638,
+          "any_12_disjoint": 0.148
+        },
+        "missing": []
       }
     },
     {
@@ -2968,7 +3984,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-15T19:44:12+08:00",
+      "generated_at": "2026-11-15T22:00:02+08:00",
       "data_cutoff": "20261112",
       "next_draw": {
         "date": "20261114",
@@ -3347,9 +4363,9 @@
         "note": "前瞻正式帳本 27 張（截止 20261112）：成本 8100、回收 4800、淨 ROI -40.7%；無重播研究指標。"
       },
       "pipeline": {
-        "last_run": "2026-11-14T22:01:02.828137+08:00",
+        "last_run": "2026-11-15T20:14:47.028886+08:00",
         "stage": "production",
-        "status": "ok"
+        "status": "blocked_stale_data"
       }
     }
   ]
