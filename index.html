@@ -24,53 +24,49 @@ const cashAmount=x=>Number(x).toLocaleString('zh-TW',{maximumFractionDigits:2});
 function cashPayout(x){return x.data_status==='error'?'資料錯誤：結算回收無法核驗':x.net_payout==null?'回收 '+cashAmount(x.payout)+' 元（稅後實得尚未核驗）':'稅後實得 '+cashAmount(x.net_payout)+' 元'}
 function renderCashNext(g){
 const s=el('section','section cash-plan'),n=g.next_draw,p=g.purchase;
-s.append(el('strong','','下一期 '+p.date));
+s.append(el('strong','','下一期 '+nextDate(p.date,true)));
 if(n?.state==='overdue')s.append(el('p','overdue','推薦逾期'));
-else if(n?.state!=='ready')s.append(el('p','muted','推薦'+(n?.state==='generating'?'產生中':'預計 '+(n?.expected_at||'待確認')+' 產生')));
-const description=p.tracks.map(t=>t.name+' '+(t.track==='lehe_2he'?(t.count==null?'組數待確認':t.count+' 組'+(t.copies?' × '+t.copies+' 份':'')):t.count+' 注')+' '+(t.amount==null?'金額依當期推薦':cashAmount(t.amount)+' 元')).join('、');
 if(p.status==='pending'){
-s.append(el('p','muted','正式計畫將於 '+p.date.slice(4,6)+'/'+p.date.slice(6,8)+' 00:10 產生'));
-if(p.tracks.length)s.append(el('p','muted','購買計畫待開獎日產生（預定：'+description+'）'));
-if(p.preview){const v=p.preview;s.append(el('strong','','下一期預覽（非正式）'));s.append(el('p','muted','來源開獎日：'+v.source_draw.date+'｜預計金額 '+cashAmount(v.planned_amount)+' 元'));
-if(v.buy_pairs.length){s.append(el('p','','預計購買組合（每組 '+v.copies+' 份）'));const row=el('div','pair-pills');v.buy_pairs.forEach(pair=>row.append(el('span','pair-pill',pair.map(n=>String(n).padStart(2,'0')).join('・'))));s.append(row)}else s.append(el('p','muted','預計不購買'));
-const top=Object.entries(v.drag_counts).sort((a,b)=>b[1]-a[1]||Number(a[0])-Number(b[0])).slice(0,5);s.append(el('p','muted','拖牌次數：'+top.map(([n,c])=>String(n).padStart(2,'0')+'＝'+c).join('、')));s.append(el('p','muted',v.note));}
+s.append(el('p','muted','正式計畫 '+p.date.slice(4,6)+'/'+p.date.slice(6,8)+' 00:10 產生'));
+if(p.preview){const v=p.preview,row=el('div','pair-pills');row.title=v.note;row.append(el('span','muted','預覽（非正式）'));v.buy_pairs.forEach(pair=>row.append(el('span','pair-pill',pair.map(n=>String(n).padStart(2,'0')).join('・'))));row.append(el('span','muted',(v.buy_pairs.length?'':'預計不購買｜')+'預計 '+cashAmount(v.planned_amount)+' 元'));s.append(row)}
 }
-else if(p.status==='buy')s.append(el('p','','本期購買：'+description));
+else if(p.status==='buy'){for(const t of p.tracks){const row=el('div','pair-pills');(t.pairs||[]).forEach(pair=>row.append(el('span','pair-pill',pair.map(v=>String(v).padStart(2,'0')).join('・'))));s.append(row,el('p','','每組 '+(t.copies||1)+' 份・共 '+cashAmount(t.amount)+' 元'+(p.monthly_used_units!=null?'｜本月已用 '+p.monthly_used_units+' 注／剩 '+p.monthly_remaining_units+' 注':'')))}}
 else if(p.status==='normal_period_paused')s.append(el('p','muted','一般期間暫停購買（D20），僅紙上紀錄'));
 else if(p.status==='normal_month_stopped_after_hit')s.append(el('p','muted','本月一般期間實買已中獎，停止購買至下月'));
 else if(p.status==='normal_month_cap_reached')s.append(el('p','muted','本月一般期間已買滿 44 注，停止購買至下月'));
 else if(p.status==='no_bets')s.append(el('p','muted','本期無可購買組合，僅紙上紀錄'));
 else if(p.status==='stop_loss_paused')s.append(el('p','overdue','本月已達停損，暫停購買；當月損益 '+cashAmount(p.monthly_profit)+' 元；停損上限 '+cashAmount(p.loss_limit)+' 元'));
 else s.append(el('p','muted','購買計畫資料缺漏或無法核驗'));
-for(const t of p.tracks)if(t.note)s.append(el('p','muted',t.note+'；原封存金額 '+cashAmount(t.sealed_amount)+' 元'));
-if(p.monthly_used_units!=null){s.append(el('p','muted','一般期間 D22｜本月已用 '+p.monthly_used_units+' 注／剩餘 '+p.monthly_remaining_units+' 注｜中獎後停止：'+(p.monthly_stopped_after_hit?'是':'否')));for(const t of p.tracks)if(t.pairs){s.append(el('p','','實買組合'));const row=el('div','pair-pills');t.pairs.forEach(pair=>row.append(el('span','pair-pill',pair.map(v=>String(v).padStart(2,'0')).join('・'))));s.append(row)}}
-if(p.paper_only.length)s.append(el('p','muted',p.paper_only.map(t=>cashNames[t]).join('、')+'：紙上紀錄（不購買）'));
+const other=el('details');other.append(el('summary','','其他推薦（紙上紀錄）'));
+for(const t of p.tracks)if(t.note)other.append(el('p','muted',t.note+'；原封存金額 '+cashAmount(t.sealed_amount)+' 元'));
+if(p.preview){other.append(el('p','power-ticket','二合全部組：'+p.preview.pairs.map(pair=>pair.map(v=>String(v).padStart(2,'0')).join('・')).join('　')));const top=Object.entries(p.preview.drag_counts).sort((a,b)=>b[1]-a[1]||Number(a[0])-Number(b[0])).slice(0,5);other.append(el('p','muted','拖牌次數：'+top.map(([n,c])=>String(n).padStart(2,'0')+'＝'+c).join('、')))}
 for(const t of n?.tracks||[]){
-const track=t.role==='observe'?'high_any':t.role;
-s.append(el('div','track',t.name+(p.paper_only.includes(track)?'｜紙上紀錄（不購買）':'')+'｜'+(t.role==='lehe_2he'?(t.status==='missing'?'組數待確認':t.tickets.length+' 組 × '+(t.copies||1)+' 份'):t.tickets.length+' 注')+'・'+(t.cost==null?'金額依當期推薦':cashAmount(t.cost)+' 元')));
-if(t.promo_note)s.append(el('p','muted',t.promo_note));
-if(t.status==='missing'){s.append(el('p','muted','推薦資料缺漏'));continue}
-if(t.role==='lehe_2he'){const row=el('div','pair-pills');t.tickets.forEach(pair=>row.append(el('span','pair-pill',pair.map(v=>String(v).padStart(2,'0')).join('・'))));s.append(row)}
-else t.tickets.forEach(ticket=>ticketBalls(s,ticket,g.special_label));
+other.append(el('div','track',t.name));if(t.promo_note)other.append(el('p','muted',t.promo_note));
+if(t.status==='missing'){other.append(el('p','muted','推薦資料缺漏'));continue}
+if(t.role==='lehe_2he')other.append(el('p','power-ticket',t.tickets.map(pair=>pair.map(v=>String(v).padStart(2,'0')).join('・')).join('　')));
+else t.tickets.forEach(ticket=>other.append(el('div','power-ticket',(Array.isArray(ticket)?ticket:ticket.main||[]).map(v=>String(v).padStart(2,'0')).join(' '))));
 }
-return s}
+s.append(other);return s}
 function renderCashActual(g){
 const s=el('section','section cash-summary'),a=g.actual_pnl;s.append(el('strong','','實際購買損益'));
 if(!a||a.status!=='ok'){s.append(el('p','muted','實際帳本資料缺漏或無法核驗；不以紙上紀錄替代'));return s}
-for(const [label,x] of [['本月（'+a.month+'）',a.monthly],['累計',a.all_time]]){s.append(el('p','',label+'｜'+x.periods+' 期｜成本 '+cashAmount(x.cost)+' 元｜稅後回收 '+cashAmount(x.net_return)+' 元｜損益 '+cashAmount(x.profit)+' 元'));if(x.pending_periods)s.append(el('p','muted','其中 '+x.pending_periods+' 期待核對，成本 '+cashAmount(x.pending_cost)+' 元已計入；未核對回收暫計 0 元'))}
-s.append(el('p','muted','僅彙總實際帳本；單注超過 5,000 元按來源規則扣稅後計入。截止 '+g.data_cutoff));return s}
+const t=powerTable(['範圍','期數','成本','稅後回收','損益']),notes=[];
+for(const [label,x] of [['本月（'+a.month+'）',a.monthly],['累計',a.all_time]]){const row=el('tr');[label,String(x.periods),cashAmount(x.cost)+' 元',cashAmount(x.net_return)+' 元',cashAmount(x.profit)+' 元'].forEach(v=>row.append(el('td','',v)));t.body.append(row);if(x.pending_periods)notes.push(label+'其中 '+x.pending_periods+' 期待核對，成本 '+cashAmount(x.pending_cost)+' 元已計入；未核對回收暫計 0 元')}
+s.append(t.wrap,el('p','muted',notes.concat('僅彙總實際帳本；單注超過 5,000 元按來源規則扣稅後計入。截止 '+g.data_cutoff).join('；')));return s}
 function renderCashPromos(g){
-const s=el('section','section'),p=g.promotions;s.append(el('strong','','加碼提示'));
-if(!p||p.status!=='ok'){s.append(el('p','muted',p?.status==='stale'?'活動資料過期，待重新確認':'活動資料無法取得，尚未確認進行中活動'));return s}
-if(!p.activities.length)s.append(el('p','muted','目前無已確認且回收率高於一般期間的活動'));
+const p=g.promotions;
+if(!p||p.status!=='ok')return el('p','muted',p?.status==='stale'?'活動資料過期，待重新確認':'活動資料無法取得，尚未確認進行中活動');
+if(!p.activities.length)return el('p','muted','目前無已確認且回收率高於一般期間的活動');
+const s=el('section','section');s.append(el('strong','','加碼提示'));
 for(const a of p.activities){const box=el('div','cash-promo');box.append(el('strong','',a.name));box.append(el('p','',a.start_date+'～'+a.end_date+'｜加碼後期望回收率 '+pct(a.promo_roi)+'（一般 '+pct(a.normal_roi)+'）；指標截止 '+p.cutoff));const link=el('a','','官方活動公告');link.href=a.official_url;link.target='_blank';link.rel='noopener noreferrer';box.append(link);box.append(el('p','','建議，需人工決定'));s.append(box)}
 return s}
 function renderCashGame(g){
-const card=el('article','card');card.append(el('h2','',g.game_name));card.append(el('span','status',g.status==='stale'?'資料過期':'研究資料'));card.append(renderCashNext(g),renderCashActual(g),renderCashPromos(g));
-if(g.latest_draw){const s=el('section','section');s.append(el('strong','','最新開獎 '+g.latest_draw.date+'｜紙上紀錄'));balls(s,g.latest_draw.numbers);g.latest_draw.settlements.forEach(x=>s.append(el('p','',x.track+'｜命中 '+x.hits.join('+')+' 個，'+cashPayout(x))));if(!g.latest_draw.settlements.length)s.append(el('p','muted','待開獎核對'));card.append(s)}
-const r=el('section','section');r.append(el('strong','','近 10 期紙上紀錄'));const list=el('div','recent');
-g.recent.forEach(d=>{const row=el('div','recent-row');row.append(el('span','',d.date));row.append(el('span','recent-value',d.settlements.length?d.settlements.map(x=>x.track+' '+cashPayout(x)).join('｜'):'待開獎核對'));list.append(row)});r.append(list);card.append(r);
-const m=el('section','section');m.append(el('strong','','指標與隨機基準'));m.append(el('p','muted',g.metrics.note));m.append(metricTable(g.metrics));card.append(m);card.append(el('p','muted','研究用途，不保證中獎；購買狀態未確認。資料截止：'+g.data_cutoff+'｜管線：'+(g.pipeline.stage||'未知')+' / '+g.pipeline.status));return card}
+const card=el('article','card powerlotto');card.append(el('h2','',g.game_name),el('span','status',g.status==='stale'?'資料過期':'研究資料'),el('p','muted','實買：39樂合二合（D22）；正式組、高ANY 僅紙上紀錄；研究用途，不保證中獎'),renderCashNext(g),renderCashActual(g));
+if(g.latest_draw){const s=el('section','section');s.append(el('strong','','最新開獎 '+nextDate(g.latest_draw.date,true)));balls(s,g.latest_draw.numbers);if(g.latest_draw.settlements.length){const t=powerTable(['軌別','命中','結果']);g.latest_draw.settlements.forEach(x=>{const row=el('tr');row.append(el('th','',x.track),el('td','',x.hits.join('+')+' 個'),el('td',(x.net_payout??x.payout)>0?'power-win':'muted',cashPayout(x)));t.body.append(row)});s.append(t.wrap)}else s.append(el('p','muted','待開獎核對'));card.append(s)}
+const active=g.promotions?.status==='ok'&&g.promotions.activities.length;if(active)card.append(renderCashPromos(g));
+const r=el('details','section');r.append(el('summary','','近 10 期紙上紀錄'));const tracks=[...new Set([...(g.latest_draw?.settlements||[]),...g.recent.flatMap(d=>d.settlements)].map(x=>x.track))];if(!tracks.length)tracks.push(...Object.values(cashNames));const t=powerTable(['日期',...tracks]);
+g.recent.forEach(d=>{const row=el('tr');row.append(el('th','',nextDate(d.date,true)));tracks.forEach(track=>{const x=d.settlements.find(x=>x.track===track),value=x?.net_payout??x?.payout;const cell=el('td',x&&value>0?'power-win':'muted',!x||x.data_status==='error'?'…':value>0?cashAmount(value)+' 元':'—');cell.title=x?cashPayout(x):'待開獎核對';row.append(cell)});t.body.append(row)});r.append(t.wrap,el('p','muted','金額為回收；— 為未中，… 為待開獎核對或資料錯誤；完整回收說明請查看提示。'));card.append(r);
+const m=el('details','section');m.append(el('summary','','指標與隨機基準'),el('p','muted',g.metrics.note),metricTable(g.metrics));card.append(m);if(!active)card.append(renderCashPromos(g));card.append(el('p','muted','資料截止 '+g.data_cutoff+'｜管線：'+(g.pipeline.stage||'未知')+' / '+g.pipeline.status));return card}
 function renderCashWarnings(games){
 document.getElementById('cash-alerts')?.remove();
 const texts=games.filter(g=>g.game_id==='cash539').flatMap(g=>(g.alerts||[]).map(a=>cashAlertText[a]).filter(Boolean));
