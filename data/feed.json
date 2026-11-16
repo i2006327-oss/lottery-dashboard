@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T00:30:01+08:00",
+  "generated_at": "2026-11-17T04:12:45+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,7 +14,7 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-11-17T00:30:01+08:00",
+      "generated_at": "2026-11-17T04:12:45+08:00",
       "data_cutoff": "20261116",
       "next_draw": {
         "date": "20261117",
@@ -820,7 +820,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-11-17T00:30:01+08:00",
+      "generated_at": "2026-11-17T04:12:45+08:00",
       "data_cutoff": "20261116",
       "next_draw": {
         "date": "20261119",
@@ -2560,7 +2560,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-17T00:30:01+08:00",
+      "generated_at": "2026-11-17T04:12:45+08:00",
       "data_cutoff": "20261113",
       "next_draw": {
         "date": "20261117",
@@ -4003,7 +4003,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-17T00:30:01+08:00",
+      "generated_at": "2026-11-17T04:12:45+08:00",
       "data_cutoff": "20261115",
       "next_draw": {
         "date": "20261117",
@@ -4062,7 +4062,9 @@
               47
             ],
             "winning_pairs": [],
-            "prizes": []
+            "prizes": [],
+            "special_hit": false,
+            "scheduled_date": "20261114"
           }
         ],
         "settlement_status": "settled"
@@ -4093,7 +4095,9 @@
                 47
               ],
               "winning_pairs": [],
-              "prizes": []
+              "prizes": [],
+              "special_hit": false,
+              "scheduled_date": "20261114"
             }
           ],
           "settlement_status": "settled"
@@ -4121,7 +4125,9 @@
               ],
               "hit_numbers": [],
               "winning_pairs": [],
-              "prizes": []
+              "prizes": [],
+              "special_hit": false,
+              "scheduled_date": null
             }
           ],
           "settlement_status": "settled"
@@ -4149,7 +4155,9 @@
               ],
               "hit_numbers": [],
               "winning_pairs": [],
-              "prizes": []
+              "prizes": [],
+              "special_hit": false,
+              "scheduled_date": null
             }
           ],
           "settlement_status": "settled"
@@ -4177,7 +4185,9 @@
               ],
               "hit_numbers": [],
               "winning_pairs": [],
-              "prizes": []
+              "prizes": [],
+              "special_hit": false,
+              "scheduled_date": null
             }
           ],
           "settlement_status": "settled"
@@ -4215,7 +4225,9 @@
               ],
               "prizes": [
                 "二星 ×1"
-              ]
+              ],
+              "special_hit": false,
+              "scheduled_date": "20261103"
             }
           ],
           "settlement_status": "settled"
@@ -4243,7 +4255,9 @@
               ],
               "hit_numbers": [],
               "winning_pairs": [],
-              "prizes": []
+              "prizes": [],
+              "special_hit": false,
+              "scheduled_date": "20261029"
             }
           ],
           "settlement_status": "settled"
@@ -4273,7 +4287,9 @@
                 4
               ],
               "winning_pairs": [],
-              "prizes": []
+              "prizes": [],
+              "special_hit": false,
+              "scheduled_date": null
             }
           ],
           "settlement_status": "settled"
@@ -4311,7 +4327,9 @@
               ],
               "prizes": [
                 "二星 ×1"
-              ]
+              ],
+              "special_hit": false,
+              "scheduled_date": null
             }
           ],
           "settlement_status": "settled"
@@ -4341,7 +4359,9 @@
                 4
               ],
               "winning_pairs": [],
-              "prizes": []
+              "prizes": [],
+              "special_hit": false,
+              "scheduled_date": null
             }
           ],
           "settlement_status": "settled"
@@ -4371,7 +4391,9 @@
                 7
               ],
               "winning_pairs": [],
-              "prizes": []
+              "prizes": [],
+              "special_hit": false,
+              "scheduled_date": null
             }
           ],
           "settlement_status": "settled"
@@ -4382,6 +4404,19 @@
         "windows": {},
         "random_baseline": {},
         "note": "前瞻正式帳本 28 張（截止 20261115）：成本 8400、回收 4800、淨 ROI -42.9%；無重播研究指標。"
+      },
+      "mark6_research": {
+        "tickets": 28,
+        "cost": 8400,
+        "payout": 4800,
+        "profit": -3600,
+        "roi": -0.42857142857142855,
+        "pair_wins": 6,
+        "expected_pair_wins": 10.0,
+        "special_hits": 1,
+        "expected_special_hits": 1.1428571428571428,
+        "paid_draws": 7,
+        "cutoff": "20261115"
       },
       "pipeline": {
         "last_run": "2026-11-16T18:57:18.634508+08:00",
