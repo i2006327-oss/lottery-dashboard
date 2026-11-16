@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T00:30:02+08:00",
+  "generated_at": "2026-11-16T19:00:01+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,7 +14,7 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-11-16T00:30:02+08:00",
+      "generated_at": "2026-11-16T19:00:01+08:00",
       "data_cutoff": "20261114",
       "next_draw": {
         "date": "20261116",
@@ -757,8 +757,8 @@
         "note": "重播研究，非前瞻"
       },
       "pipeline": {
-        "last_run": "2026-11-16T00:10:00+08:00",
-        "stage": "predraw",
+        "last_run": "2026-11-16T18:44:49+08:00",
+        "stage": "check",
         "status": "ok"
       },
       "purchase": {
@@ -833,7 +833,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-11-16T00:30:02+08:00",
+      "generated_at": "2026-11-16T19:00:01+08:00",
       "data_cutoff": "20261112",
       "next_draw": {
         "date": "20261116",
@@ -2565,7 +2565,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-16T00:30:02+08:00",
+      "generated_at": "2026-11-16T19:00:01+08:00",
       "data_cutoff": "20261113",
       "next_draw": {
         "date": "20261117",
@@ -4008,10 +4008,10 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-16T00:30:02+08:00",
-      "data_cutoff": "20261112",
+      "generated_at": "2026-11-16T19:00:01+08:00",
+      "data_cutoff": "20261115",
       "next_draw": {
-        "date": "20261114",
+        "date": "20261117",
         "period": null,
         "sealed": true,
         "tracks": [
@@ -4026,9 +4026,9 @@
                   9,
                   17,
                   28,
+                  29,
                   31,
-                  34,
-                  47
+                  34
                 ],
                 "special": [
                   6,
@@ -4043,17 +4043,17 @@
         "expected_at": null
       },
       "latest_draw": {
-        "date": "20261112",
-        "period": "26/120",
+        "date": "20261115",
+        "period": "26/121",
         "numbers": [
-          20,
-          24,
-          33,
-          37,
-          42,
-          46
+          2,
+          8,
+          11,
+          35,
+          43,
+          47
         ],
-        "special": 13,
+        "special": 48,
         "settlements": [
           {
             "track": "正式 K8 路由（eligible；不代表統計優勢）",
@@ -4061,9 +4061,11 @@
             "cost": 300,
             "payout": 0,
             "hits": [
-              0
+              1
             ],
-            "hit_numbers": [],
+            "hit_numbers": [
+              47
+            ],
             "winning_pairs": [],
             "prizes": []
           }
@@ -4071,6 +4073,36 @@
         "settlement_status": "settled"
       },
       "recent": [
+        {
+          "date": "20261115",
+          "period": "26/121",
+          "numbers": [
+            2,
+            8,
+            11,
+            35,
+            43,
+            47
+          ],
+          "special": 48,
+          "settlements": [
+            {
+              "track": "正式 K8 路由（eligible；不代表統計優勢）",
+              "role": "formal",
+              "cost": 300,
+              "payout": 0,
+              "hits": [
+                1
+              ],
+              "hit_numbers": [
+                47
+              ],
+              "winning_pairs": [],
+              "prizes": []
+            }
+          ],
+          "settlement_status": "settled"
+        },
         {
           "date": "20261112",
           "period": "26/120",
@@ -4348,48 +4380,18 @@
             }
           ],
           "settlement_status": "settled"
-        },
-        {
-          "date": "20261017",
-          "period": "26/111",
-          "numbers": [
-            3,
-            13,
-            27,
-            29,
-            30,
-            40
-          ],
-          "special": 9,
-          "settlements": [
-            {
-              "track": "正式 K8 路由（eligible；不代表統計優勢）",
-              "role": "formal",
-              "cost": 300,
-              "payout": 0,
-              "hits": [
-                1
-              ],
-              "hit_numbers": [
-                30
-              ],
-              "winning_pairs": [],
-              "prizes": []
-            }
-          ],
-          "settlement_status": "settled"
         }
       ],
       "metrics": {
-        "cutoff": "20261112",
+        "cutoff": "20261115",
         "windows": {},
         "random_baseline": {},
-        "note": "前瞻正式帳本 27 張（截止 20261112）：成本 8100、回收 4800、淨 ROI -40.7%；無重播研究指標。"
+        "note": "前瞻正式帳本 28 張（截止 20261115）：成本 8400、回收 4800、淨 ROI -42.9%；無重播研究指標。"
       },
       "pipeline": {
-        "last_run": "2026-11-15T20:14:47.028886+08:00",
+        "last_run": "2026-11-16T18:57:18.634508+08:00",
         "stage": "production",
-        "status": "blocked_stale_data"
+        "status": "ok"
       }
     }
   ]
