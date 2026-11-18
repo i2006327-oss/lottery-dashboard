@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T00:30:01+08:00",
+  "generated_at": "2026-11-18T19:00:01+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,7 +14,7 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-11-18T00:30:01+08:00",
+      "generated_at": "2026-11-18T19:00:01+08:00",
       "data_cutoff": "20261117",
       "next_draw": {
         "date": "20261118",
@@ -745,8 +745,8 @@
         "note": "重播研究，非前瞻"
       },
       "pipeline": {
-        "last_run": "2026-11-18T00:10:00+08:00",
-        "stage": "predraw",
+        "last_run": "2026-11-18T18:30:00+08:00",
+        "stage": "check",
         "status": "ok"
       },
       "purchase": {
@@ -786,20 +786,20 @@
         "status": "ok",
         "month": "202611",
         "monthly": {
-          "periods": 12,
-          "cost": 650.0,
+          "periods": 14,
+          "cost": 750.0,
           "gross_return": 0.0,
           "net_return": 0.0,
-          "profit": -650.0,
+          "profit": -750.0,
           "pending_periods": 0,
           "pending_cost": 0.0
         },
         "all_time": {
-          "periods": 47,
-          "cost": 8500.0,
+          "periods": 49,
+          "cost": 8600.0,
           "gross_return": 5600.0,
           "net_return": 5600.0,
-          "profit": -2900.0,
+          "profit": -3000.0,
           "pending_periods": 0,
           "pending_cost": 0.0
         }
@@ -821,7 +821,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-11-18T00:30:01+08:00",
+      "generated_at": "2026-11-18T19:00:01+08:00",
       "data_cutoff": "20261116",
       "next_draw": {
         "date": "20261119",
@@ -2561,7 +2561,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-18T00:30:01+08:00",
+      "generated_at": "2026-11-18T19:00:01+08:00",
       "data_cutoff": "20261117",
       "next_draw": {
         "date": "20261120",
@@ -4046,7 +4046,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-18T00:30:01+08:00",
+      "generated_at": "2026-11-18T19:00:01+08:00",
       "data_cutoff": "20261117",
       "next_draw": {
         "date": "20261119",
@@ -4478,7 +4478,7 @@
         "cutoff": "20261117"
       },
       "pipeline": {
-        "last_run": "2026-11-17T22:00:27.983974+08:00",
+        "last_run": "2026-11-18T10:07:42.748989+08:00",
         "stage": "production",
         "status": "ok"
       }
