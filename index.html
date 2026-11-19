@@ -116,23 +116,25 @@ function mark6Cells(row,d,compact=false){
 const x=d.settlements?.[0],pending=d.settlement_status==='pending',nums=ns=>(ns||[]).map(n=>String(n).padStart(2,'0')).join('·');
 if(!x||pending){for(const text of (pending?['…','…','…','…']:['無票','—','—','—'])){const cell=el('td','muted',text);if(pending)cell.title='待開獎核對';row.append(cell)}return}
 const pairs=x.winning_pairs||[],hit=(x.hits?.[0]||0)+(x.hit_numbers?.length?'（'+nums(x.hit_numbers)+'）':'');
+if(x.kind==='special30'){row.append(el('td','muted','—'),el('td','muted','—'),el('td',x.special_hit?'power-win':'muted',x.special_hit?'✓':'✗'),el('td',x.payout>0?'power-win':'muted',String(x.payout)));return}
 row.append(el('td',x.hits?.[0]?'':'muted',String(hit)),el('td',pairs.length?'power-win':'muted',pairs.length?pairs.length+' 組'+(compact?'':'（'+pairs.map(nums).join(' ')+'）'):'0'),el('td',x.special_hit?'power-win':'muted',x.special_hit?'命中':'未中'),el('td',x.payout>0?'power-win':'muted',String(x.payout)));
 }
 function renderMark6(g){
-const card=el('article','card powerlotto');card.append(el('h2','','六合彩'),el('p','muted','正式策略：K8 全二星 28 組＋特別號 2 注；研究用途，不保證中獎'));
+const special30=g.next_draw?.tracks?.[0]?.kind==='special30';
+const card=el('article','card powerlotto');card.append(el('h2','','六合彩'),el('p','muted',special30?'正式配置：30 個不同特別號（每注 10 元）；固定配置，不是預測；研究用途，不保證中獎':'正式策略：K8 全二星 28 組＋特別號 2 注；研究用途，不保證中獎'));
 if(g.status==='stale')card.append(el('p','overdue','資料過期'));
 const n=g.next_draw,s=el('section','section');
-if(n?.state==='ready'){s.append(el('strong','','下一期 '+nextDate(n.date,true)));const t=n.tracks?.[0];for(const ticket of t?.tickets||[])powerTicket(s,{main:[...ticket.main].sort((a,b)=>a-b),special:[...ticket.special].sort((a,b)=>a-b)});s.append(el('p','muted','28 組二星＋特別號 2 注・'+(t?.cost==null?'—':t.cost)+' HKD'))}
+if(n?.state==='ready'){s.append(el('strong','','下一期 '+nextDate(n.date,true)));const t=n.tracks?.[0];for(const ticket of t?.tickets||[])powerTicket(s,{main:[...ticket.main].sort((a,b)=>a-b),special:[...ticket.special].sort((a,b)=>a-b)});s.append(el('p','muted',special30?'30 注特別號・'+t.cost+' HKD・每期約 61% 機率中一注（回收 480）':'28 組二星＋特別號 2 注・'+(t?.cost==null?'—':t.cost)+' HKD'))}
 else if(n?.state==='scheduled')s.append(el('strong','muted','下一期 '+nextDate(n.date,true)+'；推薦預計 '+(n.expected_at||'').slice(9)+' 產生'));
 else if(n?.state==='overdue')s.append(el('strong','overdue','下一期 '+nextDate(n.date,true)+'；推薦逾期未產生'));
 else s.append(el('strong','muted','下一期資料尚未提供'));
 card.append(s);
 if(g.latest_draw){const d=g.latest_draw,x=d.settlements?.[0],l=el('section','section'),heading=el('strong','','最新開獎 '+nextDate(d.date,true));if(x?.scheduled_date)heading.append(el('span','muted','（延期，原定 '+nextDate(x.scheduled_date)+'）'));l.append(heading);
 powerTicket(l,{main:d.numbers,special:d.special==null?[]:[d.special]},{numbers:x?.hit_numbers||[],special:x?.special_hit?d.special:null});
-if(x&&d.settlement_status!=='pending'){const t=powerTable(['命中','二星','特別號','回收']),row=el('tr');mark6Cells(row,d);t.body.append(row);l.append(t.wrap)}
+if(x&&d.settlement_status!=='pending'){const is30=x.kind==='special30',t=powerTable(is30?['特別號','回收']:['命中','二星','特別號','回收']),row=el('tr');if(is30)row.append(el('td',x.special_hit?'power-win':'muted',x.special_hit?String(d.special).padStart(2,'0')+' ✓ 命中':'未中'),el('td',x.payout>0?'power-win':'muted',String(x.payout)));else mark6Cells(row,d);t.body.append(row);l.append(t.wrap)}
 else l.append(el('p','muted',d.settlement_status==='pending'?'待開獎核對':'本期無正式票'));card.append(l)}
 const r=g.mark6_research,stats=el('section','section');stats.append(el('strong','','累計核對'));
-if(r){const t=powerTable(['項目','實際','隨機期望']);for(const values of [['二星組數',r.pair_wins,r.expected_pair_wins.toFixed(2)],['特別號命中',r.special_hits,r.expected_special_hits.toFixed(2)]]){const row=el('tr');values.forEach(v=>row.append(el('td','',String(v))));t.body.append(row)}stats.append(t.wrap,el('p','',r.tickets+' 張・成本 '+r.cost+'・回收 '+r.payout+'・淨損益 '+r.profit+'（'+(r.roi*100).toFixed(1)+'%）・有回收 '+r.paid_draws+' 期'),el('p','muted','隨機基準：每組二星命中 1.28%、每注特別號 2.04%；截止 '+r.cutoff+'；期數少，差異多半是隨機波動'))}
+if(r){for(const [kind,v] of Object.entries(r.by_kind||{k8:r})){if(!v)continue;if(r.by_kind)stats.append(el('h3','',kind==='k8'?'K8（至 26/124）':'30 特別號（26/125 起）'));const t=powerTable(['項目','實際','隨機期望']),values=[['特別號命中',v.special_hits,v.expected_special_hits.toFixed(2)]];if(kind==='k8')values.unshift(['二星組數',v.pair_wins,v.expected_pair_wins.toFixed(2)]);for(const cells of values){const row=el('tr');cells.forEach(value=>row.append(el('td','',String(value))));t.body.append(row)}stats.append(t.wrap);if(r.by_kind)stats.append(el('p','',v.tickets+' 張・成本 '+v.cost+'・回收 '+v.payout+'・淨損益 '+(v.payout-v.cost)))}stats.append(el('p','muted','隨機基準：每組二星命中 1.28%、每注特別號 2.04%；30 特別號每期 30/49；截止 '+r.cutoff+'；期數少，差異多半是隨機波動'),el('p','',(r.by_kind?'總計：':'')+r.tickets+' 張・成本 '+r.cost+'・回收 '+r.payout+'・淨損益 '+r.profit+'（'+(r.roi*100).toFixed(1)+'%）・有回收 '+r.paid_draws+' 期'))}
 else stats.append(el('p','muted','尚無正式結算'));card.append(stats);
 const recent=el('details','section');recent.append(el('summary','','近 10 期核對'));const t=powerTable(['日期','命中','二星','特','回收']);for(const d of g.recent||[]){const row=el('tr'),date=el('th',!d.settlements?.length||d.settlement_status==='pending'?'muted':'',nextDate(d.date,true));if(d.settlements?.[0]?.scheduled_date)date.title='原定 '+nextDate(d.settlements[0].scheduled_date);row.append(date);mark6Cells(row,d,true);t.body.append(row)}recent.append(t.wrap,el('p','muted','命中＝8 碼池對 6 個正碼的命中數；醒目＝有回收；— ＝無正式票'));card.append(recent,el('p','muted','資料截止 '+(g.data_cutoff||'無')+'｜管線：'+(g.pipeline?.stage||'未知')+' / '+(g.pipeline?.status||'未知')));return card;
 }

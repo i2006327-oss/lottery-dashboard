@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T00:30:01+08:00",
+  "generated_at": "2026-11-20T02:54:16+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,7 +14,7 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-11-20T00:30:01+08:00",
+      "generated_at": "2026-11-20T02:54:16+08:00",
       "data_cutoff": "20261119",
       "next_draw": {
         "date": "20261120",
@@ -792,20 +792,20 @@
         "status": "ok",
         "month": "202611",
         "monthly": {
-          "periods": 15,
-          "cost": 800.0,
+          "periods": 16,
+          "cost": 850.0,
           "gross_return": 0.0,
           "net_return": 0.0,
-          "profit": -800.0,
+          "profit": -850.0,
           "pending_periods": 0,
           "pending_cost": 0.0
         },
         "all_time": {
-          "periods": 50,
-          "cost": 8650.0,
+          "periods": 51,
+          "cost": 8700.0,
           "gross_return": 5600.0,
           "net_return": 5600.0,
-          "profit": -3050.0,
+          "profit": -3100.0,
           "pending_periods": 0,
           "pending_cost": 0.0
         }
@@ -827,7 +827,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-11-20T00:30:01+08:00",
+      "generated_at": "2026-11-20T02:54:16+08:00",
       "data_cutoff": "20261119",
       "next_draw": {
         "date": "20261123",
@@ -2570,7 +2570,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-20T00:30:01+08:00",
+      "generated_at": "2026-11-20T02:54:16+08:00",
       "data_cutoff": "20261117",
       "next_draw": {
         "date": "20261120",
@@ -4055,7 +4055,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-20T00:30:01+08:00",
+      "generated_at": "2026-11-20T02:54:16+08:00",
       "data_cutoff": "20261119",
       "next_draw": {
         "date": "20261121",
@@ -4104,6 +4104,7 @@
         "settlements": [
           {
             "track": "正式 K8 路由（eligible；不代表統計優勢）",
+            "kind": "k8",
             "role": "formal",
             "cost": 300,
             "payout": 0,
@@ -4135,6 +4136,7 @@
           "settlements": [
             {
               "track": "正式 K8 路由（eligible；不代表統計優勢）",
+              "kind": "k8",
               "role": "formal",
               "cost": 300,
               "payout": 0,
@@ -4165,6 +4167,7 @@
           "settlements": [
             {
               "track": "正式 K8 路由（eligible；不代表統計優勢）",
+              "kind": "k8",
               "role": "formal",
               "cost": 300,
               "payout": 720,
@@ -4205,6 +4208,7 @@
           "settlements": [
             {
               "track": "正式 K8 路由（eligible；不代表統計優勢）",
+              "kind": "k8",
               "role": "formal",
               "cost": 300,
               "payout": 0,
@@ -4237,6 +4241,7 @@
           "settlements": [
             {
               "track": "正式 K8 路由（eligible；不代表統計優勢）",
+              "kind": "k8",
               "role": "formal",
               "cost": 300,
               "payout": 0,
@@ -4267,6 +4272,7 @@
           "settlements": [
             {
               "track": "正式 K8 路由（eligible；不代表統計優勢）",
+              "kind": "k8",
               "role": "formal",
               "cost": 300,
               "payout": 0,
@@ -4297,6 +4303,7 @@
           "settlements": [
             {
               "track": "正式 K8 路由（eligible；不代表統計優勢）",
+              "kind": "k8",
               "role": "formal",
               "cost": 300,
               "payout": 0,
@@ -4327,6 +4334,7 @@
           "settlements": [
             {
               "track": "正式 K8 路由（eligible；不代表統計優勢）",
+              "kind": "k8",
               "role": "formal",
               "cost": 300,
               "payout": 720,
@@ -4367,6 +4375,7 @@
           "settlements": [
             {
               "track": "正式 K8 路由（eligible；不代表統計優勢）",
+              "kind": "k8",
               "role": "formal",
               "cost": 300,
               "payout": 0,
@@ -4397,6 +4406,7 @@
           "settlements": [
             {
               "track": "正式 K8 路由（eligible；不代表統計優勢）",
+              "kind": "k8",
               "role": "formal",
               "cost": 300,
               "payout": 0,
@@ -4429,6 +4439,7 @@
           "settlements": [
             {
               "track": "正式 K8 路由（eligible；不代表統計優勢）",
+              "kind": "k8",
               "role": "formal",
               "cost": 300,
               "payout": 720,
@@ -4462,6 +4473,18 @@
         "note": "前瞻正式帳本 30 張（截止 20261119）：成本 9000、回收 5520、淨 ROI -38.7%；無重播研究指標。"
       },
       "mark6_research": {
+        "by_kind": {
+          "k8": {
+            "tickets": 30,
+            "cost": 9000,
+            "payout": 5520,
+            "special_hits": 1,
+            "expected_special_hits": 1.2244897959183674,
+            "pair_wins": 7,
+            "expected_pair_wins": 10.714285714285714
+          },
+          "special30": null
+        },
         "tickets": 30,
         "cost": 9000,
         "payout": 5520,
