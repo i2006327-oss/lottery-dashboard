@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T02:54:16+08:00",
+  "generated_at": "2026-11-20T19:00:02+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,7 +14,7 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-11-20T02:54:16+08:00",
+      "generated_at": "2026-11-20T19:00:02+08:00",
       "data_cutoff": "20261119",
       "next_draw": {
         "date": "20261120",
@@ -751,8 +751,8 @@
         "note": "重播研究，非前瞻"
       },
       "pipeline": {
-        "last_run": "2026-11-20T00:10:00+08:00",
-        "stage": "predraw",
+        "last_run": "2026-11-20T18:30:00+08:00",
+        "stage": "check",
         "status": "ok"
       },
       "purchase": {
@@ -827,7 +827,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-11-20T02:54:16+08:00",
+      "generated_at": "2026-11-20T19:00:02+08:00",
       "data_cutoff": "20261119",
       "next_draw": {
         "date": "20261123",
@@ -2419,8 +2419,8 @@
         "note": "無可安全公開且附截止日的指標"
       },
       "pipeline": {
-        "last_run": "2026/11/19 22:13:15.42",
-        "stage": "開獎後更新",
+        "last_run": "2026/11/20  6:30:02.35",
+        "stage": "延遲重試",
         "status": "ok"
       },
       "powerlotto_research": {
@@ -2570,7 +2570,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-20T02:54:16+08:00",
+      "generated_at": "2026-11-20T19:00:02+08:00",
       "data_cutoff": "20261117",
       "next_draw": {
         "date": "20261120",
@@ -4055,7 +4055,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-20T02:54:16+08:00",
+      "generated_at": "2026-11-20T19:00:02+08:00",
       "data_cutoff": "20261119",
       "next_draw": {
         "date": "20261121",
@@ -4498,7 +4498,7 @@
         "cutoff": "20261119"
       },
       "pipeline": {
-        "last_run": "2026-11-19T22:00:30.429322+08:00",
+        "last_run": "2026-11-20T10:07:47.497688+08:00",
         "stage": "production",
         "status": "ok"
       }
