@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T23:00:01+08:00",
+  "generated_at": "2026-11-25T00:30:01+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,16 +14,46 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-11-24T23:00:01+08:00",
+      "generated_at": "2026-11-25T00:30:01+08:00",
       "data_cutoff": "20261124",
       "next_draw": {
         "date": "20261125",
         "period": null,
         "sealed": false,
-        "tracks": [],
-        "state": "scheduled",
-        "expected_at": "20261125 00:10",
-        "total_cost": 0
+        "tracks": [
+          {
+            "name": "高ANY觀察",
+            "role": "observe",
+            "tickets": [
+              [
+                3,
+                7,
+                17,
+                20,
+                32
+              ],
+              [
+                11,
+                22,
+                35,
+                37,
+                39
+              ]
+            ],
+            "cost": 100
+          },
+          {
+            "name": "樂合二合",
+            "role": "lehe_2he",
+            "tickets": [],
+            "cost": null,
+            "bet_type": "2he",
+            "status": "missing"
+          }
+        ],
+        "total_cost": null,
+        "state": "generating",
+        "expected_at": "20261125 00:10"
       },
       "latest_draw": {
         "date": "20261124",
@@ -661,9 +691,9 @@
         "note": "重播研究，非前瞻"
       },
       "pipeline": {
-        "last_run": "2026-11-24T22:35:00+08:00",
-        "stage": "postdraw",
-        "status": "ok"
+        "last_run": "2026-11-25T00:10:00+08:00",
+        "stage": "predraw",
+        "status": "failed"
       },
       "purchase": {
         "date": "20261125",
@@ -777,7 +807,9 @@
         "cutoff": "20261124",
         "activities": []
       },
-      "alerts": []
+      "alerts": [
+        "pipeline_failed"
+      ]
     },
     {
       "game_id": "powerlotto",
@@ -789,7 +821,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-11-24T23:00:01+08:00",
+      "generated_at": "2026-11-25T00:30:01+08:00",
       "data_cutoff": "20261123",
       "next_draw": {
         "date": "20261126",
@@ -2537,7 +2569,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-24T23:00:01+08:00",
+      "generated_at": "2026-11-25T00:30:01+08:00",
       "data_cutoff": "20261124",
       "next_draw": {
         "date": "20261127",
@@ -4075,7 +4107,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-24T23:00:01+08:00",
+      "generated_at": "2026-11-25T00:30:01+08:00",
       "data_cutoff": "20261124",
       "next_draw": {
         "date": "20261126",
