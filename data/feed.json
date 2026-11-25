@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T00:30:01+08:00",
+  "generated_at": "2026-11-25T19:00:02+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,7 +14,7 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-11-25T00:30:01+08:00",
+      "generated_at": "2026-11-25T19:00:02+08:00",
       "data_cutoff": "20261124",
       "next_draw": {
         "date": "20261125",
@@ -52,7 +52,7 @@
           }
         ],
         "total_cost": null,
-        "state": "generating",
+        "state": "overdue",
         "expected_at": "20261125 00:10"
       },
       "latest_draw": {
@@ -691,94 +691,18 @@
         "note": "重播研究，非前瞻"
       },
       "pipeline": {
-        "last_run": "2026-11-25T00:10:00+08:00",
-        "stage": "predraw",
+        "last_run": "2026-11-25T18:30:00+08:00",
+        "stage": "check",
         "status": "failed"
       },
       "purchase": {
         "date": "20261125",
-        "status": "pending",
+        "status": "unavailable",
         "tracks": [],
         "paper_only": [],
         "total_amount": null,
         "monthly_profit": null,
-        "loss_limit": null,
-        "expected_at": "20261125 00:10",
-        "preview": {
-          "target": "20261125",
-          "preview": true,
-          "source_draw": {
-            "date": "20261124",
-            "numbers": [
-              15,
-              19,
-              23,
-              24,
-              39
-            ]
-          },
-          "pairs": [
-            [
-              2,
-              10
-            ],
-            [
-              20,
-              27
-            ],
-            [
-              28,
-              37
-            ],
-            [
-              6,
-              7
-            ],
-            [
-              22,
-              23
-            ],
-            [
-              24,
-              32
-            ],
-            [
-              2,
-              35
-            ]
-          ],
-          "buy_pairs": [
-            [
-              2,
-              10
-            ],
-            [
-              20,
-              27
-            ]
-          ],
-          "copies": 1,
-          "drag_counts": {
-            "2": 3,
-            "6": 1,
-            "7": 1,
-            "10": 2,
-            "20": 2,
-            "22": 1,
-            "23": 1,
-            "24": 1,
-            "27": 2,
-            "28": 2,
-            "32": 1,
-            "35": 1,
-            "37": 2
-          },
-          "planned_status": "buy",
-          "planned_amount": 50,
-          "prize_per_pair_twd": 1125,
-          "note": "預覽，非正式推薦；正式推薦包於開獎日 00:10 產生，入帳以正式推薦包為準",
-          "generated_at": "2026-11-24T22:35:08+08:00"
-        }
+        "loss_limit": null
       },
       "actual_pnl": {
         "status": "ok",
@@ -808,7 +732,9 @@
         "activities": []
       },
       "alerts": [
-        "pipeline_failed"
+        "pipeline_failed",
+        "recommendation_overdue",
+        "purchase_unavailable"
       ]
     },
     {
@@ -821,7 +747,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-11-25T00:30:01+08:00",
+      "generated_at": "2026-11-25T19:00:02+08:00",
       "data_cutoff": "20261123",
       "next_draw": {
         "date": "20261126",
@@ -2569,7 +2495,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-25T00:30:01+08:00",
+      "generated_at": "2026-11-25T19:00:02+08:00",
       "data_cutoff": "20261124",
       "next_draw": {
         "date": "20261127",
@@ -4107,7 +4033,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-25T00:30:01+08:00",
+      "generated_at": "2026-11-25T19:00:02+08:00",
       "data_cutoff": "20261124",
       "next_draw": {
         "date": "20261126",
@@ -4560,7 +4486,7 @@
         "cutoff": "20261124"
       },
       "pipeline": {
-        "last_run": "2026-11-24T22:00:50.838806+08:00",
+        "last_run": "2026-11-25T13:38:30.851784+08:00",
         "stage": "production",
         "status": "ok"
       }
