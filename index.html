@@ -99,7 +99,45 @@ else if(n?.state==='overdue'&&g.game_id==='cash539'){const packs=cashPackages(n)
 else if(n?.state==='overdue'){next.append(el('strong','overdue','\u4e0b\u4e00\u671f '+nextDate(n.date)+'\uff1b\u63a8\u85a6\u903e\u671f\u672a\u7522\u751f'))}
 else next.append(el('strong','muted','\u4e0b\u4e00\u671f\u8cc7\u6599\u5c1a\u672a\u63d0\u4f9b'));
 return next}
-function renderGame(g){if(g.game_id==='lotto6_49'&&g.mark6_research!==undefined)return renderMark6(g);if(g.game_id==='lotto649'&&g.biglotto_research)return renderBiglotto(g);if(g.game_id==='powerlotto')return renderPower(g);if(g.game_id==='cash539'&&g.purchase)return renderCashGame(g);const card=el('article','card');card.append(el('h2','',g.game_name));card.append(el('span','status',g.status==='not_connected'?'尚未接入':g.status==='stale'?'資料過期':'研究資料'));if(g.status==='not_connected'){card.append(el('p','muted','此彩種尚未接入資料來源。'));return card}
+function renderBingo(g){
+if(typeof document.getElementById==='function'&&document.head&&!document.getElementById('bingo-css')){const css=el('style','','.bingo-verdict{font-weight:700;color:var(--accent)}.bingo-list{margin:6px 0;padding-left:1.2em;font-size:.92rem}.bingo-list li{margin:3px 0}.bingo-cal summary{cursor:pointer;color:var(--accent);margin:6px 0}.card.bingo{grid-column:1/-1}.card.bingo .metric-table td{white-space:normal}.bingo-cal .metric-table th,.bingo-cal .metric-table td{text-align:left}');css.id='bingo-css';document.head.append(css)}
+const r=g.bingo_research,card=el('article','card bingo'),pct=v=>(v*100).toFixed(1)+'%',pad=n=>String(n).padStart(2,'0'),money=v=>Math.round(v).toLocaleString('zh-TW');
+card.append(el('h2','','賓果賓果'),el('p','muted','研究成果展示：所有玩法都是負期望值，本站不提供選號；研究用途，不保證中獎'));
+if(!r){card.append(el('p','overdue','資料缺漏'));return card}
+const st=el('section','section'),c=r.daily_check;
+st.append(el('strong',g.status==='stale'?'overdue':'','資料截止 '+(g.data_cutoff?nextDate(g.data_cutoff,true):'資料缺漏')+(g.status==='stale'?'（資料過期）':'')));
+st.append(el('p','muted','完整日 '+r.days+' 天，每天 203 期，每晚自動補資料與核對'));
+st.append(el('p',c&&c.ok?'muted':'overdue',c?'每日核對（'+nextDate(c.date)+'）：'+(c.ok?'正常':'異常 '+c.anomalies+' 項'):'每日核對資料缺漏'));
+card.append(st);
+if(r.latest){const l=el('section','section'),d=r.latest;l.append(el('strong','','最新一期 '+d.term));const row=el('div','balls');d.numbers.forEach(n=>row.append(el('span','ball'+(n===d.super?' special':''),pad(n))));l.append(row);
+l.append(el('p','muted','金色為超級獎號 '+pad(d.super)+'・猜大小：'+(d.high_low||'兩邊都未達 13 個')+'・猜單雙：'+(d.odd_even||'兩邊都未達 13 個')));
+if(r.recent_super.length){l.append(el('p','muted','最近 '+r.recent_super.length+' 期超級獎號（新到舊）'));const rs=el('div','balls');r.recent_super.forEach(x=>rs.append(el('span','ball',pad(x.super))));l.append(rs)}card.append(l)}
+const v=r.verdict,lg=r.ledger,f=el('section','section');f.append(el('strong','','研究結論'));
+if(v){f.append(el('p','bingo-verdict','選哪個號碼，期望值都一樣：沒有任何方法勝過隨機。'));
+const ul=el('ul','bingo-list');
+[ '留出期（'+nextDate(v.holdout_window[0])+'–'+nextDate(v.holdout_window[1])+'，規則事先固定、沒被挑選過的資料）：'+v.holdout_methods+' 種方法，校正後最小 p 值 '+v.holdout_min_holm_p.toFixed(2)+'，隨機對照誤報 '+v.holdout_negative_false_positives+' 組',
+  '隨機性檢定：歷史 11 項＋留出期 '+v.holdout_randomness_tests+' 項＋亂數結構 '+v.rng_tests+' 項；校正後顯著 '+v.rng_significant.length+' 項',
+  ...(v.rng_significant.length?[v.rng_note]:[]),
+  ...(lg?['前瞻試驗帳本：'+lg.versions.map(x=>x.name+' '+x.result).join('、')+'；'+lg.status]:[])
+].forEach(t=>ul.append(el('li','',t)));f.append(ul)}else f.append(el('p','muted','研究結論資料缺漏'));
+card.append(f);
+const e=r.economics;
+if(e){const a=e.assumptions,t1=el('section','section');t1.append(el('strong','','各玩法回收率（每注 '+a.cost+' 元）'));const t=powerTable(['玩法','名目','稅後','每注平均']);
+e.returns.forEach(p=>{const row=el('tr');row.append(el('td','',p.label),el('td','',pct(p.nominal)),el('td','',pct(p.after_tax)),el('td','',p.net_per_bet.toFixed(2)+' 元'));t.body.append(row)});t1.append(t.wrap);
+t1.append(el('p','muted','稅後：單注獎金超過 '+money(a.tax_threshold)+' 元，全額扣 '+(a.tax_rate*100).toFixed(1)+'%（所得稅 20%＋印花稅 0.4%）。回收率低於 100% 代表長期平均會虧。'));card.append(t1);
+const t2=el('section','section');t2.append(el('strong','','預算 '+money(a.budget)+' 元能剩多少（稅後平均）'));const b=powerTable(['玩法','買到沒錢','只買 40 期','贏到 1,500 停','贏到 2,000 停','輸到 500 停','輸了加倍']);
+e.budget.forEach(p=>{const row=el('tr');row.append(el('td','',p.label));['S1','S2','S3_1500','S3_2000','S4','S5'].forEach(k=>row.append(el('td','',money(p[k]))));b.body.append(row)});t2.append(b.wrap);
+t2.append(el('p','muted','每種組合模擬 '+money(a.runs)+' 次，一次最多買 203 期。每 1 元的平均損失和策略無關，只和總投注額有關；買越多期，結果越接近回收率。'));card.append(t2);
+const t3=el('section','section');t3.append(el('strong','','如果真有優勢，看得出來嗎？'));const pw=powerTable(['樣本期數','能偵測的最小倍數']);e.power.forEach(p=>{const row=el('tr');row.append(el('td','',money(p.n)),el('td','',p.minimum_lift.toFixed(3)+' 倍'));pw.body.append(row)});t3.append(pw.wrap);
+t3.append(el('p','muted','超級獎號要打平，命中率得是隨機的 '+e.break_even_lift+' 倍；用 '+money(e.power[0].n)+' 期資料，'+e.power[0].minimum_lift.toFixed(3)+' 倍的優勢就有 80% 機率被發現，所以不可能藏著打平等級的規律。'));card.append(t3)}
+else card.append(el('p','muted','回收率資料缺漏'));
+const pr=r.promotions,p4=el('section','section');p4.append(el('strong','','加碼'));
+p4.append(el('p',c&&c.promo_positive?'bingo-verdict':'muted',pr.active.length?'進行中：'+pr.active.map(x=>x.name+'（名目回收率 '+pct(x.nominal)+'）').join('；'):'目前沒有登錄中的加碼活動'+(c&&c.promo_positive?'；期望值轉正！':'')));
+if(pr.calendar.length){const det=el('details','bingo-cal');det.append(el('summary','','歷年加碼行事曆（'+pr.calendar.length+' 筆）'));const ct=powerTable(['年','節日','期間','玩法','內容','來源']);pr.calendar.forEach(x=>{const row=el('tr');[x.year,x.festival,x.period,x.plays,x.content,x.source].forEach(s=>row.append(el('td','',String(s))));ct.body.append(row)});det.append(ct.wrap,el('p','muted',pr.calendar_note));p4.append(det)}
+card.append(p4);
+if(r.missing.length)card.append(el('p','overdue','部分資料缺漏：'+r.missing.length+' 項'));
+return card}
+function renderGame(g){if(g.game_id==='bingo')return renderBingo(g);if(g.game_id==='lotto6_49'&&g.mark6_research!==undefined)return renderMark6(g);if(g.game_id==='lotto649'&&g.biglotto_research)return renderBiglotto(g);if(g.game_id==='powerlotto')return renderPower(g);if(g.game_id==='cash539'&&g.purchase)return renderCashGame(g);const card=el('article','card');card.append(el('h2','',g.game_name));card.append(el('span','status',g.status==='not_connected'?'尚未接入':g.status==='stale'?'資料過期':'研究資料'));if(g.status==='not_connected'){card.append(el('p','muted','此彩種尚未接入資料來源。'));return card}
 card.append(renderNext(g));
 if(g.latest_draw){const s=el('section','section');s.append(el('strong','','最新開獎 '+g.latest_draw.date));balls(s,g.latest_draw.numbers);if(g.latest_draw.special!=null){s.append(el('small','muted',g.special_label||'\u7279\u5225\u865f'));const sr=el('div','balls');sr.append(el('span','ball special',String(g.latest_draw.special).padStart(2,'0')));s.append(sr);}g.latest_draw.settlements.forEach(x=>s.append(el('p','',x.track+(x.prizes?' '+x.prizes.join('｜'):'命中 '+x.hits.join('+')+' 個')+'，回收 '+x.payout+' 元')));if(!g.latest_draw.settlements.length)s.append(el('p','muted',settlementText(g.latest_draw)));card.append(s)}
 const r=el('section','section');r.append(el('strong','','近 10 期回收'));const list=el('div','recent');g.recent.forEach(d=>{const row=el('div','recent-row');row.append(el('span','',d.date));const value=el('span','recent-value',d.settlements.length?d.settlements.map(x=>(x.prizes?x.track+' '+x.prizes.join('｜'):(x.role==='formal'?'正式':'觀察')+' '+(x.hits.length?x.hits.join('+'):'未核對'))+' '+x.payout+'元').join('｜'):settlementText(d));row.append(value);list.append(row)});r.append(list);card.append(r);

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T19:00:02+08:00",
+  "generated_at": "2026-11-26T21:40:34+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,7 +14,7 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-11-26T19:00:02+08:00",
+      "generated_at": "2026-11-26T21:40:34+08:00",
       "data_cutoff": "20261125",
       "next_draw": {
         "date": "20261126",
@@ -646,9 +646,9 @@
         "note": "重播研究，非前瞻"
       },
       "pipeline": {
-        "last_run": "2026-11-26T18:30:00+08:00",
-        "stage": "check",
-        "status": "ok"
+        "last_run": "2026-11-26T21:35:00+08:00",
+        "stage": "postdraw",
+        "status": "failed"
       },
       "purchase": {
         "date": "20261126",
@@ -846,11 +846,12 @@
         "monthly_remaining_units": 0
       },
       "promotions": {
-        "status": "stale",
-        "cutoff": null,
+        "status": "unavailable",
+        "cutoff": "20261126",
         "activities": []
       },
       "alerts": [
+        "pipeline_failed",
         "recommendation_overdue",
         "purchase_unavailable"
       ],
@@ -870,7 +871,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-11-26T19:00:02+08:00",
+      "generated_at": "2026-11-26T21:40:34+08:00",
       "data_cutoff": "20261123",
       "next_draw": {
         "date": "20261126",
@@ -2618,7 +2619,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-26T19:00:02+08:00",
+      "generated_at": "2026-11-26T21:40:34+08:00",
       "data_cutoff": "20261124",
       "next_draw": {
         "date": "20261127",
@@ -4156,7 +4157,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-26T19:00:02+08:00",
+      "generated_at": "2026-11-26T21:40:34+08:00",
       "data_cutoff": "20261124",
       "next_draw": {
         "date": "20261126",
@@ -4612,6 +4613,377 @@
         "last_run": "2026-11-26T10:07:38.006560+08:00",
         "stage": "production",
         "status": "ok"
+      }
+    },
+    {
+      "game_id": "bingo",
+      "game_name": "賓果賓果",
+      "currency": "TWD",
+      "draw_days": [
+        "每日"
+      ],
+      "status": "ok",
+      "generated_at": "2026-11-26T21:40:34+08:00",
+      "data_cutoff": "20261125",
+      "next_draw": null,
+      "latest_draw": null,
+      "recent": [],
+      "metrics": {
+        "cutoff": "20261125",
+        "windows": {},
+        "random_baseline": {},
+        "note": "詳見賓果研究區塊"
+      },
+      "pipeline": {
+        "last_run": "20261125",
+        "stage": "每日補資料與核對",
+        "status": "ok"
+      },
+      "bingo_research": {
+        "days": 117,
+        "daily_check": {
+          "date": "20261125",
+          "ok": true,
+          "anomalies": 0,
+          "promo_positive": false
+        },
+        "latest": {
+          "term": 115066787,
+          "numbers": [
+            5,
+            11,
+            15,
+            16,
+            20,
+            28,
+            30,
+            37,
+            39,
+            40,
+            54,
+            56,
+            59,
+            60,
+            62,
+            66,
+            72,
+            74,
+            76,
+            80
+          ],
+          "super": 72,
+          "high_low": null,
+          "odd_even": "雙"
+        },
+        "recent_super": [
+          {
+            "term": 115066787,
+            "super": 72
+          },
+          {
+            "term": 115066786,
+            "super": 46
+          },
+          {
+            "term": 115066785,
+            "super": 72
+          },
+          {
+            "term": 115066784,
+            "super": 29
+          },
+          {
+            "term": 115066783,
+            "super": 66
+          },
+          {
+            "term": 115066782,
+            "super": 75
+          },
+          {
+            "term": 115066781,
+            "super": 45
+          },
+          {
+            "term": 115066780,
+            "super": 22
+          },
+          {
+            "term": 115066779,
+            "super": 49
+          },
+          {
+            "term": 115066778,
+            "super": 60
+          }
+        ],
+        "verdict": {
+          "holdout_methods": 28,
+          "holdout_min_holm_p": 1.0,
+          "holdout_window": [
+            "20261029",
+            "20261121"
+          ],
+          "holdout_negative_false_positives": 0,
+          "holdout_randomness_tests": 11,
+          "rng_tests": 13,
+          "rng_significant": [
+            "4c"
+          ],
+          "rng_note": "甲4c（超級獎號與日期）校正後 p 值 0.027，但跨期不可重現，用該規律選號在其他年份命中率回到隨機水準"
+        },
+        "ledger": {
+          "status": "名額用完，家族未通過",
+          "versions": [
+            {
+              "name": "v1",
+              "result": "作廢"
+            },
+            {
+              "name": "v2",
+              "result": "未通過"
+            },
+            {
+              "name": "v3",
+              "result": "未通過"
+            }
+          ],
+          "max_versions": 5
+        },
+        "economics": {
+          "returns": [
+            {
+              "play": "star_9",
+              "label": "9星",
+              "nominal": 0.6529924035819648,
+              "after_tax": 0.6204868617995025,
+              "net_per_bet": -9.487828455012437
+            },
+            {
+              "play": "super",
+              "label": "超級獎號",
+              "nominal": 0.6,
+              "after_tax": 0.6,
+              "net_per_bet": -10.0
+            },
+            {
+              "play": "big_small",
+              "label": "猜大小",
+              "nominal": 0.5882398092432749,
+              "after_tax": 0.5882398092432749,
+              "net_per_bet": -10.294004768918127
+            },
+            {
+              "play": "odd_even",
+              "label": "猜單雙",
+              "nominal": 0.5882398092432749,
+              "after_tax": 0.5882398092432749,
+              "net_per_bet": -10.294004768918127
+            },
+            {
+              "play": "star_6",
+              "label": "6星",
+              "nominal": 0.6109333704270413,
+              "after_tax": 0.584620442848291,
+              "net_per_bet": -10.384488928792726
+            },
+            {
+              "play": "star_8",
+              "label": "8星",
+              "nominal": 0.6261365139811471,
+              "after_tax": 0.5822199358526737,
+              "net_per_bet": -10.444501603683157
+            },
+            {
+              "play": "star_5",
+              "label": "5星",
+              "nominal": 0.6031942740803501,
+              "after_tax": 0.5637248827122245,
+              "net_per_bet": -10.906877932194387
+            },
+            {
+              "play": "star_2",
+              "label": "2星",
+              "nominal": 0.5601265822784809,
+              "after_tax": 0.5601265822784809,
+              "net_per_bet": -10.996835443037977
+            },
+            {
+              "play": "star_3",
+              "label": "3星",
+              "nominal": 0.5550146056475169,
+              "after_tax": 0.5550146056475169,
+              "net_per_bet": -11.124634858812076
+            },
+            {
+              "play": "star_10",
+              "label": "10星",
+              "nominal": 0.5921948666628816,
+              "after_tax": 0.5475049492634977,
+              "net_per_bet": -11.312376268412558
+            },
+            {
+              "play": "star_7",
+              "label": "7星",
+              "nominal": 0.5489746141644876,
+              "after_tax": 0.5330446255762711,
+              "net_per_bet": -11.673884360593224
+            },
+            {
+              "play": "star_4",
+              "label": "4星",
+              "nominal": 0.5081627233525968,
+              "after_tax": 0.5081627233525968,
+              "net_per_bet": -12.29593191618508
+            },
+            {
+              "play": "star_1",
+              "label": "1星",
+              "nominal": 0.49999999999999983,
+              "after_tax": 0.49999999999999983,
+              "net_per_bet": -12.500000000000005
+            }
+          ],
+          "budget": [
+            {
+              "play": "super",
+              "label": "超級獎號",
+              "S1": 211,
+              "S2": 603,
+              "S3_1500": 638,
+              "S3_2000": 518,
+              "S4": 564,
+              "S5": 455
+            },
+            {
+              "play": "star_9",
+              "label": "9星",
+              "S1": 297,
+              "S2": 619,
+              "S3_1500": 372,
+              "S3_2000": 384,
+              "S4": 633,
+              "S5": 367
+            },
+            {
+              "play": "big_small",
+              "label": "猜大小",
+              "S1": 11,
+              "S2": 588,
+              "S3_1500": 33,
+              "S3_2000": 11,
+              "S4": 476,
+              "S5": 436
+            },
+            {
+              "play": "odd_even",
+              "label": "猜單雙",
+              "S1": 11,
+              "S2": 588,
+              "S3_1500": 34,
+              "S3_2000": 11,
+              "S4": 476,
+              "S5": 436
+            }
+          ],
+          "power": [
+            {
+              "n": 666652,
+              "minimum_lift": 1.0348060269235433
+            },
+            {
+              "n": 216195,
+              "minimum_lift": 1.0613830018159192
+            },
+            {
+              "n": 4872,
+              "minimum_lift": 1.4512988322588318
+            },
+            {
+              "n": 1624,
+              "minimum_lift": 1.8016871963171566
+            }
+          ],
+          "break_even_lift": 1.667,
+          "assumptions": {
+            "cost": 25,
+            "budget": 1000,
+            "runs": 100000,
+            "tax_threshold": 5000,
+            "tax_rate": 0.204
+          }
+        },
+        "promotions": {
+          "active": [],
+          "calendar": [
+            {
+              "year": 2024,
+              "festival": "春節",
+              "period": "2 月 2 日–2 月 18 日（17 天）",
+              "plays": "1–6 星、猜大小、猜單雙",
+              "content": "猜大小、猜單雙 6 倍提高為 7 倍",
+              "source": "三立新聞網"
+            },
+            {
+              "year": 2024,
+              "festival": "中秋",
+              "period": "9 月 6 日起 16 天",
+              "plays": "猜大小、猜單雙",
+              "content": "6 倍提高為 7 倍",
+              "source": "新聞摘要"
+            },
+            {
+              "year": 2025,
+              "festival": "春節",
+              "period": "1 月 24 日–2 月 12 日（待查證）",
+              "plays": "未確認",
+              "content": "未確認",
+              "source": "台灣新聞網"
+            },
+            {
+              "year": 2025,
+              "festival": "端午",
+              "period": "5 月 26 日起 14 天",
+              "plays": "超級獎號（上市以來首次）",
+              "content": "1,200 元提高為 1,500 元",
+              "source": "自由財經"
+            },
+            {
+              "year": 2025,
+              "festival": "中秋",
+              "period": "9 月 27 日–10 月 12 日（16 天）",
+              "plays": "超級獎號、猜大小、猜單雙",
+              "content": "1,500 元；7 倍",
+              "source": "今周刊、旺得富"
+            },
+            {
+              "year": 2026,
+              "festival": "春節",
+              "period": "2 月 27 日–3 月 3 日（5 天）",
+              "plays": "1–6 星",
+              "content": "星號倍數未查到",
+              "source": "工商時報"
+            },
+            {
+              "year": 2026,
+              "festival": "端午",
+              "period": "31 天；1–6 星只在 6 月 19 日–21 日",
+              "plays": "超級獎號、猜大小、猜單雙、1–6 星",
+              "content": "首次四種玩法全部加碼",
+              "source": "遠見、NOWnews"
+            },
+            {
+              "year": 2026,
+              "festival": "中秋",
+              "period": "9 月 25 日–10 月 11 日",
+              "plays": "超級獎號、猜大小、猜單雙；1–6 星 10 月 8 日–9 日",
+              "content": "1,500 元；175 元（7 倍）",
+              "source": "台灣彩券公告（星號部分未核實）"
+            }
+          ],
+          "calendar_note": "新聞整理，未逐筆對照台灣彩券官方公告；加碼期間名目回收率最高約 75%–83%，至今沒有任何一次超過 100%"
+        },
+        "missing": []
       }
     }
   ]
