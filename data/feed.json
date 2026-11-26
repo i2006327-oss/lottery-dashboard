@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T00:30:28+08:00",
+  "generated_at": "2026-11-26T19:00:02+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,7 +14,7 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-11-26T00:30:28+08:00",
+      "generated_at": "2026-11-26T19:00:02+08:00",
       "data_cutoff": "20261125",
       "next_draw": {
         "date": "20261126",
@@ -52,7 +52,7 @@
           }
         ],
         "total_cost": null,
-        "state": "generating",
+        "state": "overdue",
         "expected_at": "20261126 00:10"
       },
       "latest_draw": {
@@ -646,42 +646,204 @@
         "note": "重播研究，非前瞻"
       },
       "pipeline": {
-        "last_run": "2026-11-26T00:10:01+08:00",
-        "stage": "predraw",
-        "status": "failed"
+        "last_run": "2026-11-26T18:30:00+08:00",
+        "stage": "check",
+        "status": "ok"
       },
       "purchase": {
         "date": "20261126",
-        "status": "pending",
+        "status": "unavailable",
         "tracks": [],
         "paper_only": [],
         "total_amount": null,
         "monthly_profit": null,
-        "loss_limit": null,
-        "expected_at": "20261126 00:10",
-        "preview": null
+        "loss_limit": null
       },
       "actual_pnl": {
         "status": "ok",
         "month": "202611",
         "monthly": {
-          "periods": 20,
-          "cost": 1050.0,
+          "periods": 21,
+          "cost": 1100.0,
           "gross_return": 0.0,
           "net_return": 0.0,
-          "profit": -1050.0,
+          "profit": -1100.0,
           "pending_periods": 0,
           "pending_cost": 0.0
         },
         "all_time": {
-          "periods": 55,
-          "cost": 8900.0,
+          "periods": 56,
+          "cost": 8950.0,
           "gross_return": 5600.0,
           "net_return": 5600.0,
-          "profit": -3300.0,
+          "profit": -3350.0,
           "pending_periods": 0,
           "pending_cost": 0.0
-        }
+        },
+        "recent": [
+          {
+            "date": "20261125",
+            "source": "preview",
+            "cost": 50.0,
+            "pending": false,
+            "gross": 0.0,
+            "net": 0.0
+          },
+          {
+            "date": "20261124",
+            "source": "sealed",
+            "cost": 50.0,
+            "pending": false,
+            "gross": 0.0,
+            "net": 0.0
+          },
+          {
+            "date": "20261123",
+            "source": "sealed",
+            "cost": 50.0,
+            "pending": false,
+            "gross": 0.0,
+            "net": 0.0
+          },
+          {
+            "date": "20261121",
+            "source": "sealed",
+            "cost": 50.0,
+            "pending": false,
+            "gross": 0.0,
+            "net": 0.0
+          },
+          {
+            "date": "20261120",
+            "source": "sealed",
+            "cost": 50.0,
+            "pending": false,
+            "gross": 0.0,
+            "net": 0.0
+          },
+          {
+            "date": "20261119",
+            "source": "sealed",
+            "cost": 50.0,
+            "pending": false,
+            "gross": 0.0,
+            "net": 0.0
+          },
+          {
+            "date": "20261118",
+            "source": "sealed",
+            "cost": 50.0,
+            "pending": false,
+            "gross": 0.0,
+            "net": 0.0
+          },
+          {
+            "date": "20261117",
+            "source": "sealed",
+            "cost": 50.0,
+            "pending": false,
+            "gross": 0.0,
+            "net": 0.0
+          },
+          {
+            "date": "20261116",
+            "source": "sealed",
+            "cost": 50.0,
+            "pending": false,
+            "gross": 0.0,
+            "net": 0.0
+          },
+          {
+            "date": "20261114",
+            "source": "sealed",
+            "cost": 50.0,
+            "pending": false,
+            "gross": 0.0,
+            "net": 0.0
+          },
+          {
+            "date": "20261113",
+            "source": "sealed",
+            "cost": 50.0,
+            "pending": false,
+            "gross": 0.0,
+            "net": 0.0
+          },
+          {
+            "date": "20261112",
+            "source": "sealed",
+            "cost": 50.0,
+            "pending": false,
+            "gross": 0.0,
+            "net": 0.0
+          },
+          {
+            "date": "20261111",
+            "source": "sealed",
+            "cost": 50.0,
+            "pending": false,
+            "gross": 0.0,
+            "net": 0.0
+          },
+          {
+            "date": "20261110",
+            "source": "sealed",
+            "cost": 50.0,
+            "pending": false,
+            "gross": 0.0,
+            "net": 0.0
+          },
+          {
+            "date": "20261109",
+            "source": "sealed",
+            "cost": 50.0,
+            "pending": false,
+            "gross": 0.0,
+            "net": 0.0
+          },
+          {
+            "date": "20261107",
+            "source": "sealed",
+            "cost": 50.0,
+            "pending": false,
+            "gross": 0.0,
+            "net": 0.0
+          },
+          {
+            "date": "20261106",
+            "source": "sealed",
+            "cost": 50.0,
+            "pending": false,
+            "gross": 0.0,
+            "net": 0.0
+          },
+          {
+            "date": "20261105",
+            "source": "sealed",
+            "cost": 50.0,
+            "pending": false,
+            "gross": 0.0,
+            "net": 0.0
+          },
+          {
+            "date": "20261104",
+            "source": "sealed",
+            "cost": 50.0,
+            "pending": false,
+            "gross": 0.0,
+            "net": 0.0
+          },
+          {
+            "date": "20261103",
+            "source": "sealed",
+            "cost": 100.0,
+            "pending": false,
+            "gross": 0.0,
+            "net": 0.0
+          }
+        ],
+        "monthly_used_units": 44,
+        "monthly_remaining_units": 0
       },
       "promotions": {
         "status": "stale",
@@ -689,8 +851,14 @@
         "activities": []
       },
       "alerts": [
-        "pipeline_failed"
-      ]
+        "recommendation_overdue",
+        "purchase_unavailable"
+      ],
+      "paper_league_f": {
+        "status": "scheduled",
+        "latest": null,
+        "editions": []
+      }
     },
     {
       "game_id": "powerlotto",
@@ -702,7 +870,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-11-26T00:30:28+08:00",
+      "generated_at": "2026-11-26T19:00:02+08:00",
       "data_cutoff": "20261123",
       "next_draw": {
         "date": "20261126",
@@ -2450,7 +2618,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-26T00:30:28+08:00",
+      "generated_at": "2026-11-26T19:00:02+08:00",
       "data_cutoff": "20261124",
       "next_draw": {
         "date": "20261127",
@@ -3988,7 +4156,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-26T00:30:28+08:00",
+      "generated_at": "2026-11-26T19:00:02+08:00",
       "data_cutoff": "20261124",
       "next_draw": {
         "date": "20261126",
@@ -4441,7 +4609,7 @@
         "cutoff": "20261124"
       },
       "pipeline": {
-        "last_run": "2026-11-25T13:38:30.851784+08:00",
+        "last_run": "2026-11-26T10:07:38.006560+08:00",
         "stage": "production",
         "status": "ok"
       }

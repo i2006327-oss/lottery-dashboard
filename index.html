@@ -52,7 +52,22 @@ const s=el('section','section cash-summary'),a=g.actual_pnl;s.append(el('strong'
 if(!a||a.status!=='ok'){s.append(el('p','muted','實際帳本資料缺漏或無法核驗；不以紙上紀錄替代'));return s}
 const t=powerTable(['範圍','期數','成本','稅後回收','損益']),notes=[];
 for(const [label,x] of [['本月（'+a.month+'）',a.monthly],['累計',a.all_time]]){const row=el('tr');[label,String(x.periods),cashAmount(x.cost)+' 元',cashAmount(x.net_return)+' 元',cashAmount(x.profit)+' 元'].forEach(v=>row.append(el('td','',v)));t.body.append(row);if(x.pending_periods)notes.push(label+'其中 '+x.pending_periods+' 期待核對，成本 '+cashAmount(x.pending_cost)+' 元已計入；未核對回收暫計 0 元')}
+if(a.monthly_used_units!=null)notes.push('本月已用 '+a.monthly_used_units+' 注／剩 '+a.monthly_remaining_units+' 注');
+if(a.recent?.some(x=>x.source==='preview'))notes.push('來源：預覽（實際帳本）');
 s.append(t.wrap,el('p','muted',notes.concat('僅彙總實際帳本；單注超過 5,000 元按來源規則扣稅後計入。截止 '+g.data_cutoff).join('；')));return s}
+function renderCashLeague(g){
+const s=el('section','section cash-paper-league');s.style='border:2px dashed #8497ac;padding:12px;margin-top:16px';
+s.append(el('strong','','紙上觀察：V4 去除共振（F）'),el('p','muted','紙上觀察，非實買；不計入實際購買損益。'));
+const data=g.paper_league_f;
+if(!data||data.status!=='ok'){s.append(el('p','muted',data?.status==='scheduled'?'20261127 起記錄':'紙上資料暫缺或格式不符，待更新'));}
+else {const x=data.latest,fmt=ns=>ns.map(n=>String(n).padStart(2,'0')).join('・'),groups=ps=>ps.length?ps.map(fmt).join('、'):'本期無組合';
+s.append(el('p','','最新一期 '+x.target));
+for(const [k,label] of [['v4','V4 拖牌'],['hot30','近 30 期熱號'],['last_plus_hot','上期＋熱']])s.append(el('p','',label+'前 4 碼：'+fmt(x.method_top4[k])));
+s.append(el('p','','共振號碼：'+(fmt(x.resonance_numbers)||'無')),el('p','','保留組合：'+groups(x.pairs)),el('p','','去除組合：'+groups(x.removed_pairs)),el('p','',!x.pairs.length?'本期無組合':x.winning_bets===null?'待開獎結算':x.winning_bets>0?'中獎 '+x.winning_bets+' 組':'未中獎'));
+if(!data.editions.length)s.append(el('p','muted','累計前瞻資料暫缺，待結算更新'));
+for(const e of data.editions){s.append(el('p','','第 '+e.edition+' 屆累計前瞻'));const t=powerTable(['範圍','組數','中獎組數','回收率','單尾 p']);for(const [k,label] of [['first_half','前半'],['second_half','後半'],['total','全期']]){const v=e[k],row=el('tr');[label,String(v.groups),String(v.winning_bets),v.roi_percent===null?'尚無投入':v.roi_percent.toFixed(2)+'%',v.single_tail_p.toFixed(6)].forEach(text=>row.append(el('td','',text)));t.body.append(row)}s.append(t.wrap)}
+}
+s.append(el('p','muted','各屆分別評估；按前瞻封存期數分前後兩半（前半 floor(N/2)，含零組期）。兩半各對隨機二合（10/741）單尾 p<0.05，且全期回收率≥100% 才可提議轉實買；實買仍須使用者另行核可。'));return s}
 function renderCashPromos(g){
 const p=g.promotions;
 if(!p||p.status!=='ok')return el('p','muted',p?.status==='stale'?'活動資料過期，待重新確認':'活動資料無法取得，尚未確認進行中活動');
@@ -62,10 +77,14 @@ for(const a of p.activities){const box=el('div','cash-promo');box.append(el('str
 return s}
 function renderCashGame(g){
 const card=el('article','card powerlotto');card.append(el('h2','',g.game_name),el('span','status',g.status==='stale'?'資料過期':'研究資料'),el('p','muted','實買：39樂合二合（D22）；正式組、高ANY 僅紙上紀錄；研究用途，不保證中獎'),renderCashNext(g),renderCashActual(g));
-if(g.latest_draw){const s=el('section','section');s.append(el('strong','','最新開獎 '+nextDate(g.latest_draw.date,true)));balls(s,g.latest_draw.numbers);if(g.latest_draw.settlements.length){const t=powerTable(['軌別','命中','結果']);g.latest_draw.settlements.forEach(x=>{const row=el('tr');row.append(el('th','',x.track),el('td','',x.hits.join('+')+' 個'),el('td',(x.net_payout??x.payout)>0?'power-win':'muted',cashPayout(x)));t.body.append(row)});s.append(t.wrap)}else s.append(el('p','muted','待開獎核對'));card.append(s)}
+if(g.latest_draw){const s=el('section','section');s.append(el('strong','','最新開獎 '+nextDate(g.latest_draw.date,true)));balls(s,g.latest_draw.numbers);if(g.latest_draw.settlements.length){const t=powerTable(['軌別','命中','結果']);g.latest_draw.settlements.forEach(x=>{const row=el('tr');row.append(el('th','',x.track),el('td','',x.hits.join('+')+' 個'),el('td',(x.net_payout??x.payout)>0?'power-win':'muted',cashPayout(x)));t.body.append(row)});s.append(t.wrap)}else s.append(el('p','muted','紙上紀錄：無封存包'));card.append(s)}
+card.append(renderCashLeague(g));
 const active=g.promotions?.status==='ok'&&g.promotions.activities.length;if(active)card.append(renderCashPromos(g));
-const r=el('details','section');r.append(el('summary','','近 10 期紙上紀錄'));const tracks=[...new Set([...(g.latest_draw?.settlements||[]),...g.recent.flatMap(d=>d.settlements)].map(x=>x.track))];if(!tracks.length)tracks.push(...Object.values(cashNames));const t=powerTable(['日期',...tracks]);
-g.recent.forEach(d=>{const row=el('tr');row.append(el('th','',nextDate(d.date,true)));tracks.forEach(track=>{const x=d.settlements.find(x=>x.track===track),value=x?.net_payout??x?.payout;const cell=el('td',x&&value>0?'power-win':'muted',!x||x.data_status==='error'?'…':value>0?cashAmount(value)+' 元':'—');cell.title=x?cashPayout(x):'待開獎核對';row.append(cell)});t.body.append(row)});r.append(t.wrap,el('p','muted','金額為回收；— 為未中，… 為待開獎核對或資料錯誤；完整回收說明請查看提示。'));card.append(r);
+const r=el('details','section');r.append(el('summary','','近 10 期紙上紀錄'));const tracks=[...new Set(['正式 C2J2','高ANY觀察','樂合二合',...[...(g.latest_draw?.settlements||[]),...g.recent.flatMap(d=>d.settlements)].map(x=>x.track)])];const t=powerTable(['日期','實買（稅後回收）',...tracks]);
+g.recent.forEach(d=>{const row=el('tr');row.append(el('th','',nextDate(d.date,true)));
+const actual=(g.actual_pnl?.recent||[]).filter(x=>x.date===d.date),value=actual.reduce((s,x)=>s+x.net,0);
+row.append(el('td',value>0?'power-win':'muted',g.actual_pnl?.status!=='ok'?'無法核驗':!actual.length?'無實買紀錄':(actual.some(x=>x.source==='preview')?'預覽｜':'')+(actual.some(x=>x.pending)?'待開獎核對':cashAmount(value)+' 元')));
+tracks.forEach(track=>{const x=d.settlements.find(x=>x.track===track),value=x?.net_payout??x?.payout;const cell=el('td',x&&value>0?'power-win':'muted',!x?'無封存包':x.data_status==='error'?'…':value>0?cashAmount(value)+' 元':'—');cell.title=x?cashPayout(x):'無封存包';row.append(cell)});t.body.append(row)});r.append(t.wrap,el('p','muted','實買欄以實際帳本結算；紙上軌缺資料為無封存包；— 為未中，… 為資料錯誤；完整回收說明請查看提示。'));card.append(r);
 const m=el('details','section');m.append(el('summary','','指標與隨機基準'),el('p','muted',g.metrics.note),metricTable(g.metrics));card.append(m);if(!active)card.append(renderCashPromos(g));card.append(el('p','muted','資料截止 '+g.data_cutoff+'｜管線：'+(g.pipeline.stage||'未知')+' / '+g.pipeline.status));return card}
 function renderCashWarnings(games){
 document.getElementById('cash-alerts')?.remove();
