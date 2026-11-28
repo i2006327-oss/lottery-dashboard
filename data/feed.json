@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T19:00:02+08:00",
+  "generated_at": "2026-11-28T22:00:01+08:00",
   "games": [
     {
       "game_id": "cash539",
@@ -14,7 +14,7 @@
         "週六"
       ],
       "status": "ok",
-      "generated_at": "2026-11-28T19:00:02+08:00",
+      "generated_at": "2026-11-28T22:00:01+08:00",
       "data_cutoff": "20261127",
       "next_draw": {
         "date": "20261128",
@@ -705,9 +705,9 @@
         "note": "重播研究，非前瞻"
       },
       "pipeline": {
-        "last_run": "2026-11-28T18:30:00+08:00",
-        "stage": "check",
-        "status": "ok"
+        "last_run": "2026-11-28T21:35:00+08:00",
+        "stage": "postdraw",
+        "status": "failed"
       },
       "purchase": {
         "date": "20261128",
@@ -916,7 +916,9 @@
         "cutoff": "20261128",
         "activities": []
       },
-      "alerts": [],
+      "alerts": [
+        "pipeline_failed"
+      ],
       "paper_league_f": {
         "status": "ok",
         "latest": {
@@ -1004,7 +1006,7 @@
       ],
       "special_label": "第二區",
       "status": "ok",
-      "generated_at": "2026-11-28T19:00:02+08:00",
+      "generated_at": "2026-11-28T22:00:01+08:00",
       "data_cutoff": "20261126",
       "next_draw": {
         "date": "20261130",
@@ -2764,7 +2766,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-28T19:00:02+08:00",
+      "generated_at": "2026-11-28T22:00:01+08:00",
       "data_cutoff": "20261127",
       "next_draw": {
         "date": "20261201",
@@ -4296,7 +4298,7 @@
       ],
       "special_label": "特別號",
       "status": "ok",
-      "generated_at": "2026-11-28T19:00:02+08:00",
+      "generated_at": "2026-11-28T22:00:01+08:00",
       "data_cutoff": "20261124",
       "next_draw": {
         "date": "20261126",
@@ -4762,7 +4764,7 @@
         "每日"
       ],
       "status": "ok",
-      "generated_at": "2026-11-28T19:00:02+08:00",
+      "generated_at": "2026-11-28T22:00:01+08:00",
       "data_cutoff": "20261127",
       "next_draw": null,
       "latest_draw": null,
